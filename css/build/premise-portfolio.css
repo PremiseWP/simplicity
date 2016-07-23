@@ -1,0 +1,56 @@
+/**
+ * Overwrite some of premise portfolio css
+ */
+
+#pwpp-portfolio-grid .pwpp-item {
+	position: relative;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	padding: 0;
+	box-shadow: 0 0 1px 0 #ccc;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#pwpp-portfolio-grid .pwpp-item-inner {
+	border: 0;
+}
+
+#pwpp-portfolio-grid .pwpp-item .pwpp-post-thumbnail {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+#pwpp-portfolio-grid .pwpp-post-excerpt {
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	transition: bottom .4s ease-in-out;
+	background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+#pwpp-portfolio-grid .pwpp-item:hover .pwpp-post-thumbnail {
+	opacity: 0.6;
+}
+
+#pwpp-portfolio-grid .pwpp-item:hover .pwpp-post-excerpt {
+	bottom: 0;
+}
+
+
+@media screen and ( min-width: 768px ) {
+	#pwpp-portfolio-grid .pwpp-item {
+		width: 50%;
+	}
+}
+
+
+@media screen and ( min-width: 1024px ) {
+	#pwpp-portfolio-grid .pwpp-item {
+		width: 33.33%;
+	}
+}
