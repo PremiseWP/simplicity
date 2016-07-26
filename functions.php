@@ -49,11 +49,6 @@ if ( function_exists( 'add_action' ) ) {
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );
 
-	if ( is_admin() ) {
-		add_action( 'load-post.php',     'pwps_load_video_mb_class' );
-	    add_action( 'load-post-new.php', 'pwps_load_video_mb_class' );
-	}
-
 	add_action( 'wp_ajax_pwps_nav_search', array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
 	add_action( 'wp_ajax_nopriv_pwps_nav_search', array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
 
