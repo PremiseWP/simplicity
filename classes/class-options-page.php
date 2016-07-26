@@ -25,9 +25,7 @@ class PWPS_Theme_Options {
 	 * @see 	init() does the rest once our custom post type has been registered
 	 * @since 	1.0
 	 */
-	public function __construct() {
-
-	}
+	public function __construct() {}
 
 
 
@@ -77,6 +75,15 @@ class PWPS_Theme_Options {
 				'name'    => 'pwps_theme_options[nav-icon]',
 				'label'   => 'Select A Nav Icon',
 				'default' => 'fa-search',
+				'wrapper_class' => 'span4',
+			),
+
+			array(
+				'type'    => 'text',
+				'name'    => 'pwps_theme_options[container-max-width]',
+				'label'   => 'Container Max Width',
+				'tooltip' => 'Enter value in px or % to determine the main container maximum width.',
+				'default' => '1200px',
 				'wrapper_class' => 'span4',
 			),
 

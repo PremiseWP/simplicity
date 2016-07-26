@@ -31,7 +31,7 @@
 				<div class="pwps-nav">
 					<div class="pwps-nav-toggle">
 						<a href="javascript:void(0);" id="pwps-nav-toggle-a">
-							<i class="fa <?php echo (string) premise_get_value( 'pwps_theme_options[nav-icon]' ); ?>"></i>
+							<i class="fa <?php echo pwps_get_nav_icon(); ?>"></i>
 						</a>
 					</div>
 					<!-- The search field -->
@@ -40,8 +40,7 @@
 					</div>
 					<!-- The nav -->
 					<?php pwps_main_nav(); ?>
-
-					<div class="pwps-nav-ui"></div>
+					<!-- The overlay -->
 					<div class="pwps-nav-overlay"></div>
 				</div>
 
