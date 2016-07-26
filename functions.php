@@ -45,6 +45,7 @@ if ( function_exists( 'add_action' ) ) {
 
 	// add the theme options page
 	add_action( 'init', array( PWPS_Theme_Options::get_instance(), 'init' ) );
+	add_action( 'customize_register' , array( PWPS_Theme_Customizer::get_instance(), 'init' ) );
 
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );

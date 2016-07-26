@@ -166,9 +166,11 @@ p.error {
  */
 
 .pwps-container {
-	width: 90%;
+	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
 }
 
 #pwps-content {
@@ -202,7 +204,16 @@ body.admin-bar #pwps-header {
 	width: 100%;
 	padding: 10px 0;
 	z-index: 999999999;
-	background-color: rgba( 255, 255, 255, 0.6 );
+}
+
+.pwps-header-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	background-color: #FFFFFF;
 }
 
 .pwps-logo {
@@ -252,7 +263,7 @@ body.admin-bar #pwps-header {
 	overflow: auto;
 	display: block;
 	padding: 5px 0;
-	background-color: #FFFFFF;
+	background-color: transparent;
 	border-top: 1px solid #f4f4f4;
 	border-bottom: 1px solid #f4f4f4;
 }

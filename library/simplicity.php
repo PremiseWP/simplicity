@@ -99,12 +99,10 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 	function pwps_load_custom_css() {
 		?>
 		<style type="text/css">
-			/**
-			 * Custom styles set from the backend
-			 */
-			.pwps-container {
-				max-width: <?php echo pwps_get_container_max_width(); ?>;
-			}
+			<?php
+			echo pwps_get_container_max_width();
+			echo pwps_get_header_styles();
+			?>
 		</style>
 		<?php
 		return (string) $_css;
@@ -124,7 +122,41 @@ if ( ! function_exists( 'pwps_get_container_max_width' ) ) {
 	 */
 	function pwps_get_container_max_width() {
 		$max_width = (string) premise_get_value( 'pwps_theme_options[container-max-width]' );
-		return esc_attr( ( '' !== $max_width ) ? (string) $max_width : '1200px' );
+
+		$_css = '';
+
+		// set the max-width
+		$_css .= ( '' !== $max_width ) ? '.pwps-container{max-width:'.$max_width.';}' : '';
+
+		return esc_attr( (string) $_css );
+	}
+}
+
+
+
+
+if( ! function_exists( 'pwps_get_header_styles' ) ) {
+	/**
+	 * Return the css for the header container.
+	 *
+	 * @return string css for header container
+	 */
+	function pwps_get_header_styles() {
+		$header = premise_get_value( 'pwps_customizer_options[header]' );
+		// $nav_icon_color = (string) premise_get_value( 'pwps_customizer_options[nav-icon-color]' );
+
+		$_css = '';
+
+		// set the header background
+		$_css .= ( ( isset( $header['background-color'] ) && '' !== $header['background-color'] )
+					|| ( isset( $header['opacity'] ) && '' !== $header['opacity'] ) )
+						? '#pwps-header .pwps-header-overlay{background-color:'.$header['background-color'].';opacity:'.$header['opacity'].'}'
+							: '';
+
+		// set the nav icon color
+		$_css .= ( isset( $header['color'] ) && '' !== $header['color'] ) ? '#pwps-nav-toggle-a{color:'.$header['color'].';}' : '';
+
+		return esc_attr( (string) $_css );
 	}
 }
 

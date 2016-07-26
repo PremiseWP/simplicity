@@ -46,6 +46,7 @@
 
 			</div>
 
+			<div class="pwps-header-overlay"></div>
 		</header>
 
 		<div id="pwps-content" class="pwps-container">
