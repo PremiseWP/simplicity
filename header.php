@@ -31,7 +31,7 @@
 				<div class="pwps-nav">
 					<div class="pwps-nav-toggle">
 						<a href="javascript:void(0);" id="pwps-nav-toggle-a">
-							<i class="fa fa-search"></i>
+							<i class="fa <?php echo (string) premise_get_value( 'pwps_theme_options[nav-icon]' ); ?>"></i>
 						</a>
 					</div>
 					<!-- The search field -->

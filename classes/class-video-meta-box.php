@@ -4,7 +4,7 @@
 *
 * @package  Simplicity\Classes
 */
-class SGR_Video_MB {
+class PWPS_Theme_Options {
 
 
 
@@ -26,8 +26,7 @@ class SGR_Video_MB {
 	 * @since 	1.0
 	 */
 	public function __construct() {
-		add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
-        add_action( 'save_post',      array( $this, 'save'         ) );
+
 	}
 
 
@@ -52,101 +51,41 @@ class SGR_Video_MB {
 	 * @since   1.0
 	 */
 	public function init() {
-
+		new Premise_Options(
+			array(
+				'title' => 'Simplicity Theme Options',
+				'menu_title' => 'Simplicity',
+				'callback' => array( $this, 'options_page' ),
+			),
+			'',
+			'pwps_theme_options',
+			'pwps_theme_options_group'
+		);
 	}
 
 
 
 	/**
-	 * add the meta box to our custom post type
+	 * Display the options page
 	 *
-	 * @param void $post_type adds our meta box to the custom post type
+	 * @param string html for options page
 	 */
-	public function add_meta_box( $post_type ) {
-		if ( 'post' == $post_type ) {
-			add_meta_box(
-                'pwps_video_url',
-                __( 'Add A Video', '' ),
-                array( $this, 'meta_box_html' ),
-                $post_type,
-                'advanced',
-                'high'
-            );
-		}
-	}
+	public function options_page() {
+		$fields = array(
+			array(
+				'type'    => 'fa_icon',
+				'name'    => 'pwps_theme_options[nav-icon]',
+				'label'   => 'Select A Nav Icon',
+				'default' => 'fa-search',
+				'wrapper_class' => 'span4',
+			),
 
+			array(
+				'type' => 'submit',
+			)
+		);
 
-
-	/**
-	 * render the inner html of the CPT meta box
-	 *
-	 * @return string html for meta box
-	 */
-	public function meta_box_html() {
-
-		// Add an nonce field so we can check for it later.
-        wp_nonce_field( 'pwps_video_url', 'pwps_video_url_nonce' );
-
-        global $post;
-        premise_field( 'video', array(
-        	'name' => 'pwps_video_url',
-        	'context' => 'post',
-        	'default' => get_post_meta( $post->ID, 'pego_post_video_url', true ),
-        ) );
-	}
-
-
-
-	/**
-	 * save our post type options
-	 *
-	 * @return void does not return anything
-	 */
-	public function save( $post_id ) {
-		// Check if our nonce is set.
-        if ( ! isset( $_POST['pwps_video_url_nonce'] ) ) {
-            return $post_id;
-        }
-
-        $nonce = $_POST['pwps_video_url_nonce'];
-
-        // Verify that the nonce is valid.
-        if ( ! wp_verify_nonce( $nonce, 'pwps_video_url' ) ) {
-            return $post_id;
-        }
-
-        /*
-         * If this is an autosave, our form has not been submitted,
-         * so we don't want to do anything.
-         */
-        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-            return $post_id;
-        }
-
-        // Check the user's permissions.
-        if ( 'post' == $_POST['post_type'] ) {
-            if ( ! current_user_can( 'edit_post', $post_id ) ) {
-                return $post_id;
-            }
-        }
-
-        /* OK, it's safe for us to save the data now. */
-
-        // Update the meta field.
-        update_post_meta( $post_id, 'pwps_video_url', $this->sanitized() );
-	}
-
-
-
-	/**
-	 * return the sanitized data to save in database
-	 *
-	 * @return array returns arrat with sanitized fieldds.
-	 */
-	public function sanitized() {
-		// Sanitize the user input.
-        $mydata = $_POST['pwps_video_url'];
-        return $mydata;
+		premise_field_section( $fields );
 	}
 }
 

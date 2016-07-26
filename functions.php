@@ -340,7 +340,7 @@ if ( function_exists( 'add_action' ) ) {
 	add_action( 'init', 'pwps_register_menu' );
 
 	// add the theme options page
-	add_action( 'init', 'pwps_theme_options_page' );
+	add_action( 'init', array( PWPS_Theme_Options::get_instance(), 'init' ) );
 
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );
