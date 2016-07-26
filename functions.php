@@ -4,7 +4,7 @@
  *
  * Theme Prefix: 'pwps_'
  *
- * @package sangreea
+ * @package Simplicity
  */
 
 
@@ -29,7 +29,7 @@ if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	 */
 	function pwps_theme_setup() {
 		// flush rewrite rules
-		// flush_rewrite_rules();
+		flush_rewrite_rules();
 	}
 }
 
@@ -48,7 +48,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	) );
 
 	// Image sizes
-	// add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
+	add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
 	add_image_size( 'custom-logo-size', 300, 150 ); // custom logo size
 }
 
@@ -86,9 +86,9 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 				'theme_location'  => 'header-menu', // DO NOT MODIFY.
 				'menu'            => '',
 				'container'       => 'div',
-				'container_class' => 'pwps-header-menu-container',
+				'container_class' => 'pwps-nav-menu-container',
 				'container_id'    => '',
-				'menu_class'      => 'pwps-header-menu',
+				'menu_class'      => 'pwps-nav-menu',
 				'menu_id'         => '',
 				'echo'            => true,
 				'fallback_cb'     => '',

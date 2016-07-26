@@ -5,7 +5,7 @@
  * Displays posts that relate to a sepcific posts. If the post uses tags
  * this template will display other posts that use that same tag.
  *
- * @package sangreea
+ * @package Simplicity
  */
 
 // get all tags for this post

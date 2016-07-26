@@ -1,10 +1,10 @@
-<?php 
+<?php
 /**
  * Make Premise WP required by this theme
  *
  * @link https://github.com/PremiseWP/Premise-WP Premise WP GitHub project
  *
- * @package [level 1]\[level 2]\[etc.]
+ * @package Simplicity\Includes
  */
 
 /**

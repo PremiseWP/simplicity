@@ -167,7 +167,7 @@ p.error {
 
 .pwps-container {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -221,9 +221,61 @@ body.admin-bar #pwps-header {
 }
 
 /* The Nav */
+
+#pwps-header .pwps-container {
+	position: relative; /* This is important */
+}
 .pwps-nav {
-	position: relative;
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+}
+
+.pwps-nav-menu-container {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	margin-top: 10px;
+	transition: opacity .4s 0.4s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.pwps-nav-menu-container ul {
+	width: 100%;
+	white-space: nowrap;
+	overflow: auto;
+	display: block;
+	padding: 5px 0;
+	background-color: #FFFFFF;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.pwps-nav-menu-container li {
+	display: inline-block;
+	margin-left: 5px;
+	border-right: 1px solid #f4f4f4;
+	padding-right: 5px;
+}
+
+.pwps-nav-menu-container li:last-child {
+ 	border-right: 0;
+ }
+
+.pwps-nav-menu-container li.current-menu-item {
+
+}
+
+.pwps-nav-menu-container a {
+	display: block;
+	padding: 10px 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #444;
 }
 
 .pwps-nav-toggle {
@@ -344,6 +396,11 @@ body.admin-bar #pwps-header {
 #pwps-header.pwps-nav-active #pwps-nav-search-input {
 	opacity: 1;
 	width: 278px;
+}
+
+#pwps-header.pwps-nav-active .pwps-nav-menu-container {
+	visibility: visible;
+	opacity: 1;
 }
 
 

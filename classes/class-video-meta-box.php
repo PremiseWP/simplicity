@@ -1,6 +1,8 @@
 <?php
 /**
 * Adds the video url metabox
+*
+* @package  Simplicity\Classes
 */
 class SGR_Video_MB {
 

@@ -2,7 +2,7 @@
 /**
  * Content Template
  *
- * @package sangreea
+ * @package Simplicity
  */
 
 ?>

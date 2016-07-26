@@ -2,7 +2,7 @@
 /**
  * Header Template
  *
- * @package [level 1]\[level 2]\[etc.]
+ * @package Simplicity
  */
 
 ?><!DOCTYPE html>
@@ -28,21 +28,25 @@
 					<?php pwps_the_logo(); ?>
 				</div>
 
-				<!-- <div class="pwps-nav">
+				<div class="pwps-nav">
 					<div class="pwps-nav-toggle">
 						<a href="javascript:void(0);" id="pwps-nav-toggle-a">
 							<i class="fa fa-search"></i>
 						</a>
 					</div>
+					<!-- The search field -->
 					<div class="pwps-nav-search">
 						<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Find episodes, recipes, and more">
 					</div>
+					<!-- The nav -->
+					<?php pwps_main_nav(); ?>
+
 					<div class="pwps-nav-ui"></div>
 					<div class="pwps-nav-overlay"></div>
-				</div> -->
+				</div>
 
 			</div>
 
 		</header>
 
-		<div id="pwps-content">
+		<div id="pwps-content" class="pwps-container">

@@ -2,7 +2,7 @@
 /**
  * Content Loop Template
  *
- * @package sangreea
+ * @package Simplicity
  */
 
 ?>
@@ -12,7 +12,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'medium', array( 'class' => 'premise-responsive' ) ); ?>
+				<?php the_post_thumbnail( 'pwps-thumbnail', array( 'class' => 'premise-responsive' ) ); ?>
 			</a>
 		</div>
 	<?php endif; ?>
