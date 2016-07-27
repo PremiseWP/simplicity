@@ -109,14 +109,12 @@ class PWPS_Nav_Search {
 	 */
 	public function load() {
 		?>
-		<div <?php post_class( 'nav-results' ); ?>>
-			<div class="pwps-container">
-				<div class="premise-row">
-					<?php while( $this->query->have_posts() ) {
-						$this->query->the_post();
-						get_template_part( 'content', 'loop' );
-					} ?>
-				</div>
+		<div class="nav-results">
+			<div class="premise-row">
+				<?php while( $this->query->have_posts() ) {
+					$this->query->the_post();
+					get_template_part( 'content', 'loop' );
+				} ?>
 			</div>
 		</div>
 		<?php
