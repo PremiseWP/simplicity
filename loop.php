@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="pwps-container pwps-the-loop">
+<div class="pwps-the-loop">
 
 	<?php
 	/**

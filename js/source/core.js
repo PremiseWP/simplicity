@@ -31,7 +31,8 @@
 		var initialPage = sgrContent[0].innerHTML;
 		// initiate nav search UI
 		function pwpsInitNav() {
-			pwpsResetNav();
+			// continue if reset was successful
+			if ( ! pwpsResetNav() ) return false;
 
 			header.addClass( 'pwps-nav-active' );
 			navSearch.focus();
@@ -69,7 +70,13 @@
 
 		// reset the nav. does not do nothing yet
 		function pwpsResetNav() {
-			return true;
+			if ( header.is( '.pwps-nav-active' ) ) {
+				header.removeClass( 'pwps-nav-active' );
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 
 		// preform the search and return results

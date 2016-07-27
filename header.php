@@ -38,6 +38,7 @@
 					<div class="pwps-nav-search">
 						<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Find episodes, recipes, and more">
 					</div>
+					<div class="premise-clear"></div>
 					<!-- The nav -->
 					<?php pwps_main_nav(); ?>
 					<!-- The overlay -->

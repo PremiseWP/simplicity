@@ -6,3 +6,10 @@
 		padding-left: 20px;
 	}
 }
+
+/* @320px Styles for iPhone 5 */
+@media screen and ( max-width: 320px ) {
+	#pwps-header.pwps-nav-active .pwps-nav-search {
+		width: 235px; /* See main css file for iphone 6 styles */
+	}
+}
