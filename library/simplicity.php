@@ -66,25 +66,34 @@ if ( ! function_exists( 'pwps_pagination' ) ) {
 	 * @return string html for pagination
 	 */
 	function pwps_pagination() {
-		global $wp_query;
+		// global $wp_query;
 
-		$big = 999999999; // need an unlikely integer
+		// $big = 999999999; // need an unlikely integer
 
-		$args = array(
-			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-			'format' => '?paged=%#%',
-			'current' => max( 1, get_query_var('paged') ),
-			'total' => $wp_query->max_num_pages,
-			'mid_size' => 0,
-			'prev_text' => '<i class="fa fa-chevron-left"></i>',
-			'next_text' => '<i class="fa fa-chevron-right"></i>',
-		);
+		// $args = array(
+		// 	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		// 	'format' => '?paged=%#%',
+		// 	'current' => max( 1, get_query_var('paged') ),
+		// 	'total' => $wp_query->max_num_pages,
+		// 	'mid_size' => 0,
+		// 	'prev_text' => '<i class="fa fa-chevron-left"></i>',
+		// 	'next_text' => '<i class="fa fa-chevron-right"></i>',
+		// );
 
-		$html  = '<div class="pwps-pagination">';
-		$html .= paginate_links( $args );
-		$html .= '</div>';
+		// $html  = '<div class="pwps-pagination">';
+		// $html .= paginate_links( $args );
+		// $html .= '</div>';
 
-		echo (string) $html;
+		// echo (string) $html;
+
+		?>
+
+		<div class="pwps-infinte-pagination">
+			<i class="fa fa-spin fa-spinner"></i>
+			<span>Loading more posts...</span>
+		</div>
+
+		<?php
 	}
 }
 
@@ -100,8 +109,9 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 		?>
 		<style type="text/css">
 			<?php
-			echo pwps_get_container_max_width();
+			// echo pwps_get_container_max_width();
 			echo pwps_get_header_styles();
+			echo pwps_get_body_styles();
 			?>
 		</style>
 		<?php
@@ -142,21 +152,114 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 	 * @return string css for header container
 	 */
 	function pwps_get_header_styles() {
-		$header = premise_get_value( 'pwps_customizer_options[header]' );
-		// $nav_icon_color = (string) premise_get_value( 'pwps_customizer_options[nav-icon-color]' );
+		/**
+		 * holds associative array with header styles already cleaned up.
+		 *
+		 * Returns the following values:
+		 * - opacity          => '' (string)
+		 * - background-color => '' (string)
+		 * - color            => '' (string)
+		 *
+		 * @see pwps_escape_string this function returns "safe to use" values.
+		 *
+		 * @var array
+		 */
+		$header = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[header]' ) );
 
-		$_css = '';
+		// if there is no css, set the default css
+		$hbgc = ( isset( $header['background-color'] )  && ! empty( $header['background-color'] ) ) ? $header['background-color'] : '#FDFDFD';
+		$hop  = ( isset( $header['opacity'] )           && ! empty( $header['opacity'] ) )          ? $header['opacity']          : '0.6';
+		$hcol = ( isset( $header['color'] )             && ! empty( $header['color'] ) )            ? $header['color']            : '#444444';
 
-		// set the header background
-		$_css .= ( ( isset( $header['background-color'] ) && '' !== $header['background-color'] )
-					|| ( isset( $header['opacity'] ) && '' !== $header['opacity'] ) )
-						? '#pwps-header .pwps-header-overlay{background-color:'.$header['background-color'].';opacity:'.$header['opacity'].'}'
-							: '';
+		$_css = ''; // start with an empty string
 
-		// set the nav icon color
-		$_css .= ( isset( $header['color'] ) && '' !== $header['color'] ) ? '#pwps-nav-toggle-a{color:'.$header['color'].';}' : '';
+		// set the header background and opacity
+		$_css .= '#pwps-header .pwps-header-overlay {
+			background-color: '.$hbgc.';
+			opacity: '.$hop.';
+		}';
+
+		// set the header color
+		$_css .= '#pwps-header {
+			color:'.$hcol.';
+		}';
 
 		return esc_attr( (string) $_css );
+	}
+}
+
+
+if( ! function_exists( 'pwps_get_body_styles' ) ) {
+	/**
+	 * Return the css for the body container.
+	 *
+	 * @return string css for body container
+	 */
+	function pwps_get_body_styles() {
+		/**
+		 * holds associative array with body styles already cleaned up.
+		 *
+		 * Returns the following values:
+		 * - opacity          => '' (string)
+		 * - background-color => '' (string)
+		 * - color            => '' (string)
+		 *
+		 * @see pwps_escape_string this function returns "safe to use" values.
+		 *
+		 * @var array
+		 */
+		$body = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[body]' ) );
+
+		// if there is no css, set the default css
+		$width = ( isset( $body['max-width'] )             && ! empty( $body['max-width'] ) )            ? $body['max-width']            : '1200px';
+
+		$bbgc = ( isset( $body['background-color'] )  && ! empty( $body['background-color'] ) ) ? $body['background-color'] : '#FFFFFF';
+		$bcol = ( isset( $body['color'] )             && ! empty( $body['color'] ) )            ? $body['color']            : '#444444';
+
+		$h1col = ( isset( $body['h1-color'] )             && ! empty( $body['h1-color'] ) )            ? $body['h1-color']            : '#222222';
+		$h2col = ( isset( $body['h2-color'] )             && ! empty( $body['h2-color'] ) )            ? $body['h2-color']            : '#222222';
+
+		$_css = ''; // start with an empty string
+
+		// set the body background and opacity
+		$_css .= '.pwps-site-body {
+			background-color: '.$bbgc.';
+			color: '.$bcol.';
+		}';
+
+		$_css .= 'h1 {
+			color: '.$h1col.';
+		}';
+
+		$_css .= 'h2 {
+			color: '.$h2col.';
+		}';
+
+		$_css .= '.pwps-container {
+			max-width: '.$width.';
+		}';
+
+		return esc_attr( (string) $_css );
+	}
+}
+
+
+
+if ( ! function_exists( 'pwps_escape_string' ) ) {
+	/**
+	 * Cleans up a string to make it safe to use. Validation for the correct value or type of value should be done when safed in the database.
+	 *
+	 * It encodes the <, >, &, ” and ‘ (less than, greater than, ampersand, double quote and single quote) characters.
+	 * Then returns the string escaped for HTML output.
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/esc_html/ esc_html() documentation
+	 * @link https://developer.wordpress.org/reference/functions/esc_attr/ esc_attr() documentation
+	 *
+	 * @param  string $string string to clean up
+	 * @return string         string already cleaned up
+	 */
+	function pwps_escape_string( $string ) {
+		return ( '' !== $string ) ? esc_html( esc_attr( trim( (string) $string ) ) ) : '';
 	}
 }
 
@@ -173,6 +276,57 @@ if ( ! function_exists( 'pwps_get_nav_icon' ) ) {
 	 */
 	function pwps_get_nav_icon() {
 		return esc_attr( (string) premise_get_value( 'pwps_theme_options[nav-icon]' ) );
+	}
+}
+
+
+
+if ( ! function_exists( 'pwps_load_more_posts' ) ) {
+	/**
+	 * load more posts via ajax for infinte croll
+	 *
+	 * @wp-hook wp_ajax_pwps_load_more_posts
+	 * @wp-hook wp_ajax_nopriv_pwps_load_more_posts
+	 *
+	 * @return  string html for pots
+	 */
+	function pwps_load_more_posts() {
+		$paged = $_POST['page'];
+
+		$query = new WP_Query( array( 'paged' => $paged ) );
+
+		if ( $query->have_posts() ) {
+			while( $query->have_posts() ) {
+				$query->the_post();
+				get_template_part( 'content', 'loop' );
+			}
+		}
+		else {
+			die( '' ); // return empty string when no more posts were found
+		}
+
+		die(); // always dies at the end for ajax calls
+	}
+}
+
+
+
+if ( ! function_exists( 'pwps_customizer_control_styles' ) ) {
+
+	function pwps_customizer_control_styles() {
+		?>
+		<style type="text/css">
+		/* Header Section */
+		#accordion-section-pwps_customizer_header_section {
+
+		}
+
+		/* Opacity field */
+		#customize-control-pwps_customizer_header_opacity input {
+			max-width: 47px;
+		}
+		</style>
+		<?php
 	}
 }
 

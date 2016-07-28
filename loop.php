@@ -25,7 +25,7 @@
 
 			<?php endif; ?>
 
-			<?php get_template_part( 'content' );
+			<?php get_template_part( 'content', 'loop' );
 
 			// display comments if we comments are open and we have at least one comment
 			if ( is_singular() && ( comments_open() || get_comments_number() ) ) {
@@ -33,8 +33,6 @@
 			}
 
 		endwhile;
-
-		pwps_pagination();
 
 		if ( is_singular() ) :
 
@@ -50,3 +48,5 @@
 	?>
 
 </div>
+
+<?php pwps_pagination(); ?>

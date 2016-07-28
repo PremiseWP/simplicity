@@ -1,12 +1,14 @@
 (function($){
-	$(document).ready(function(){
+	$( document ).ready( function(){
 		// reference our variables for efficiency
-		var windowHeight = $(window).height(),
+		var windowHeight = $( window ).height(),
 		header       = $( '#pwps-header' ),
 		navToggle    = $( '#pwps-nav-toggle-a' ),
 		navSearch    = $( '#pwps-nav-search-input' ),
 		navOverlay   = $( '.pwps-nav-overlay' ),
-		sgrContent   = $( '#pwps-content' );
+		sgrContent   = $( '#pwps-content' ),
+		loadMorePosts = $( '.pwps-infinte-pagination' ),
+		loopContainer = $( '.pwps-the-loop' );
 
 		// initiate our javascript. this function is called at the end of this file.
 		function pwpsInitJs() {
@@ -15,12 +17,14 @@
 
 			// activate the nav search
 			navToggle.click( pwpsInitNav );
+
+			( loadMorePosts.length ) ? pwpsLoadMorePostsAjax() : false;
 		}
 
 		// fix spacing between main content and top of page since our header is fixed
 		function pwpsHeaderBump() {
 			sgrContent.css( 'margin-top', header.outerHeight() + 'px' );
-			$(window).resize( function(){
+			$( window ).resize( function(){
 				setTimeout( function() {
 					sgrContent.css( 'margin-top', header.outerHeight() + 'px' );
 					clearTimeout();
@@ -101,6 +105,38 @@
 			} );
 
 			return false;
+		}
+
+		// load posts via ajax for pagination
+		function pwpsLoadMorePostsAjax() {
+			var _paged = 2,
+			_load = loadMorePosts.premiseScroll( {
+				onScroll: function() {
+					_load.stopScroll(); // prevent this function from running twice
+
+					var $this = $( this ),
+					data = {
+						action: 'pwps_load_more_posts',
+						page: _paged
+					}
+
+					$this.addClass( 'pwps-loading' );
+
+					$.post( '/wp-admin/admin-ajax.php', data, function( r ) {
+						if ( '' == r ) {
+							$this.html( '<p class="premise-align-center">There are no more posts to load.</p>' );
+						}
+						else {
+							loopContainer.append( r );
+							$this.removeClass( 'pwps-loading' );
+							_load.startScroll(); // allow this function to run again
+						}
+						_paged++;
+					} );
+					return false;
+				},
+				offsetIn: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
+			} );
 		}
 
 		// run it!

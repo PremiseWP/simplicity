@@ -17,7 +17,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class( '' ); ?>>
+	<body <?php body_class( 'pwps-site-body' ); ?>>
 		<?php echo '<!-- ' . basename( get_page_template() ) . ' -->'; ?>
 
 		<header id="pwps-header">

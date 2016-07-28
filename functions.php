@@ -44,7 +44,7 @@ if ( function_exists( 'add_action' ) ) {
 	add_action( 'init', 'pwps_register_menu' );
 
 	// add the theme options page
-	add_action( 'init', array( PWPS_Theme_Options::get_instance(), 'init' ) );
+	// add_action( 'init', array( PWPS_Theme_Options::get_instance(), 'init' ) );
 	add_action( 'customize_register' , array( PWPS_Theme_Customizer::get_instance(), 'init' ) );
 
 	// Enqueue scripts.
@@ -53,5 +53,10 @@ if ( function_exists( 'add_action' ) ) {
 	add_action( 'wp_ajax_pwps_nav_search', array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
 	add_action( 'wp_ajax_nopriv_pwps_nav_search', array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
 
+	add_action( 'wp_ajax_pwps_load_more_posts', 'pwps_load_more_posts' );
+	add_action( 'wp_ajax_nopriv_pwps_load_more_posts', 'pwps_load_more_posts' );
+
 	add_action( 'wp_head', 'pwps_load_custom_css', 99 );
+
+	add_action( 'customize_controls_print_styles', 'pwps_customizer_control_styles' );
 }

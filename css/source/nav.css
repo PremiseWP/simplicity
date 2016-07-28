@@ -125,7 +125,7 @@
 
 #pwps-nav-toggle-a {
 	display: block;
-	color: #444444;
+	color: inherit;
 	cursor: pointer;
 }
 
