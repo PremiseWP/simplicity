@@ -335,7 +335,7 @@ function mytheme_customizer_live_preview() {
 	wp_enqueue_script(
 		  'simplicity-customizer-js',			//Give the script an ID
 		  get_template_directory_uri().'/js/theme-customizer.js',//Point to file
-		  array( 'jquery','customize-preview' ),	//Define dependencies
+		  array( 'jquery' ),	//Define dependencies
 		  '',						//Define a version (optional)
 		  true						//Put script in footer?
 	);
