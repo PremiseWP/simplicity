@@ -73,30 +73,16 @@ class PWPS_Theme_Options {
 	 * @param string html for options page
 	 */
 	public function options_page() {
-		$fields = array(
+		premise_field_section( array(
 			array(
-				'type'    => '',
-				'name'    => 'pwps_theme_options[]',
-				'label'   => 'Select A Nav Icon',
-				'default' => 'fa-search',
-				'wrapper_class' => 'span4',
-			),
-
-			array(
-				'type'    => 'text',
-				'name'    => 'pwps_theme_options[container-max-width]',
-				'label'   => 'Container Max Width',
-				'tooltip' => 'Enter value in px or % to determine the main container maximum width.',
-				'default' => '1200px',
-				'wrapper_class' => 'span4',
+				'type' => 'text',
+				'name' => 'pwps_theme_options',
 			),
 
 			array(
 				'type' => 'submit',
 			)
-		);
-
-		premise_field_section( $fields );
+		) );
 	}
 }
 

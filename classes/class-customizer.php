@@ -18,6 +18,11 @@ class PWPS_Theme_Customizer {
 	protected static $instance = null;
 
 
+	/**
+	 * Holds header options
+	 *
+	 * @var array
+	 */
 	public $header_options = array(
 		'id'          => 'pwps_customizer_header_section',
 		'key'         => 'header', // key to save serialized data
@@ -134,7 +139,7 @@ class PWPS_Theme_Customizer {
 	 * @param  object $wp_customize Wordpress Customize manager object.
 	 */
 	public function init( $wp_customize ) {
-
+		// save the wp_cusomize object for later use
 		$this->customize = $wp_customize;
 
 		// register the header section
@@ -145,20 +150,34 @@ class PWPS_Theme_Customizer {
 	}
 
 
-
+	/**
+	 * regiseter the header settings
+	 *
+	 * @return void register the settings
+	 */
 	public function header_section() {
 		$this->register_section( $this->header_options );
 	}
 
 
-
+	/**
+	 * regiseter the body settings
+	 *
+	 * @return void register the settings
+	 */
 	public function body_section() {
 		$this->register_section( $this->body_options );
 	}
 
 
-
+	/**
+	 * This function registers the settings for our customizer so that we dont have to do each setting manually as documented in the codex.
+	 *
+	 * @param  array $section  the section plus the settings for the section
+	 * @return void            registers the settings, does not return anything
+	 */
 	protected function register_section( $section ) {
+		// 1. Register the section
 		$this->customize->add_section( $section['id'],
 			array(
 				'title'       => __( $section['title'], 'pwps_text_domain' ),
@@ -169,6 +188,7 @@ class PWPS_Theme_Customizer {
 		);
 
 		foreach ( $section['settings'] as $k => $opt ) {
+			// 2. register the setting
 			$this->customize->add_setting( 'pwps_customizer_options['.$section['key'].']['.$k.']',
 				array(
 					'default'     => $opt['default'],
@@ -178,6 +198,7 @@ class PWPS_Theme_Customizer {
 				)
 			);
 
+			// 3. register the control
 			if ( 'color' == $opt['control'] ) {
 				$this->customize->add_control( new WP_Customize_Color_Control(
 					$this->customize,

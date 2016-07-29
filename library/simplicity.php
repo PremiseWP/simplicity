@@ -61,31 +61,11 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 
 if ( ! function_exists( 'pwps_pagination' ) ) {
 	/**
-	 * display the pagination for the site
+	 * display the pagination element that triggers the infinite scroll when in view
 	 *
 	 * @return string html for pagination
 	 */
 	function pwps_pagination() {
-		// global $wp_query;
-
-		// $big = 999999999; // need an unlikely integer
-
-		// $args = array(
-		// 	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-		// 	'format' => '?paged=%#%',
-		// 	'current' => max( 1, get_query_var('paged') ),
-		// 	'total' => $wp_query->max_num_pages,
-		// 	'mid_size' => 0,
-		// 	'prev_text' => '<i class="fa fa-chevron-left"></i>',
-		// 	'next_text' => '<i class="fa fa-chevron-right"></i>',
-		// );
-
-		// $html  = '<div class="pwps-pagination">';
-		// $html .= paginate_links( $args );
-		// $html .= '</div>';
-
-		// echo (string) $html;
-
 		?>
 
 		<div class="pwps-infinte-pagination">
@@ -211,13 +191,13 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 		$body = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[body]' ) );
 
 		// if there is no css, set the default css
-		$width = ( isset( $body['max-width'] )             && ! empty( $body['max-width'] ) )            ? $body['max-width']            : '1200px';
+		$width = ( isset( $body['max-width'] )        && ! empty( $body['max-width'] ) )        ? $body['max-width']        : '1200px';
 
-		$bbgc = ( isset( $body['background-color'] )  && ! empty( $body['background-color'] ) ) ? $body['background-color'] : '#FFFFFF';
-		$bcol = ( isset( $body['color'] )             && ! empty( $body['color'] ) )            ? $body['color']            : '#444444';
+		$bbgc  = ( isset( $body['background-color'] ) && ! empty( $body['background-color'] ) ) ? $body['background-color'] : '#FFFFFF';
+		$bcol  = ( isset( $body['color'] )            && ! empty( $body['color'] ) )            ? $body['color']            : '#444444';
 
-		$h1col = ( isset( $body['h1-color'] )             && ! empty( $body['h1-color'] ) )            ? $body['h1-color']            : '#222222';
-		$h2col = ( isset( $body['h2-color'] )             && ! empty( $body['h2-color'] ) )            ? $body['h2-color']            : '#222222';
+		$h1col = ( isset( $body['h1-color'] )         && ! empty( $body['h1-color'] ) )         ? $body['h1-color']         : '#222222';
+		$h2col = ( isset( $body['h2-color'] )         && ! empty( $body['h2-color'] ) )         ? $body['h2-color']         : '#222222';
 
 		$_css = ''; // start with an empty string
 
@@ -312,33 +292,35 @@ if ( ! function_exists( 'pwps_load_more_posts' ) ) {
 
 
 if ( ! function_exists( 'pwps_customizer_control_styles' ) ) {
-
+	/**
+	 * Enqueue our CSS file for the theme customizer controls
+	 *
+	 * @return void enqueues the css file to be loaded on the customizer page
+	 */
 	function pwps_customizer_control_styles() {
-		?>
-		<style type="text/css">
-		/* Header Section */
-		#accordion-section-pwps_customizer_header_section {
-
-		}
-
-		/* Opacity field */
-		#customize-control-pwps_customizer_header_opacity input {
-			max-width: 47px;
-		}
-		</style>
-		<?php
+		wp_enqueue_style(
+			'simplicity-customizer-css',			//Give the script an ID
+			get_template_directory_uri().'/css/theme-customizer.css'
+		);
 	}
 }
 
 
-function mytheme_customizer_live_preview() {
-	wp_enqueue_script(
-		  'simplicity-customizer-js',			//Give the script an ID
-		  get_template_directory_uri().'/js/theme-customizer.js',//Point to file
-		  array( 'jquery' ),	//Define dependencies
-		  '',						//Define a version (optional)
-		  true						//Put script in footer?
-	);
-}
 
+if ( ! function_exists( 'pwps_enqueue_customizer_js' ) ) {
+	/**
+	 * Enqueue our JS file for the theme customizer controls
+	 *
+	 * @return void enqueues the js file to be loaded on the customizer page
+	 */
+	function pwps_enqueue_customizer_js() {
+		wp_enqueue_script(
+			'simplicity-customizer-js',			//Give the script an ID
+			get_template_directory_uri().'/js/theme-customizer.js',//Point to file
+			array( 'jquery' ),	//Define dependencies
+			'',						//Define a version (optional)
+			true						//Put script in footer?
+		);
+	}
+}
 ?>

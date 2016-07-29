@@ -15,13 +15,13 @@ require_once 'class-tgm-activation-plugin.php';
 /**
  * Register TGM_Plugin_Activation Hook
  */
-add_action( 'tgmpa_register', 'themeprefix_register_required_plugins' );
+add_action( 'tgmpa_register', 'pwps_register_required_plugins' );
 
 /**
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function themeprefix_register_required_plugins() {
+function pwps_register_required_plugins() {
     /*
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
@@ -47,9 +47,9 @@ function themeprefix_register_required_plugins() {
      * Array of configuration settings. Amend each line as needed.
      */
     $config = array(
-        'id'           => 'UNIQUE_ID',              // Unique ID for hashing notices for multiple instances of TGMPA.
+        'id'           => 'pwps_simplicity',              // Unique ID for hashing notices for multiple instances of TGMPA.
         'default_path' => '',                  // Default absolute path to bundled plugins.
-        'menu'         => 'UNIQUE_ID-slug',         // Menu slug.
+        'menu'         => 'themes',         // Menu slug.
         'parent_slug'  => 'plugins.php',       // Parent menu slug.
         'capability'   => 'manage_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
         'has_notices'  => true,                // Show admin notices or not.

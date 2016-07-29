@@ -15,15 +15,11 @@
 	 */
 	if ( have_posts() ) :
 
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) : the_post(); ?>
 
-			if ( ! is_home() && ! is_front_page() ) : ?>
-
-				<div class="pwps-post-title">
-					<h1><?php the_title(); ?></h1>
-				</div>
-
-			<?php endif; ?>
+			<div class="pwps-post-title">
+				<h1><?php the_title(); ?></h1>
+			</div>
 
 			<?php get_template_part( 'content', 'loop' );
 
