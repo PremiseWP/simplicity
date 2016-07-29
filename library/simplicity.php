@@ -275,7 +275,7 @@ if ( ! function_exists( 'pwps_get_nav_icon' ) ) {
 	 * @return string fa icon code to use
 	 */
 	function pwps_get_nav_icon() {
-		return esc_attr( (string) premise_get_value( 'pwps_theme_options[nav-icon]' ) );
+		return esc_attr( (string) premise_get_value( 'pwps_customizer_options[header][nav-icon]' ) );
 	}
 }
 
@@ -328,6 +328,17 @@ if ( ! function_exists( 'pwps_customizer_control_styles' ) ) {
 		</style>
 		<?php
 	}
+}
+
+
+function mytheme_customizer_live_preview() {
+	wp_enqueue_script(
+		  'simplicity-customizer-js',			//Give the script an ID
+		  get_template_directory_uri().'/js/theme-customizer.js',//Point to file
+		  array( 'jquery','customize-preview' ),	//Define dependencies
+		  '',						//Define a version (optional)
+		  true						//Put script in footer?
+	);
 }
 
 ?>

@@ -11,6 +11,7 @@
 // Includes
 require 'library/theme-setup.php';
 require 'library/simplicity.php';
+require 'classes/class-customizer.php';
 require 'classes/class-options-page.php';
 require 'classes/class-nav-search.php';
 
@@ -59,4 +60,7 @@ if ( function_exists( 'add_action' ) ) {
 	add_action( 'wp_head', 'pwps_load_custom_css', 99 );
 
 	add_action( 'customize_controls_print_styles', 'pwps_customizer_control_styles' );
+
+	add_action( 'customize_controls_print_scripts', 'mytheme_customizer_live_preview' );
+
 }
