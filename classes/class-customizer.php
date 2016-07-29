@@ -21,12 +21,17 @@ class PWPS_Theme_Customizer {
 	public $header_options = array(
 		'id'          => 'pwps_customizer_header_section',
 		'key'         => 'header', // key to save serialized data
-		'title'       => 'Simpliscity Header',
+		'title'       => 'Simplicity Header',
 		'priority'    => 35,
 		'capability'  => 'edit_theme_options',
 		'description' => 'This section controls most of your header settings. Your site\'s logo can be changed from the \'Site Identity\' section.',
 		// The options for this section
 		'settings'    => array(
+			'nav-icon' => array(
+				'default'    => 'fa-search',
+				'control_id' => 'pwps_customizer_header_fa_icon',
+				'label'      => 'Nav Icon',
+			),
 			'background-color' => array(
 				'default'    => '#FDFDFD',
 				'control'    => 'color',
@@ -44,11 +49,6 @@ class PWPS_Theme_Customizer {
 				'default'    => '0.6',
 				'control_id' => 'pwps_customizer_header_opacity',
 				'label'      => 'Header Opacity',
-			),
-			'nav-icon' => array(
-				'default'    => 'fa-search',
-				'control_id' => 'pwps_customizer_header_fa_icon',
-				'label'      => 'Nav Icon',
 			),
 		)
 	);
@@ -134,12 +134,14 @@ class PWPS_Theme_Customizer {
 	 * @param  object $wp_customize Wordpress Customize manager object.
 	 */
 	public function init( $wp_customize ) {
+
 		$this->customize = $wp_customize;
+
 		// register the header section
-		$this->header_section( $wp_customize );
+		$this->header_section();
 
 		// register the body section
-		$this->body_section( $wp_customize );
+		$this->body_section();
 	}
 
 
@@ -195,6 +197,7 @@ class PWPS_Theme_Customizer {
 						'label'       => __( $opt['label'], 'pwps_text_domain' ),
 						'section'     => $section['id'],
 						'settings'    => 'pwps_customizer_options['.$section['key'].']['.$k.']',
+						'description' => isset( $opt['description'] ) ? $opt['description'] : '',
 					)
 				);
 			}
