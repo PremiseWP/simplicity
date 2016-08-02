@@ -21,7 +21,12 @@
 				<h1><?php the_title(); ?></h1>
 			</div>
 
-			<?php get_template_part( 'content', 'loop' );
+			<?php
+			if ( is_singular() ) :
+				get_template_part( 'content' );
+			else :
+				get_template_part( 'content', 'loop' );
+			endif;
 
 			// display comments if we comments are open and we have at least one comment
 			if ( is_singular() && ( comments_open() || get_comments_number() ) ) {
