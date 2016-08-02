@@ -32,7 +32,7 @@
 			} );
 		}
 
-		var initialPage = sgrContent[0].innerHTML;
+		var initialPage = ( sgrContent.length ) ? sgrContent[0].innerHTML : '';
 		// initiate nav search UI
 		function pwpsInitNav() {
 			// continue if reset was successful
