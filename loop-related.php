@@ -31,10 +31,10 @@ if ( $tags ) :
 
 	// only display this section if there are related posts
 	if ( $lr_query->have_posts() ) : ?>
-		<section id="loop-related-posts" class="pwps-section-border-top">
+		<section id="pwps-loop-related">
 			<h2>Similar Posts..</h2>
 			<div class="pwps-loop-related">
-				<div class="premise-row"><?php
+				<div class="premise-scroller"><?php
 					while( $lr_query->have_posts() ) : $lr_query->the_post();
 
 						get_template_part( 'content', 'related' );

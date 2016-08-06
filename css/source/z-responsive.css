@@ -1,8 +1,15 @@
 
 @media screen and (min-width: 600px) {
-	/* float thumbnail right */
-	.post-thumbnail {
-		float: right;
-		padding-left: 20px;
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.pwps-the-loop .pwps-post-thumbnail {
+		float: left;
+		padding-right: 20px;
+		max-width: 400px;
+		box-sizing: border-box;
 	}
 }

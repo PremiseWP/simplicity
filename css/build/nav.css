@@ -220,11 +220,6 @@
 	}
 }
 
-/* Nav Result */
-.pwps-nav-results {
-	padding-top: 100px;
-}
-
 /* When nav is active */
 #pwps-header.pwps-nav-active {
 	background-color: transparent;

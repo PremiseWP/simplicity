@@ -268,12 +268,22 @@ if ( ! function_exists( 'pwps_load_more_posts' ) ) {
 	 * @wp-hook wp_ajax_pwps_load_more_posts
 	 * @wp-hook wp_ajax_nopriv_pwps_load_more_posts
 	 *
+	 * @todo validate page
+	 *
 	 * @return  string html for pots
 	 */
 	function pwps_load_more_posts() {
-		$paged = $_POST['page'];
+		$data = array_map( 'sanitize_text_string', $_POST );
 
-		$query = new WP_Query( array( 'paged' => $paged ) );
+		// start our arguments for the query with published posts only
+		$args = array(
+			'post_status' => 'publish',
+		);
+
+		$args['s']     = ( isset( $_POST['s'] )    && ! empty( $_POST['s'] ) )    ? $_POST['s']    : false;
+		$args['paged'] = ( isset( $_POST['page'] ) && ! empty( $_POST['page'] ) ) ? $_POST['page'] : false;
+
+		$query = new WP_Query( $args );
 
 		if ( $query->have_posts() ) {
 			while( $query->have_posts() ) {
@@ -323,4 +333,42 @@ if ( ! function_exists( 'pwps_enqueue_customizer_js' ) ) {
 		);
 	}
 }
+
+
+if ( ! function_exists( 'pwps_the_post_meta' ) ) {
+	/**
+	 * display the post meta
+	 *
+	 * @return string the html for the post meta
+	 */
+	function pwps_the_post_meta() {
+		if ( 'page' !== get_post_type() ) : ?>
+			<div class="pwps-post-meta">
+				<div class="pwps-meta-item pwps-date-meta">
+					<span>Date: <?php echo esc_html( get_post_time( 'j/n/y', true ) ); ?></span>
+				</div>
+				<div class="pwps-meta-item pwps-author-meta">
+					<span>By: <?php the_author(); ?></span>
+				</div>
+				<?php if ( $pwps_format = get_post_format() ) : ?>
+					<div class="pwps-meta-item pwps-format-meta">
+						<span class="pwps-meta-other"><?php echo esc_html( $pwps_format ); ?></span>
+					</div>
+				<?php endif; ?>
+				<?php if ( '' !== $pwpws_categories = get_the_category_list( ', ' ) ) : ?>
+					<div class="pwps-meta-item pwps-categories-meta">
+						<?php echo 'Found in: ' . $pwpws_categories; ?>
+					</div>
+				<?php endif; ?>
+				<?php if ( function_exists( 'sharing_display' ) ) : ?>
+					<div class="pwps-meta-item pwps-social-meta">
+						<?php echo sharing_display(); ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php endif;
+	}
+}
+
+
 ?>

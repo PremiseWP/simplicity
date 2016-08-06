@@ -80,6 +80,11 @@ table td {
 	text-align: left;
 }
 
+/* scoped to content */
+.post-content table {
+	width: 100%;
+}
+
 /* Lists */
 
 dl,
@@ -289,7 +294,12 @@ p.error {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
-	box-sizing: border-box;
+}
+
+.pwps-container:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 #pwps-content {
@@ -305,11 +315,6 @@ p.error {
 /* Admin bar */
 body.admin-bar #pwps-header {
 	margin-top: 32px;
-}
-
-.pwps-section-border-top {
-	margin-top: 100px;
-	padding-top: 60px;
 }
 
 .pwps-section {
@@ -369,16 +374,20 @@ body.admin-bar #pwps-header {
 	margin-bottom: 60px;
 }
 
-.pwps-post-title {
-	word-break: break-word;
+.pwps-post-title h2,
+.pwps-post-title h3 {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .pwps-post-thumbnail {
-	/*margin-bottom: 20px;*/
+	margin-bottom: 20px;
 }
 
 .pwps-post-meta {
-
+	clear: both; /* important - issue found during testing when excerpt is too short */
 }
 
 .pwps-meta-item {
@@ -433,21 +442,88 @@ body.admin-bar #pwps-header {
 	Comments
  */
 
-#comments {
-	border-top: 1px solid #CCCCCC
+#pwps-comments {
+	margin-top: 100px;
+	padding-top: 60px;
+	border-top: 1px solid #CCCCCC;
 }
 
-#commentform .logged-in-as {
+.pwps-comment-list {
+	margin-bottom: 0;
+}
+
+.pwps-comment-list .comment {
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.pwps-comment-list .comment:last-child {
+	margin-bottom: 0;
+}
+
+.pwps-comment-list .comment .comment-body {
+	position: relative;
+	padding-bottom: 60px;
+	min-height: 140px; /* !important - 100px img size plus padding 30px plus 10px additional margin*/
+	height: auto;
+}
+
+.pwps-comment-list .comment .comment-body p {
+	font-style: italic;
+	color: #444;
+}
+
+.pwps-comment-list .comment .comment-body .comment-meta,
+.pwps-comment-list .comment .comment-body .reply {
+ 	position: absolute;
+	bottom: 0;
+	line-height: 30px;
+ }
+
+.pwps-comment-list .comment .comment-body .comment-meta {
+	right: 0;
+}
+
+.pwps-comment-list .comment .comment-body .reply {
+	left: 0;
+}
+
+.pwps-comment-list .comment .comment-body .comment-author {
+	margin-bottom: 15px;
+}
+
+.pwps-comment-list .comment .comment-body .comment-author img {
+	float: left;
+	margin-right: 20px;
+}
+
+.pwps-comment-list .comment .comment-body .comment-author cite.fn,
+.pwps-comment-list .comment .comment-body .comment-author .says {
+	font-style: italic;
+	color: #000;
+	/*font-size: 90%;*/
+}
+
+/* The comment form */
+
+#pwps-comments #respond {
+	padding: 80px
+}
+
+#pwps-comment-form .logged-in-as {
 	text-align: right;
 	font-size: 14px;
 	margin: 30px 0;
 }
 
-#commentform .comment-form-comment label {
+#pwps-comment-form .comment-form-comment label {
 	display: none; /* remove the comments label */
 }
 
-#commentform .comment-form-comment textarea#comment {
+#pwps-comment-form .comment-form-comment textarea#comment {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -457,55 +533,77 @@ body.admin-bar #pwps-header {
 	margin-top: 15px;
 }
 
-.comment-list {
-	/*padding-top: 20px;*/
+#pwps-comment-form .comment-form-author,
+#pwps-comment-form .comment-form-email,
+#pwps-comment-form .comment-form-url {
+	display: block;
+	margin-bottom: 30px;
 }
 
-.comment-list .comment {
-	border-bottom: 1px solid #CCCCCC;
-	margin-bottom: 40px;
-	padding-bottom: 20px;
+#pwps-comment-form .comment-form-author label,
+#pwps-comment-form .comment-form-email label,
+#pwps-comment-form .comment-form-url label {
+	display: block;
+	margin-bottom: 5px;
 }
 
-.comment-list .comment .comment-body {
-	position: relative;
-	padding-bottom: 60px;
-	min-height: 140px; /* !important - 100px img size plus padding 30px plus 10px additional margin*/
-	height: auto;
-}
-
-.comment-list .comment .comment-body p {
-	font-style: italic;
-	color: #444;
-}
-
-.comment-list .comment .comment-body .comment-meta,
-.comment-list .comment .comment-body .reply {
- 	position: absolute;
-	bottom: 0;
+#pwps-comment-form .comment-form-author input,
+#pwps-comment-form .comment-form-email input,
+#pwps-comment-form .comment-form-url input {
+	border: 1px solid #888888;
+	border-radius: 2px;
+	display: block;
+	width: 100%;
+	font-size: 16px;
 	line-height: 30px;
- }
-
-.comment-list .comment .comment-body .comment-meta {
-	right: 0;
+	padding: 3px;
+	box-sizing: border-box;
 }
 
-.comment-list .comment .comment-body .reply {
-	left: 0;
+
+/*
+	Related Posts
+ */
+
+#pwps-loop-related {
+	margin-top: 100px;
+	padding-top: 60px;
+	border-top: 1px solid #CCCCCC
 }
 
-.comment-list .comment .comment-body .comment-author {
-	margin-bottom: 15px;
+.pwps-loop-related {
+	margin-top: 40px;
 }
 
-.comment-list .comment .comment-body .comment-author img {
-	float: left;
-	margin-right: 20px;
+.pwps-related-post {
+	vertical-align: top;
+	padding: 0 20px;
+	border-right: 1px solid #CCCCCC;
 }
 
-.comment-list .comment .comment-body .comment-author cite.fn,
-.comment-list .comment .comment-body .comment-author .says {
-	font-style: italic;
-	color: #000;
-	/*font-size: 90%;*/
+.pwps-related-post:first-child {
+	padding-left: 0;
+}
+
+.pwps-loop-related .premise-scroller {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+/* Premise Scroller */
+
+.premise-scroller {
+	display: block;
+	box-sizing: border-box;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.premise-scroller > [class^="span"],
+.premise-scroller > [class*=" span"],
+.premise-scroller > [class^="col"],
+.premise-scroller > [class*=" col"] {
+	display: inline-block;
+	float: none;
+	white-space: normal;
 }

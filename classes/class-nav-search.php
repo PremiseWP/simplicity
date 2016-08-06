@@ -67,7 +67,8 @@ class PWPS_Nav_Search {
 		$search = ( isset( $_POST['search'] ) && ! empty( $_POST['search'] ) ) ? (string) sanitize_text_field( $_POST['search'] ) : '';
 
 		if ( '' !== $action && '' !== $search ) {
-			$this->search( $search );
+			$this->s = $search;
+			$this->search();
 		}
 		die();
 	}
@@ -76,17 +77,12 @@ class PWPS_Nav_Search {
 	/**
 	 * Perform the search
 	 *
-	 * @param  string $search string to search for
-	 *
 	 * @return void           does not return anything. this function performs the search and calls the loop.
 	 */
-	public function search( $search ) {
-		$this->s = $search;
-
+	public function search() {
 		$this->query = new WP_Query( array( 's' => $this->s, 'post_status' => 'publish' ) );
-		wp_reset_query(); // reset query immediately, we already saved the object reference
-
 		$this->loop();
+		wp_reset_query(); // reset query
 	}
 
 
@@ -97,27 +93,11 @@ class PWPS_Nav_Search {
 	 */
 	public function loop() {
 		if ( $this->query->have_posts() ) {
-			$this->load();
+			while( $this->query->have_posts() ) {
+				$this->query->the_post();
+				get_template_part( 'content', 'loop' );
+			}
 		}
-	}
-
-
-	/**
-	 * load each result post from results
-	 *
-	 * @return string html for loop results
-	 */
-	public function load() {
-		?>
-		<div class="nav-results">
-			<div class="premise-row">
-				<?php while( $this->query->have_posts() ) {
-					$this->query->the_post();
-					get_template_part( 'content', 'loop' );
-				} ?>
-			</div>
-		</div>
-		<?php
 	}
 }
 

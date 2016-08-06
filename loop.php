@@ -17,12 +17,11 @@
 
 		while ( have_posts() ) : the_post(); ?>
 
-			<div class="pwps-post-title">
-				<h1><?php the_title(); ?></h1>
-			</div>
-
 			<?php
-			if ( is_singular() ) :
+			if ( is_singular() ) : ?>
+				<div class="pwps-post-title">
+					<h1><?php the_title(); ?></h1>
+				</div><?php
 				get_template_part( 'content' );
 			else :
 				get_template_part( 'content', 'loop' );
@@ -50,4 +49,4 @@
 
 </div>
 
-<?php pwps_pagination(); ?>
+<?php if ( ! is_singular() ) pwps_pagination(); ?>

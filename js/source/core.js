@@ -6,7 +6,7 @@
 		navToggle    = $( '#pwps-nav-toggle-a' ),
 		navSearch    = $( '#pwps-nav-search-input' ),
 		navOverlay   = $( '.pwps-nav-overlay' ),
-		sgrContent   = $( '#pwps-content' ),
+		pwpsContent   = $( '#pwps-content' ),
 		loadMorePosts = $( '.pwps-infinte-pagination' ),
 		loopContainer = $( '.pwps-the-loop' );
 
@@ -18,21 +18,22 @@
 			// activate the nav search
 			navToggle.click( pwpsInitNav );
 
-			( loadMorePosts.length ) ? pwpsLoadMorePostsAjax() : false;
+			// bind infinite scroll
+			pwpsLoadMorePostsAjax();
 		}
 
 		// fix spacing between main content and top of page since our header is fixed
 		function pwpsHeaderBump() {
-			sgrContent.css( 'margin-top', header.outerHeight() + 'px' );
+			pwpsContent.css( 'margin-top', header.outerHeight() + 'px' );
 			$( window ).resize( function(){
 				setTimeout( function() {
-					sgrContent.css( 'margin-top', header.outerHeight() + 'px' );
+					pwpsContent.css( 'margin-top', header.outerHeight() + 'px' );
 					clearTimeout();
 				}, 1000 );
 			} );
 		}
 
-		var initialPage = ( sgrContent.length ) ? sgrContent[0].innerHTML : '';
+		var initialPage = ( loopContainer.length ) ? loopContainer[0].innerHTML : '';
 		// initiate nav search UI
 		function pwpsInitNav() {
 			// continue if reset was successful
@@ -59,8 +60,8 @@
 				if ( 1 <= s.length ) {
 					pwpsDoSearch( s );
 				}
-				else {
-					sgrContent.html( initialPage );
+				else { // clean up loop and place inital content back
+					loopContainer.removeClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', '' ).html( initialPage );
 					navOverlay.removeClass( 'loading' );
 				}
 			} );
@@ -100,8 +101,9 @@
 
 			// call the ajax hook and pass data
 			$.post( '/wp-admin/admin-ajax.php', data, function( resp ) {
-				sgrContent.html( resp );
+				loopContainer.addClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', s ).html( resp );
 				navOverlay.removeClass( 'loading' );
+				pwpsLoadMorePostsAjax();
 			} );
 
 			return false;
@@ -109,15 +111,23 @@
 
 		// load posts via ajax for pagination
 		function pwpsLoadMorePostsAjax() {
-			var _paged = 2,
-			_load = loadMorePosts.premiseScroll( {
+			if ( ! $( '.pwps-infinte-pagination' ).length ) return false;
+
+			var search_paged = 2, loop_paged = 2,
+
+			_load = $( '.pwps-infinte-pagination' ).premiseScroll( {
 				onScroll: function() {
 					_load.stopScroll(); // prevent this function from running twice
 
 					var $this = $( this ),
 					data = {
 						action: 'pwps_load_more_posts',
-						page: _paged
+						page: loopContainer.is( '.pwps-nav-results' ) ? search_paged : loop_paged,
+					}
+
+					if ( loopContainer.is( '.pwps-nav-results' )
+						&& '' !== loopContainer.attr( 'data-pwps-nav-search' ) ) {
+						data.s = loopContainer.attr( 'data-pwps-nav-search' );
 					}
 
 					$this.addClass( 'pwps-loading' );
@@ -131,8 +141,10 @@
 							$this.removeClass( 'pwps-loading' );
 							_load.startScroll(); // allow this function to run again
 						}
-						_paged++;
+						loopContainer.is( '.pwps-nav-results' ) ? search_paged++ : loop_paged++;
 					} );
+					console.log( 'search: ' + search_paged );
+					console.log( 'loop: ' + loop_paged );
 					return false;
 				},
 				offsetIn: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
