@@ -36,7 +36,7 @@
 					</div>
 					<!-- The search field -->
 					<div class="pwps-nav-search">
-						<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Find episodes, recipes, and more">
+						<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Search anything.. Pages, Posts, Plugins, Themes, etc">
 					</div>
 					<div class="premise-clear"></div>
 					<!-- The nav -->

@@ -33,6 +33,12 @@
 			} );
 		}
 
+		if ( ! loopContainer.lenght ) {
+			_conent = pwpsContent.html();
+			pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
+			loopContainer = $( '.pwps-the-loop' );
+		}
+
 		var initialPage = ( loopContainer.length ) ? loopContainer[0].innerHTML : '';
 		// initiate nav search UI
 		function pwpsInitNav() {
@@ -56,14 +62,18 @@
 				var $this = $( this ),
 				s = $this.val();
 
-				// if string is at least 1 character long
-				if ( 1 <= s.length ) {
-					pwpsDoSearch( s );
-				}
-				else { // clean up loop and place inital content back
-					loopContainer.removeClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', '' ).html( initialPage );
-					navOverlay.removeClass( 'loading' );
-				}
+				setTimeout(function(){
+					// if string is at least 1 character long
+					if ( 1 <= s.length ) {
+							pwpsDoSearch( s );
+					}
+					else { // clean up loop and place inital content back
+						loopContainer.removeClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', '' ).html( initialPage );
+						navOverlay.removeClass( 'loading' );
+					}
+					clearTimeout();
+				}, 300);
+
 			} );
 
 			// click anywhere to exit
@@ -143,8 +153,6 @@
 						}
 						loopContainer.is( '.pwps-nav-results' ) ? search_paged++ : loop_paged++;
 					} );
-					console.log( 'search: ' + search_paged );
-					console.log( 'loop: ' + loop_paged );
 					return false;
 				},
 				offsetIn: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
