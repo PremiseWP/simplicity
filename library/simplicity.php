@@ -95,7 +95,6 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 			?>
 		</style>
 		<?php
-		return (string) $_css;
 	}
 }
 
@@ -369,6 +368,3 @@ if ( ! function_exists( 'pwps_the_post_meta' ) ) {
 		<?php endif;
 	}
 }
-
-
-?>
