@@ -199,7 +199,8 @@ class PWPS_Theme_Customizer {
 			);
 
 			// 3. register the control
-			if ( 'color' == $opt['control'] ) {
+			if ( isset( $opt['control'] )
+				&& 'color' == $opt['control'] ) {
 				$this->customize->add_control( new WP_Customize_Color_Control(
 					$this->customize,
 					$opt['control_id'],
