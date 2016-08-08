@@ -8,8 +8,8 @@
 ?><!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title><?php wp_title( '&raquo;', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 		<!-- Make Responsive -->
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
