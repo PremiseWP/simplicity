@@ -15,6 +15,12 @@
 			// fix header space
 			pwpsHeaderBump();
 
+			if ( ! loopContainer.length ) {
+				_conent = pwpsContent.html();
+				pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
+				loopContainer = $( '.pwps-the-loop' );
+			}
+
 			// activate the nav search
 			navToggle.click( pwpsInitNav );
 
@@ -31,12 +37,6 @@
 					clearTimeout();
 				}, 1000 );
 			} );
-		}
-
-		if ( ! loopContainer.lenght ) {
-			_conent = pwpsContent.html();
-			pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
-			loopContainer = $( '.pwps-the-loop' );
 		}
 
 		var initialPage = ( loopContainer.length ) ? loopContainer[0].innerHTML : '';
@@ -113,7 +113,7 @@
 			$.post( '/wp-admin/admin-ajax.php', data, function( resp ) {
 				loopContainer.addClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', s ).html( resp );
 				navOverlay.removeClass( 'loading' );
-				pwpsLoadMorePostsAjax();
+				// pwpsLoadMorePostsAjax();
 			} );
 
 			return false;

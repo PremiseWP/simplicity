@@ -272,15 +272,23 @@ if ( ! function_exists( 'pwps_load_more_posts' ) ) {
 	 * @return  string html for pots
 	 */
 	function pwps_load_more_posts() {
-		$data = array_map( 'sanitize_text_string', $_POST );
+		$data = array_map( 'sanitize_text_field', $_POST );
 
 		// start our arguments for the query with published posts only
 		$args = array(
 			'post_status' => 'publish',
 		);
+		
+		if ( isset( $data['page'] ) && ! empty( $data['page'] ) ) {
+			$args['paged'] = $data['page'];
+		}
+		else {
+			die( 'There is no pagination. Please refresh this page to see if that fixes the issue.' );
+		}
 
-		$args['s']     = ( isset( $_POST['s'] )    && ! empty( $_POST['s'] ) )    ? $_POST['s']    : false;
-		$args['paged'] = ( isset( $_POST['page'] ) && ! empty( $_POST['page'] ) ) ? $_POST['page'] : false;
+		if ( isset( $data['s'] ) && ! empty( $data['s'] ) ) {
+			$args['s'] = $data['s'];
+		}
 
 		$query = new WP_Query( $args );
 
