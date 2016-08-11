@@ -26,6 +26,41 @@
 
 			// bind infinite scroll
 			pwpsLoadMorePostsAjax();
+
+			// posts link pages ajax
+			var pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
+			pwpsLinkPages.click( function( e ) {
+				e.preventDefault();
+
+				$( this ).parents( '.pwps-link-pages-ajax' ).addClass( 'pwps-loading' );
+
+				var href = $( this ).attr( 'href' ),
+				pCont = loopContainer.find( '.post-content' );
+
+				pCont.css( 'min-height', pCont.height() );
+				
+				$.ajax( {
+					url: href,
+					type: 'post',
+					success: function( r ) {
+						var content = $(r).find( '.pwps-post .post-content' );
+						pCont.html( content );
+						closePagination();
+						return false;
+					},
+					error: function( r ) {
+						pCont.append( '<p>Something went wrong, please refresh and try again.</p>' );
+						closePagination();
+						return false;
+					}
+				});
+				return false;
+
+				function closePagination() {
+					$( this ).parents( '.pwps-link-pages-ajax' ).removeClass( 'pwps-loading' );
+					pCont.css( 'min-height', '' );
+				}
+			} );
 		}
 
 		// fix spacing between main content and top of page since our header is fixed

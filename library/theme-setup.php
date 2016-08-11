@@ -9,6 +9,30 @@
 //  Hide the admin bar in the front end
 show_admin_bar( true );
 
+// Add theme supprt
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+	// Add Menu Support.
+	add_theme_support( 'menus' );
+
+	// Add Thumbnail Theme Support.
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-formats', array( 'video', 'image', 'gallery' ) );
+
+	// custom logo in customizer
+	add_theme_support( 'custom-logo', array(
+		'size' => 'custom-logo-size',
+	) );
+
+	// Image sizes
+	add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
+	add_image_size( 'custom-logo-size', 300, 150 ); // custom logo size
+
+	// add woocommerce support
+	add_theme_support( 'woocommerce' );
+}
+
 
 if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	/**
@@ -19,27 +43,6 @@ if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	 * @return void
 	 */
 	function pwps_theme_setup() {
-		// Add theme supprt
-		if ( function_exists( 'add_theme_support' ) ) {
-			// Add Menu Support.
-			add_theme_support( 'menus' );
-
-			// Add Thumbnail Theme Support.
-			add_theme_support( 'post-thumbnails' );
-			add_theme_support( 'post-formats', array( 'video', 'image' ) );
-
-			// custom logo in customizer
-			add_theme_support( 'custom-logo', array(
-				'size' => 'custom-logo-size',
-			) );
-
-			// Image sizes
-			add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
-			add_image_size( 'custom-logo-size', 300, 150 ); // custom logo size
-
-			// add woocommerce support
-			add_theme_support( 'woocommerce' );
-		}		
 		// flush rewrite rules
 		flush_rewrite_rules();
 	}

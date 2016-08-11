@@ -61,4 +61,6 @@ if ( function_exists( 'add_action' ) ) {
 	add_action('woocommerce_before_main_content', 'pwps_woocommerce_wrapper_start', 10);
 	add_action('woocommerce_after_main_content', 'pwps_woocommerce_wrapper_end', 10);
 
+	add_filter( 'gallery_css', 'pwps_gallery_shortcode' );
+
 }

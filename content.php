@@ -17,7 +17,25 @@
 	<?php endif; ?>
 
 	<div class="post-content">
-		<?php the_content(); ?>
+		<?php the_content();
+		$defaults = array(
+			'before'           => '<p class="pwps-link-pages-ajax">' . __( 'Pages:' ),
+			'after'            => '</p>',
+			'link_before'      => '',
+			'link_after'       => '',
+			'next_or_number'   => 'number',
+			'separator'        => ' ',
+			'nextpagelink'     => __( 'Next page' ),
+			'previouspagelink' => __( 'Previous page' ),
+			'pagelink'         => '%',
+			'echo'             => 1
+		);
+	 
+	    wp_link_pages( $defaults ); ?>
+	</div>
+
+	<div class="pwps-posts-navigation">
+		<p><?php posts_nav_link(); ?></p>
 	</div>
 
 </article>
