@@ -17,29 +17,9 @@ if ( ! class_exists( 'Premise_WP' ) ) {
 // Includes
 require 'library/theme-setup.php';
 require 'library/simplicity.php';
+require 'classes/class-nav-search.php';
 require 'classes/class-customizer.php';
 require 'classes/class-options-page.php';
-require 'classes/class-nav-search.php';
-
-
-// Add theme supprt
-if ( function_exists( 'add_theme_support' ) ) {
-	// Add Menu Support.
-	add_theme_support( 'menus' );
-
-	// Add Thumbnail Theme Support.
-	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'post-formats', array( 'video', 'image' ) );
-
-	// custom logo in customizer
-	add_theme_support( 'custom-logo', array(
-		'size' => 'custom-logo-size',
-	) );
-
-	// Image sizes
-	add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
-	add_image_size( 'custom-logo-size', 300, 150 ); // custom logo size
-}
 
 
 // Hooks
@@ -71,4 +51,14 @@ if ( function_exists( 'add_action' ) ) {
 	// Print styles and scripts for the customizer to work properly
 	add_action( 'customize_controls_print_styles', 'pwps_customizer_control_styles' );
 	add_action( 'customize_controls_print_scripts', 'pwps_enqueue_customizer_js' );
+
+	// Remove woocommerce defult wrappers and sidebar
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+	// add our own woocommerce wrappers
+	add_action('woocommerce_before_main_content', 'pwps_woocommerce_wrapper_start', 10);
+	add_action('woocommerce_after_main_content', 'pwps_woocommerce_wrapper_end', 10);
+
 }

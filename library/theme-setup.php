@@ -7,9 +7,9 @@
 
 
 //  Hide the admin bar in the front end
-show_admin_bar( false );
+show_admin_bar( true );
 
-// setup theme
+
 if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	/**
 	 * Setup the theme once it is activated.
@@ -19,13 +19,33 @@ if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	 * @return void
 	 */
 	function pwps_theme_setup() {
+		// Add theme supprt
+		if ( function_exists( 'add_theme_support' ) ) {
+			// Add Menu Support.
+			add_theme_support( 'menus' );
+
+			// Add Thumbnail Theme Support.
+			add_theme_support( 'post-thumbnails' );
+			add_theme_support( 'post-formats', array( 'video', 'image' ) );
+
+			// custom logo in customizer
+			add_theme_support( 'custom-logo', array(
+				'size' => 'custom-logo-size',
+			) );
+
+			// Image sizes
+			add_image_size( 'pwps-thumbnail', 800, 800 ); // post thumbnails
+			add_image_size( 'custom-logo-size', 300, 150 ); // custom logo size
+
+			// add woocommerce support
+			add_theme_support( 'woocommerce' );
+		}		
 		// flush rewrite rules
 		flush_rewrite_rules();
 	}
 }
 
 
-// Enqueue styles and scripts
 if ( ! function_exists( 'pwps_enqueue_scripts' ) ) {
 	/**
 	 * Enqueue theme scripts in the front end
@@ -44,8 +64,6 @@ if ( ! function_exists( 'pwps_enqueue_scripts' ) ) {
 }
 
 
-
-// Register menu locations
 if ( ! function_exists( 'pwps_register_menu' ) ) {
 	/**
 	 * Register theme menu location
@@ -62,4 +80,27 @@ if ( ! function_exists( 'pwps_register_menu' ) ) {
 	}
 }
 
+
+if ( ! function_exists( 'pwps_woocommerce_wrapper_start' ) ) {
+	/**
+	 * Begin woocommerce wrappers
+	 * 
+	 * @return string begining of wrapper
+	 */
+	function pwps_woocommerce_wrapper_start() {
+	  echo '<section id="pwps-woocommerce"><div class="pwps-the-loop">';
+	}
+}
+
+
+if ( ! function_exists( 'pwps_woocommerce_wrapper_end' ) ) {
+	/**
+	 * End woocommerce wrappers
+	 * 
+	 * @return string End of wrapper
+	 */
+	function pwps_woocommerce_wrapper_end() {
+	  echo '</div></section>';
+	}
+}
 ?>
