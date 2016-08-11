@@ -6,12 +6,6 @@
  */
 
 
-// Require Premise WP if it does not exist.
-if ( ! class_exists( 'Premise_WP' ) ) {
-	require '../includes/require-premise-wp.php';
-}
-
-
 //  Hide the admin bar in the front end
 show_admin_bar( false );
 
