@@ -278,7 +278,7 @@ if ( ! function_exists( 'pwps_load_more_posts' ) ) {
 		$args = array(
 			'post_status' => 'publish',
 		);
-		
+
 		if ( isset( $data['page'] ) && ! empty( $data['page'] ) ) {
 			$args['paged'] = $data['page'];
 		}
@@ -374,5 +374,23 @@ if ( ! function_exists( 'pwps_the_post_meta' ) ) {
 				<?php endif; ?>
 			</div>
 		<?php endif;
+	}
+}
+
+
+if ( ! function_exists( 'pwps_get_copyright_text' ) ) {
+	/**
+	 * Get the footer copyright and set dynamic content. Accepts html.
+	 * 
+	 * @return string the copyright text
+	 */
+	function pwps_get_copyright_text() {
+		// dynamic content
+		$pattern = array( '%COPY%', '%YEAR%', '%SITENAME%' );
+		$replace = array( '&copy;', date( 'Y' ), esc_html( get_option( 'blogname' ) ) );
+		$ct = (string) premise_get_value( 'pwps_customizer_options[footer][copyright]' );
+		
+		return (string) str_replace( $pattern, $replace, $ct );
+
 	}
 }

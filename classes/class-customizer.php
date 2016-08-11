@@ -27,7 +27,7 @@ class PWPS_Theme_Customizer {
 		'id'          => 'pwps_customizer_header_section',
 		'key'         => 'header', // key to save serialized data
 		'title'       => 'Simplicity Header',
-		'priority'    => 35,
+		'priority'    => 35.1,
 		'capability'  => 'edit_theme_options',
 		'description' => 'This section controls most of your header settings. Your site\'s logo can be changed from the \'Site Identity\' section.',
 		// The options for this section
@@ -68,7 +68,7 @@ class PWPS_Theme_Customizer {
 		'id'          => 'pwps_customizer_body_section',
 		'title'       => 'Simplicity Body',
 		'key'         => 'body',
-		'priority'    => 35,
+		'priority'    => 35.2,
 		'capability'  => 'edit_theme_options',
 		'description' => 'This section controls the styles for your site\'s body (main container).',
 		// The options for this section
@@ -104,6 +104,31 @@ class PWPS_Theme_Customizer {
 				'label'      => 'H2 Color',
 			),
 		),
+	);
+
+
+	/**
+	 * Holds footer options
+	 *
+	 * @var array
+	 */
+	public $footer_options = array(
+		'id'          => 'pwps_customizer_footer_section',
+		'key'         => 'footer', // key to save serialized data
+		'title'       => 'Simplicity Footer',
+		'priority'    => 35.3,
+		'capability'  => 'edit_theme_options',
+		'description' => 'This section controls your footer settings.',
+		// The options for this section
+		'settings'    => array(
+			'copyright' => array(
+				'type' => 'textarea', 
+				'default'    => '%COPY% %YEAR% %SITENAME%. All Rights Reserved.',
+				'control_id' => 'pwps_customizer_footer_copyright',
+				'label'      => 'Copyright',
+				'description' => 'Insert dynamic content such copyright symbol, date or site name by using %COPY%, %YEAR% or %SITENAME% (respectively).',
+			),
+		)
 	);
 
 
@@ -147,6 +172,9 @@ class PWPS_Theme_Customizer {
 
 		// register the body section
 		$this->body_section();
+
+		// register the footer section
+		$this->footer_section();
 	}
 
 
@@ -167,6 +195,16 @@ class PWPS_Theme_Customizer {
 	 */
 	public function body_section() {
 		$this->register_section( $this->body_options );
+	}
+
+
+	/**
+	 * regiseter the footer settings
+	 *
+	 * @return void register the settings
+	 */
+	public function footer_section() {
+		$this->register_section( $this->footer_options );
 	}
 
 
@@ -215,7 +253,7 @@ class PWPS_Theme_Customizer {
 			else {
 				$this->customize->add_control( $opt['control_id'],
 					array(
-						'type'        => 'text',
+						'type'        => isset( $opt['type'] ) ? $opt['type'] : 'text',
 						'label'       => __( $opt['label'], 'pwps_text_domain' ),
 						'section'     => $section['id'],
 						'settings'    => 'pwps_customizer_options['.$section['key'].']['.$k.']',

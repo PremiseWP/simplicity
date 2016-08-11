@@ -12,7 +12,7 @@
 	<footer id="footer">
 		<div class="pwps-container">
 			<div class="premise-align-center copyright">
-				<p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
+				<p><?php echo pwps_get_copyright_text(); ?></p>
 			</div>
 		</div>
 	</footer>
