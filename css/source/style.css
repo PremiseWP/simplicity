@@ -697,6 +697,16 @@ body.admin-bar #pwps-header {
 	float: left;
 }
 
+.gallery.gallery-columns-6 .gallery-item,
+.gallery.gallery-columns-7 .gallery-item,
+.gallery.gallery-columns-8 .gallery-item {
+	width: 48%;
+}
+
+.gallery.gallery-columns-9 .gallery-item {
+	width: 31.33%;
+}
+
 .gallery .gallery-item .gallery-icon {
 	position: relative;
 	padding-top: 75%;
