@@ -7,15 +7,16 @@
 
 ?>
 
-<article <?php post_class( 'pwps-post' ); ?>>
+<article <?php post_class( 'pwps-post pwps-attachment-post' ); ?>>
 
-	<?php if ( ! is_home() && ! is_front_page() ) : ?>
-		<div class="pwps-post-title">
-			<h1><?php the_title(); ?></h1>
-		</div>
-	<?php endif; ?>
+	<div class="pwps-post-title">
+		<h1><?php the_title(); ?></h1>
+	</div>
 
 	<div class="post-content">
+		<blockquote class="pwps-post-caption">
+			<?php the_excerpt(); ?>
+		</blockquote>
 		<?php the_content();
 		$defaults = array(
 			'before'           => '<p class="pwps-link-pages-ajax">' . __( 'Pages:' ),
