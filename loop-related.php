@@ -9,7 +9,7 @@
  */
 
 // get all tags for this post
-$tags = wp_get_post_tags($post->ID);
+$tags = wp_get_post_tags( $post->ID );
 
 // if ther are tags on this post, try to find other posts
 if ( $tags ) :
@@ -23,7 +23,7 @@ if ( $tags ) :
 	// prep our WP_Query arguments
 	$args = array(
 		'tag__in' => $tag_ids,
-		'post__not_in' => array($post->ID),
+		'post__not_in' => array( $post->ID ),
 	);
 
 	// query our posts
@@ -42,7 +42,7 @@ if ( $tags ) :
 					endwhile; ?>
 				</div>
 			</div>
-		</section><?php
+		</section><?php 
 	endif;
 
 	// reset our post query

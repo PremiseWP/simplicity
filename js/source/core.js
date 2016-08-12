@@ -15,11 +15,52 @@
 			// fix header space
 			pwpsHeaderBump();
 
+			if ( ! loopContainer.length ) {
+				_conent = pwpsContent.html();
+				pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
+				loopContainer = $( '.pwps-the-loop' );
+			}
+
 			// activate the nav search
 			navToggle.click( pwpsInitNav );
 
 			// bind infinite scroll
 			pwpsLoadMorePostsAjax();
+
+			// posts link pages ajax
+			var pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
+			pwpsLinkPages.click( function( e ) {
+				e.preventDefault();
+
+				$( this ).parents( '.pwps-link-pages-ajax' ).addClass( 'pwps-loading' );
+
+				var href = $( this ).attr( 'href' ),
+				pCont = loopContainer.find( '.post-content' );
+
+				pCont.css( 'min-height', pCont.height() );
+				
+				$.ajax( {
+					url: href,
+					type: 'post',
+					success: function( r ) {
+						var content = $(r).find( '.pwps-post .post-content' );
+						pCont.html( content );
+						closePagination();
+						return false;
+					},
+					error: function( r ) {
+						pCont.append( '<p>Something went wrong, please refresh and try again.</p>' );
+						closePagination();
+						return false;
+					}
+				});
+				return false;
+
+				function closePagination() {
+					$( this ).parents( '.pwps-link-pages-ajax' ).removeClass( 'pwps-loading' );
+					pCont.css( 'min-height', '' );
+				}
+			} );
 		}
 
 		// fix spacing between main content and top of page since our header is fixed
@@ -31,12 +72,6 @@
 					clearTimeout();
 				}, 1000 );
 			} );
-		}
-
-		if ( ! loopContainer.lenght ) {
-			_conent = pwpsContent.html();
-			pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
-			loopContainer = $( '.pwps-the-loop' );
 		}
 
 		var initialPage = ( loopContainer.length ) ? loopContainer[0].innerHTML : '';
@@ -113,7 +148,7 @@
 			$.post( '/wp-admin/admin-ajax.php', data, function( resp ) {
 				loopContainer.addClass( 'pwps-nav-results' ).attr( 'data-pwps-nav-search', s ).html( resp );
 				navOverlay.removeClass( 'loading' );
-				pwpsLoadMorePostsAjax();
+				// pwpsLoadMorePostsAjax();
 			} );
 
 			return false;

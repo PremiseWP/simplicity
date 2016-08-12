@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<section id="home">
+<section id="pwps-home">
 
 	<?php get_template_part( 'loop' ); ?>
 

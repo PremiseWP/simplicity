@@ -15,30 +15,15 @@
 	 */
 	if ( have_posts() ) :
 
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) : the_post();
 
-			<?php
-			if ( is_singular() ) : ?>
-				<div class="pwps-post-title">
-					<h1><?php the_title(); ?></h1>
-				</div><?php
-				get_template_part( 'content' );
+			if ( is_singular() ) :
+				get_template_part( 'content', get_post_type() );
 			else :
 				get_template_part( 'content', 'loop' );
 			endif;
 
-			// display comments if we comments are open and we have at least one comment
-			if ( is_singular() && ( comments_open() || get_comments_number() ) ) {
-				comments_template();
-			}
-
 		endwhile;
-
-		if ( is_singular() ) :
-
-			get_template_part( 'loop', 'related' );
-
-		endif;
 
 	else :
 
