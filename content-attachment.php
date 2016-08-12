@@ -1,6 +1,6 @@
 <?php
 /**
- * Content Template
+ * Attachment Page Template
  *
  * @package Simplicity
  */
@@ -14,24 +14,21 @@
 	</div>
 
 	<div class="post-content">
-		<blockquote class="pwps-post-caption">
-			<?php the_excerpt(); ?>
-		</blockquote>
-		<?php the_content();
-		$defaults = array(
-			'before'           => '<p class="pwps-link-pages-ajax">' . __( 'Pages:' ),
-			'after'            => '</p>',
-			'link_before'      => '',
-			'link_after'       => '',
-			'next_or_number'   => 'number',
-			'separator'        => ' ',
-			'nextpagelink'     => __( 'Next page' ),
-			'previouspagelink' => __( 'Previous page' ),
-			'pagelink'         => '%',
-			'echo'             => 1
-		);
-	 
-	    wp_link_pages( $defaults ); ?>
+		<div class="pwps-attachment-image">
+			<?php echo wp_get_attachment_image( get_the_ID(), 'full', true, array( 'class' => 'premise-responsive' ) ); ?>
+		</div>
+
+		<?php if ( get_the_excerpt() ) : ?>
+			<blockquote class="pwps-attachment-caption">
+				<?php the_excerpt(); ?>
+			</blockquote>
+		<?php endif; ?>
+
+		<div class="pwps-attachment-content">
+			<h3>More on this attachment</h3>
+			<p>Click on the thumbnail below to open the attachment.</p>
+			<?php the_content(); ?>
+		</div>
 	</div>
 
 	<div class="pwps-posts-navigation">

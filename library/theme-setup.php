@@ -7,7 +7,7 @@
 
 
 //  Hide the admin bar in the front end
-show_admin_bar( true );
+// show_admin_bar( true );
 
 // Add theme supprt
 if ( function_exists( 'add_theme_support' ) ) {

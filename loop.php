@@ -18,7 +18,7 @@
 		while ( have_posts() ) : the_post();
 
 			if ( is_singular() ) :
-				get_template_part( 'content', get_post_type() );
+				get_template_part( 'content', pwps_get_post_format() );
 			else :
 				get_template_part( 'content', 'loop' );
 			endif;

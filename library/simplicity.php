@@ -57,8 +57,6 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 }
 
 
-
-
 if ( ! function_exists( 'pwps_pagination' ) ) {
 	/**
 	 * display the pagination element that triggers the infinite scroll when in view
@@ -76,7 +74,6 @@ if ( ! function_exists( 'pwps_pagination' ) ) {
 		<?php
 	}
 }
-
 
 
 if ( ! function_exists( 'pwps_load_custom_css' ) ) {
@@ -99,8 +96,6 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 }
 
 
-
-
 if ( ! function_exists( 'pwps_get_container_max_width' ) ) {
 	/**
 	 * returns teh max width for the main container.
@@ -120,8 +115,6 @@ if ( ! function_exists( 'pwps_get_container_max_width' ) ) {
 		return esc_attr( (string) $_css );
 	}
 }
-
-
 
 
 if( ! function_exists( 'pwps_get_header_styles' ) ) {
@@ -223,7 +216,6 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 }
 
 
-
 if ( ! function_exists( 'pwps_escape_string' ) ) {
 	/**
 	 * Cleans up a string to make it safe to use. Validation for the correct value or type of value should be done when safed in the database.
@@ -243,8 +235,6 @@ if ( ! function_exists( 'pwps_escape_string' ) ) {
 }
 
 
-
-
 if ( ! function_exists( 'pwps_get_nav_icon' ) ) {
 	/**
 	 * gets the fa icon to use for the nav
@@ -257,7 +247,6 @@ if ( ! function_exists( 'pwps_get_nav_icon' ) ) {
 		return esc_attr( (string) premise_get_value( 'pwps_customizer_options[header][nav-icon]' ) );
 	}
 }
-
 
 
 if ( ! function_exists( 'pwps_load_more_posts' ) ) {
@@ -307,7 +296,6 @@ if ( ! function_exists( 'pwps_load_more_posts' ) ) {
 }
 
 
-
 if ( ! function_exists( 'pwps_customizer_control_styles' ) ) {
 	/**
 	 * Enqueue our CSS file for the theme customizer controls
@@ -321,7 +309,6 @@ if ( ! function_exists( 'pwps_customizer_control_styles' ) ) {
 		);
 	}
 }
-
 
 
 if ( ! function_exists( 'pwps_enqueue_customizer_js' ) ) {
@@ -396,40 +383,68 @@ if ( ! function_exists( 'pwps_get_copyright_text' ) ) {
 }
 
 
+if ( ! function_exists( 'pwps_gallery_css' ) ) {
 	/**
-	 * Builds the Gallery shortcode output.
-	 *
-	 * This implements the functionality of the Gallery Shortcode for displaying
-	 * WordPress images on a post.
-	 *
-	 * @since 2.5.0
-	 *
-	 * @staticvar int $instance
-	 *
-	 * @param array $attr {
-	 *     Attributes of the gallery shortcode.
-	 *
-	 *     @type string       $order      Order of the images in the gallery. Default 'ASC'. Accepts 'ASC', 'DESC'.
-	 *     @type string       $orderby    The field to use when ordering the images. Default 'menu_order ID'.
-	 *                                    Accepts any valid SQL ORDERBY statement.
-	 *     @type int          $id         Post ID.
-	 *     @type string       $itemtag    HTML tag to use for each image in the gallery.
-	 *                                    Default 'dl', or 'figure' when the theme registers HTML5 gallery support.
-	 *     @type string       $icontag    HTML tag to use for each image's icon.
-	 *                                    Default 'dt', or 'div' when the theme registers HTML5 gallery support.
-	 *     @type string       $captiontag HTML tag to use for each image's caption.
-	 *                                    Default 'dd', or 'figcaption' when the theme registers HTML5 gallery support.
-	 *     @type int          $columns    Number of columns of images to display. Default 3.
-	 *     @type string|array $size       Size of the images to display. Accepts any valid image size, or an array of width
-	 *                                    and height values in pixels (in that order). Default 'thumbnail'.
-	 *     @type string       $ids        A comma-separated list of IDs of attachments to display. Default empty.
-	 *     @type string       $include    A comma-separated list of IDs of attachments to include. Default empty.
-	 *     @type string       $exclude    A comma-separated list of IDs of attachments to exclude. Default empty.
-	 *     @type string       $link       What to link each image to. Default empty (links to the attachment page).
-	 *                                    Accepts 'file', 'none'.
-	 * }
-	 * @return string HTML content to display gallery.
+	 * Filter the gallery default css to return an empty string so that we can take over
+	 * 
+	 * @return string empty string
 	 */
-	function pwps_gallery_shortcode( $attr ) {
+	function pwps_gallery_css( $attr ) {
 	        return '';
 	}
+}
+
+
+if ( ! function_exists( 'pwps_insert_page_links' ) ) {
+	/**
+	 * insert the post page links after the content.
+	 *
+	 * The page links are links that appear at the bottom of the post content if the user
+	 * inserts a <!--nextpage-->. This is useful if your content is too long and you want 
+	 * to load it in separate pages. 
+	 * 
+	 * @param  string $content the original content
+	 * @return string          the filtered content
+	 */
+	function pwps_insert_page_links( $content ) {
+		return $content . pwps_get_page_links();
+	}
+}
+
+
+if ( ! function_exists( 'pwps_get_page_links' ) ) {
+	/**
+	 * get the html for the page links.
+	 *
+	 * @see    pwps_insert_page_links() uses this function to append the page links to the content
+	 * 
+	 * @return string                   the page links html
+	 */
+	function pwps_get_page_links() {
+		$args = array(
+			'before'           => '<p class="pwps-link-pages-ajax">' . __( 'Pages:' ),
+			'after'            => '</p>',
+			'link_before'      => '',
+			'link_after'       => '',
+			'next_or_number'   => 'number',
+			'separator'        => ' ',
+			'nextpagelink'     => __( 'Next page' ),
+			'previouspagelink' => __( 'Previous page' ),
+			'pagelink'         => '%',
+			'echo'             => 0, 
+		);
+	 	
+	    return (string) wp_link_pages( $args );
+	}
+}
+
+
+if ( ! function_exists( 'pwps_get_post_format' ) ) {
+
+	function pwps_get_post_format() {
+		if ( get_post_format() ) {
+			return get_post_format();
+		}
+		return get_post_type();
+	}
+}

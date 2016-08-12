@@ -381,6 +381,14 @@ body.admin-bar #pwps-header {
 	padding: 80px 0;
 }
 
+/* clear floats */
+.gallery:after,
+.pwps-attachment-content:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 
 /*
 	Header
@@ -517,6 +525,53 @@ body.admin-bar #pwps-header {
 #loop-related-posts {
 	border-top: 1px solid #CCCCCC;
 	padding-top: 40px;
+}
+
+
+/*
+	Image Format
+ */
+
+.pwps-image-format .pwps-post-content figure,
+.pwps-image-format .pwps-post-content figure img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.pwps-image-format .pwps-post-content .wp-caption-text {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-top: 0;
+}
+
+
+/*
+	Video Format
+ */
+
+.pwps-video-format .pwps-post-content iframe,
+.pwps-video-format .pwps-post-content embed {
+	width: 100% !important;
+	height: 300px;
+}
+
+
+/*
+	Attachment Page
+ */
+
+.pwps-attachment-content .attachment {
+	float: left;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+
+.pwps-attachment-caption {
+	margin: 60px 0;
 }
 
 
@@ -680,12 +735,6 @@ body.admin-bar #pwps-header {
 .gallery {
 	margin-left: -1%;
 	margin-right: -1%;
-}
-
-.gallery:after {
-	content: '';
-	display: block;
-	clear: both;
 }
 
 .gallery .gallery-item {

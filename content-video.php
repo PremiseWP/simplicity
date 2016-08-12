@@ -1,13 +1,13 @@
 <?php
 /**
- * Content Template
+ * Content Video Template
  *
  * @package Simplicity
  */
 
 ?>
 
-<article <?php post_class( 'pwps-post' ); ?>>
+<article <?php post_class( 'pwps-post pwps-video-format' ); ?>>
 
 	<?php if ( ! is_home() && ! is_front_page() ) : ?>
 		<div class="pwps-post-title">

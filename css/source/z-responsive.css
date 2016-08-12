@@ -28,10 +28,15 @@
 	.gallery.gallery-columns-9 .gallery-item {
 		width: 14.6666%;
 	}
+
+	.pwps-video-format .pwps-post-content iframe,
+	.pwps-video-format .pwps-post-content embed {
+		height: 450px;
+	}
 }
 
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
 	.gallery.gallery-columns-4 .gallery-item {
 		width: 23%;
 	}
@@ -49,5 +54,10 @@
 	}
 	.gallery.gallery-columns-9 .gallery-item {
 		width: 9.11111%;
+	}
+
+	.pwps-video-format .pwps-post-content iframe,
+	.pwps-video-format .pwps-post-content embed {
+		height: 600px;
 	}
 }

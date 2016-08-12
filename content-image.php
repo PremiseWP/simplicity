@@ -1,13 +1,13 @@
 <?php
 /**
- * Content Template
+ * Content Image Template
  *
  * @package Simplicity
  */
 
 ?>
 
-<article <?php post_class( 'pwps-post' ); ?>>
+<article <?php post_class( 'pwps-post pwps-image-format' ); ?>>
 
 	<?php if ( ! is_home() && ! is_front_page() ) : ?>
 		<div class="pwps-post-title">
