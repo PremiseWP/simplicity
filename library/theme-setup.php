@@ -8,7 +8,7 @@
 
 // Require Premise WP if it does not exist.
 if ( ! class_exists( 'Premise_WP' ) ) {
-	require '../includes/require-premise-wp.php';
+	require get_template_directory() . '/includes/require-premise-wp.php';
 }
 
 
