@@ -883,8 +883,16 @@ body.admin-bar #pwps-header {
 	Woocommerce
  */
 
-#pwps-woocommerce .span8 {
+#pwps-woocommerce .woocommerce-ordering .orderby {
+	position: relative;
+}
 
+#pwps-woocommerce .woocommerce-ordering .orderby:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "\f105";
+	font-family: 'FontAwesome';
 }
 
 
