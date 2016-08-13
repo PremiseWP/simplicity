@@ -36,8 +36,3 @@
 	</div>
 
 </article>
-
-<?php get_template_part( 'loop', 'related' );
-
-// get the comments
-if ( ( comments_open() || get_comments_number() ) ) comments_template(); ?>

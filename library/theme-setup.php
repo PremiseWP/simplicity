@@ -18,7 +18,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 	// Add Thumbnail Theme Support.
 	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'post-formats', array( 'video', 'image', 'gallery' ) );
+	add_theme_support( 'post-formats', array( 'video', 'image', 'gallery', 'quote', 'aside' ) );
 
 	// custom logo in customizer
 	add_theme_support( 'custom-logo', array(
@@ -123,6 +123,17 @@ if ( ! function_exists( 'pwps_widgets_init' ) ) {
 	 * @return void registers sidebar
 	 */
 	function pwps_widgets_init() {
+		// default sidebar
+		register_sidebar( array(
+			'name'          => __( 'Simplicity Sidebar', 'pwps_text_domain' ),
+			'id'            => 'pwps-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed on the woocommerce pages.', 'pwps_text_domain' ),
+			'before_widget' => '<li id="%1$s" class="pwps-widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h2 class="pwps-widget-title">',
+			'after_title'   => '</h2>',
+	    ) );
+
 	    register_sidebar( array(
 			'name'          => __( 'Simplicity Woocommerce', 'pwps_text_domain' ),
 			'id'            => 'pwps-woocommerce-sidebar',
