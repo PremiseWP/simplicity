@@ -37,7 +37,7 @@ if ( $tags ) :
 				<div class="premise-scroller"><?php
 					while( $lr_query->have_posts() ) : $lr_query->the_post();
 
-						get_template_part( 'content', 'related' );
+						get_template_part( 'content', 'loop' );
 
 					endwhile; ?>
 				</div>

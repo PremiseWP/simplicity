@@ -1,10 +1,18 @@
-
-@media screen and (min-width: 600px) {
-
-}
+/**
+ * Responsive css for the simplicity theme.
+ *
+ * This theme is written on a mobile first approach, so it is important to understand that the main
+ * css file (located at: css/source/style.css) holds all our mobile css. This file makes adjustments
+ * to our css as we scale up on bigger screens, not the other way around.
+ *
+ * Breakpoints:
+ * @768px   iPad portrait
+ * @1024px  iPad landscape
+ */
 
 
 @media screen and (min-width: 768px) {
+	/* featured images */
 	.pwps-the-loop .pwps-post-thumbnail {
 		float: left;
 		padding-right: 20px;
@@ -12,6 +20,7 @@
 		box-sizing: border-box;
 	}
 
+	/* gallery shortcode */
 	.gallery.gallery-columns-2 .gallery-item,
 	.gallery.gallery-columns-4 .gallery-item {
 		width: 48%;
@@ -29,18 +38,26 @@
 		width: 14.6666%;
 	}
 
+	/* video format posts */
 	.pwps-video-format .pwps-post-content iframe,
 	.pwps-video-format .pwps-post-content embed {
 		height: 450px;
 	}
 
+	/* woocommerce pages */
 	#pwps-woocommerce .span8 {
 		padding-right: 30px;
+	}
+
+	/* Adjust loop of related posts */
+	.pwps-loop-related .pwps-blog-post {
+		width: 60%;
 	}
 }
 
 
 @media screen and (min-width: 1024px) {
+	/* gallery shortcode css */
 	.gallery.gallery-columns-4 .gallery-item {
 		width: 23%;
 	}
@@ -60,8 +77,14 @@
 		width: 9.11111%;
 	}
 
+	/* Video format adjustments */
 	.pwps-video-format .pwps-post-content iframe,
 	.pwps-video-format .pwps-post-content embed {
 		height: 600px;
+	}
+
+	/* Adjust loop of related posts */
+	.pwps-loop-related .pwps-blog-post {
+		width: 40%;
 	}
 }
