@@ -35,6 +35,8 @@ if ( function_exists( 'add_action' ) ) {
 	// Register menus
 	add_action( 'init', 'pwps_register_menu' );
 
+	// initiate the widgets
+	add_action( 'widgets_init', 'pwps_widgets_init' );
 
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );

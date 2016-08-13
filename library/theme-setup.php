@@ -33,7 +33,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'woocommerce' );
 }
 
-
 if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	/**
 	 * Setup the theme once it is activated.
@@ -91,7 +90,7 @@ if ( ! function_exists( 'pwps_woocommerce_wrapper_start' ) ) {
 	 * @return string begining of wrapper
 	 */
 	function pwps_woocommerce_wrapper_start() {
-	  echo '<section id="pwps-woocommerce"><div class="pwps-the-loop">';
+	  echo '<section id="pwps-woocommerce" class="premise-row"><div class="pwps-the-loop span8">';
 	}
 }
 
@@ -103,7 +102,35 @@ if ( ! function_exists( 'pwps_woocommerce_wrapper_end' ) ) {
 	 * @return string End of wrapper
 	 */
 	function pwps_woocommerce_wrapper_end() {
-	  echo '</div></section>';
+			echo '</div>';
+
+			if ( is_active_sidebar( 'pwps-woocommerce-sidebar' ) ) {
+				echo '<div class="pwps-woocommerce-sidebar span4"><ul class="pwps-sidebar">';
+					dynamic_sidebar( 'pwps-woocommerce-sidebar' );
+				echo '</ul></div>';
+			}
+
+		echo '</section>';
+	}
+}
+
+
+if ( ! function_exists( 'pwps_widgets_init' ) ) {
+	/**
+	 * Initiate our widgets. registers sidebar
+	 * 
+	 * @return void registers sidebar
+	 */
+	function pwps_widgets_init() {
+	    register_sidebar( array(
+			'name'          => __( 'Simplicity Woocommerce', 'pwps_text_domain' ),
+			'id'            => 'pwps-woocommerce-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed on the woocommerce pages.', 'pwps_text_domain' ),
+			'before_widget' => '<li id="%1$s" class="pwps-widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h2 class="pwps-widget-title">',
+			'after_title'   => '</h2>',
+	    ) );
 	}
 }
 ?>

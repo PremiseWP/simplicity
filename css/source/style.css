@@ -236,6 +236,26 @@ tt {
 
 }
 
+pre {
+	display: block;
+	margin: 20px auto;
+	max-width: 100%;
+	height: auto;
+	overflow: auto;
+}
+
+code {
+	background-color: rgba( 4, 4, 4, 0.1 );
+	padding: 1px 3px;
+	font-size: 14px;
+	color: inherit;
+}
+
+code::selection {
+	/*background-color: rgba( 4, 4, 4, 0.9 );
+	color: #FFFFFF;*/
+}
+
 
 /*
 	Typography
@@ -804,3 +824,66 @@ body.admin-bar #pwps-header {
  	opacity: 1;
 	visibility: visible;
  }
+
+
+ /*
+ 	Sidebars and widgets
+  */
+ 
+.pwps-sidebar .pwps-widget {
+ 	list-style-type: none;
+ 	margin-bottom: 30px;
+ 	padding-bottom: 20px;
+ 	margin-left: 0;
+ 	border-bottom: 1px solid #ccc;
+}
+
+.pwps-widget-title {
+	font-size: 25px;
+}
+
+.pwps-sidebar .pwps-widget > ul {
+	margin-bottom: 0;
+}
+
+.widget_nav_menu li,
+.product-categories li {
+	position: relative;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.widget_nav_menu li {
+	border-bottom: 1px dashed #ccc;
+}
+
+.widget_nav_menu li > a,
+.product-categories li > a {
+	display: block;
+	padding: 5px;
+}
+
+.widget_nav_menu li > ul,
+.product-categories li > ul {
+	margin-left: 20px;
+}
+
+/*.widget_nav_menu li > ul li:before {
+	content: "\f105";
+	font-family: 'FontAwesome';
+	font-size: 15px;
+	line-height: 20px;
+	vertical-align: middle;
+	position: absolute;
+	top: 5px;
+	left: -10px;
+}*/
+
+
+/*
+	Woocommerce
+ */
+
+#pwps-woocommerce .span8 {
+	
+}

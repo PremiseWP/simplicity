@@ -33,6 +33,10 @@
 	.pwps-video-format .pwps-post-content embed {
 		height: 450px;
 	}
+
+	#pwps-woocommerce .span8 {
+		padding-right: 30px;
+	}
 }
 
 

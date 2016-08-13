@@ -26,7 +26,7 @@
 
 		<div class="pwps-attachment-content">
 			<h3>More on this attachment</h3>
-			<p>Click on the thumbnail below to open the attachment.</p>
+			<p>Click on the thumbnail or url below to open the attachment.</p>
 			<?php the_content(); ?>
 		</div>
 	</div>
