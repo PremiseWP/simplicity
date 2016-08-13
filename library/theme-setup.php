@@ -90,7 +90,8 @@ if ( ! function_exists( 'pwps_woocommerce_wrapper_start' ) ) {
 	 * @return string begining of wrapper
 	 */
 	function pwps_woocommerce_wrapper_start() {
-	  echo '<section id="pwps-woocommerce" class="premise-row"><div class="pwps-the-loop span8">';
+		$span = is_active_sidebar( 'pwps-woocommerce-sidebar' ) ? 'span8' : 'span12';
+		echo '<section id="pwps-woocommerce" class="premise-row"><div class="pwps-the-loop '.$span.'">';
 	}
 }
 
