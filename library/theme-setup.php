@@ -118,31 +118,34 @@ if ( ! function_exists( 'pwps_woocommerce_wrapper_end' ) ) {
 
 if ( ! function_exists( 'pwps_widgets_init' ) ) {
 	/**
-	 * Initiate our widgets. registers sidebar
+	 * Initiate our widgets. registers sidebars
 	 * 
 	 * @return void registers sidebar
 	 */
 	function pwps_widgets_init() {
-		// default sidebar
-		register_sidebar( array(
-			'name'          => __( 'Simplicity Sidebar', 'pwps_text_domain' ),
-			'id'            => 'pwps-sidebar',
-			'description'   => __( 'Widgets in this area will be displayed on the woocommerce pages.', 'pwps_text_domain' ),
+		// these attributes apply to all our sidebars. Why write them multiple times?
+		$sidebar_attrs = array(
 			'before_widget' => '<li id="%1$s" class="pwps-widget %2$s">',
 			'after_widget'  => '</li>',
 			'before_title'  => '<h2 class="pwps-widget-title">',
 			'after_title'   => '</h2>',
-	    ) );
-
-	    register_sidebar( array(
+		);
+		// The main sidebar
+		$sidebars['sidebar'] = array(
+			'name'          => __( 'Simplicity Sidebar', 'pwps_text_domain' ),
+			'id'            => 'pwps-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed on your posts and blog page.', 'pwps_text_domain' ),
+		);
+		// sidebar for woocommerce pages
+		$sidebars['woocommerce'] = array(
 			'name'          => __( 'Simplicity Woocommerce', 'pwps_text_domain' ),
 			'id'            => 'pwps-woocommerce-sidebar',
 			'description'   => __( 'Widgets in this area will be displayed on the woocommerce pages.', 'pwps_text_domain' ),
-			'before_widget' => '<li id="%1$s" class="pwps-widget %2$s">',
-			'after_widget'  => '</li>',
-			'before_title'  => '<h2 class="pwps-widget-title">',
-			'after_title'   => '</h2>',
-	    ) );
+		);
+		// loop and register the sidebars
+		foreach ( $sidebars as $k => $sidebar ) {
+			register_sidebar( array_merge( $sidebar, $sidebar_attrs ) );
+		}
 	}
 }
 ?>
