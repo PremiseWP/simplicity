@@ -149,6 +149,9 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 		$_css .= '#pwps-header .pwps-header-overlay {
 			background-color: '.$hbgc.';
 			opacity: '.$hop.';
+		}
+		.woocommerce button.button.alt {
+			background-color: '.$hbgc.';
 		}';
 
 		// set the header color
@@ -368,7 +371,7 @@ if ( ! function_exists( 'pwps_the_post_meta' ) ) {
 if ( ! function_exists( 'pwps_get_copyright_text' ) ) {
 	/**
 	 * Get the footer copyright and set dynamic content. Accepts html.
-	 * 
+	 *
 	 * @return string the copyright text
 	 */
 	function pwps_get_copyright_text() {
@@ -376,7 +379,7 @@ if ( ! function_exists( 'pwps_get_copyright_text' ) ) {
 		$pattern = array( '%COPY%', '%YEAR%', '%SITENAME%' );
 		$replace = array( '&copy;', date( 'Y' ), esc_html( get_option( 'blogname' ) ) );
 		$ct = (string) premise_get_value( 'pwps_customizer_options[footer][copyright]' );
-		
+
 		return (string) str_replace( $pattern, $replace, $ct );
 
 	}
@@ -386,7 +389,7 @@ if ( ! function_exists( 'pwps_get_copyright_text' ) ) {
 if ( ! function_exists( 'pwps_gallery_css' ) ) {
 	/**
 	 * Filter the gallery default css to return an empty string so that we can take over
-	 * 
+	 *
 	 * @return string empty string
 	 */
 	function pwps_gallery_css( $attr ) {
@@ -400,9 +403,9 @@ if ( ! function_exists( 'pwps_insert_page_links' ) ) {
 	 * insert the post page links after the content.
 	 *
 	 * The page links are links that appear at the bottom of the post content if the user
-	 * inserts a <!--nextpage-->. This is useful if your content is too long and you want 
-	 * to load it in separate pages. 
-	 * 
+	 * inserts a <!--nextpage-->. This is useful if your content is too long and you want
+	 * to load it in separate pages.
+	 *
 	 * @param  string $content the original content
 	 * @return string          the filtered content
 	 */
@@ -417,7 +420,7 @@ if ( ! function_exists( 'pwps_get_page_links' ) ) {
 	 * get the html for the page links.
 	 *
 	 * @see    pwps_insert_page_links() uses this function to append the page links to the content
-	 * 
+	 *
 	 * @return string                   the page links html
 	 */
 	function pwps_get_page_links() {
@@ -431,9 +434,9 @@ if ( ! function_exists( 'pwps_get_page_links' ) ) {
 			'nextpagelink'     => __( 'Next page' ),
 			'previouspagelink' => __( 'Previous page' ),
 			'pagelink'         => '%',
-			'echo'             => 0, 
+			'echo'             => 0,
 		);
-	 	
+
 	    return (string) wp_link_pages( $args );
 	}
 }
@@ -442,7 +445,7 @@ if ( ! function_exists( 'pwps_get_page_links' ) ) {
 if ( ! function_exists( 'pwps_get_post_format' ) ) {
 	/**
 	 * return the past format or type to use when retrieveng the content template
-	 * 
+	 *
 	 * @return string the post format to use or empty string
 	 */
 	function pwps_get_post_format() {

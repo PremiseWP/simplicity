@@ -956,6 +956,7 @@ body.admin-bar #pwps-header {
 
 .woocommerce div.product .woocommerce-tabs .panel {
 	margin: 0;
+	margin-bottom: 60px;
 	padding: 20px;
 	border: 1px solid #d3ced2;
 	border-top: 0;
@@ -964,10 +965,6 @@ body.admin-bar #pwps-header {
 
 .woocommerce button.button {
 	padding: 8px 16px;
-}
-
-.woocommerce button.button.alt {
-	background-color: #1E73BE;
 }
 
 
