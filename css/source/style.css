@@ -58,7 +58,6 @@ select {
 	font-size: inherit;
 }
 
-input,
 input[type="text"],
 input[type="username"],
 input[type="password"],
