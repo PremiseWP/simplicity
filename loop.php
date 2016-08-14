@@ -5,9 +5,11 @@
  * @package Simplicity
  */
 
+// get the sidebar
+global $sdbar;
 ?>
 
-<div class="pwps-the-loop">
+<div class="pwps-the-loop<?php echo $sdbar ? ' span8' : '' ?>">
 
 	<?php
 	/**

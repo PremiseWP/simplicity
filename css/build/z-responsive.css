@@ -45,7 +45,8 @@
 	}
 
 	/* woocommerce pages */
-	#pwps-woocommerce .span8 {
+	#pwps-woocommerce .span8,
+	.pwps-the-loop.span8 {
 		padding-right: 30px;
 	}
 

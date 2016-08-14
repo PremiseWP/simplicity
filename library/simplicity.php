@@ -440,7 +440,11 @@ if ( ! function_exists( 'pwps_get_page_links' ) ) {
 
 
 if ( ! function_exists( 'pwps_get_post_format' ) ) {
-
+	/**
+	 * return the past format or type to use when retrieveng the content template
+	 * 
+	 * @return string the post format to use or empty string
+	 */
 	function pwps_get_post_format() {
 		if ( get_post_format() ) {
 			return get_post_format();
