@@ -839,7 +839,7 @@ body.admin-bar #pwps-header {
  /*
  	Sidebars and widgets
   */
- 
+
 .pwps-sidebar .pwps-widget {
  	list-style-type: none;
  	margin-bottom: 30px;
@@ -879,8 +879,8 @@ body.admin-bar #pwps-header {
 /* Search widget */
 .widget_search .search-form {
 	position: relative;
+	padding-right: 70px;
 }
-
 .widget_search .search-form .screen-reader-text {
 	position: absolute;
 	top: -22px;
@@ -888,9 +888,15 @@ body.admin-bar #pwps-header {
 	opacity: 0;
 	transition: opacity .4s .2s ease-in-out;
 }
-
 .widget_search .search-form:hover .screen-reader-text {
 	opacity: 1;
+}
+.widget_search .search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 5px;
+	line-height: 30px;
 }
 
 

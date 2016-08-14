@@ -5,11 +5,11 @@
  * @package Simplicity
  */
 
-// get the sidebar
-global $sdbar;
+// defined at single.php
+global $pwps_has_sidebar;
 ?>
 
-<div class="pwps-the-loop<?php echo $sdbar ? ' span8' : '' ?>">
+<div class="pwps-the-loop<?php echo $pwps_has_sidebar ? ' span8' : '' ?>">
 
 	<?php
 	/**
@@ -22,8 +22,8 @@ global $sdbar;
 			if ( is_singular() ) :
 				get_template_part( 'content', pwps_get_post_format() );
 				get_template_part( 'loop', 'related' );
-				if ( ( comments_open() || get_comments_number() ) ) : 
-					comments_template(); 
+				if ( ( comments_open() || get_comments_number() ) ) :
+					comments_template();
 				endif;
 			else :
 				get_template_part( 'content', 'loop' );
