@@ -153,6 +153,7 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 		.woocommerce button.button.alt {
 			background-color: '.$hbgc.';
 		}';
+		// TO DO - add button or accent colors to theme options
 
 		// set the header color
 		$_css .= '#pwps-header {
