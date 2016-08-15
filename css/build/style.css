@@ -1009,3 +1009,10 @@ body.admin-bar #pwps-header {
 .pwps-author h4 {
 	margin-bottom: 0;
 }
+
+
+/* Jetpack */
+
+.pwps-post-content .sharedaddy {
+	margin-top: 60px;
+}
