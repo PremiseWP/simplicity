@@ -333,6 +333,24 @@ if ( ! function_exists( 'pwps_enqueue_customizer_js' ) ) {
 }
 
 
+if ( ! function_exists( 'pwps_print_customizer_js' ) ) {
+	/**
+	 * print our JS file for the theme customizer controls
+	 *
+	 * @return void prints the js file to be loaded on the customizer page
+	 */
+	function pwps_print_customizer_js() {
+		wp_enqueue_script(
+			'simplicity-customizerpprint-js',			//Give the script an ID
+			get_template_directory_uri().'/js/theme-customizer-print-scripts.js',//Point to file
+			array( 'jquery' ),	//Define dependencies
+			'',						//Define a version (optional)
+			true						//Put script in footer?
+		);
+	}
+}
+
+
 if ( ! function_exists( 'pwps_the_post_meta' ) ) {
 	/**
 	 * display the post meta

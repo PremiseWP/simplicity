@@ -36,6 +36,7 @@ class PWPS_Theme_Customizer {
 				'default'    => 'fa-search',
 				'control_id' => 'pwps_customizer_header_fa_icon',
 				'label'      => 'Nav Icon',
+				// 'transport' => 'postMessage',
 			),
 			'background-color' => array(
 				'default'    => '#FDFDFD',
@@ -232,7 +233,7 @@ class PWPS_Theme_Customizer {
 					'default'     => $opt['default'],
 					'type'        => 'option',
 					'capability'  => 'edit_theme_options',
-					'transport'   => 'refresh',
+					'transport'   => isset( $opt['transport'] ) ? $opt['transport'] : 'refresh',
 				)
 			);
 

@@ -55,7 +55,8 @@ if ( function_exists( 'add_action' ) ) {
 
 	// Print styles and scripts for the customizer to work properly
 	add_action( 'customize_controls_print_styles',  'pwps_customizer_control_styles' );
-	add_action( 'customize_controls_print_scripts', 'pwps_enqueue_customizer_js' );
+	add_action( 'customize_controls_print_scripts', 'pwps_print_customizer_js' );
+	add_action( 'customize_preview_init',           'pwps_enqueue_customizer_js' );
 
 	// Remove woocommerce defult wrappers and sidebar
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper',     10);
