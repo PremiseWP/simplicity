@@ -674,7 +674,9 @@ body.admin-bar #pwps-header {
 
 #pwps-comments #respond,
 .woocommerce #pwps-woocommerce #review_form #respond {
-	padding: 80px
+	padding: 80px 0;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 #pwps-comment-form .logged-in-as {
@@ -980,6 +982,7 @@ body.admin-bar #pwps-header {
 }
 .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link {
 	display: inline-block;
+	margin-left: 0;
 }
 
 .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
