@@ -88,4 +88,32 @@
 	.pwps-loop-related .pwps-blog-post {
 		width: 40%;
 	}
+
+	/* Woocommerce account nav adjustments */
+	.woocommerce-MyAccount-navigation {
+		border-left: 0;
+		padding: 0;
+		border-right: 0;
+		margin-bottom: 0;
+		padding-right: 20px;
+	}
+	.woocommerce-MyAccount-navigation ul {
+		white-space: normal;
+		overflow: hidden;
+		border-top: 0;
+		border-bottom: 0;
+		margin-bottom: 0;
+		border-right: 1px solid #CCCCCC;
+		padding: 5px 0;
+	}
+	.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link {
+		display: block;
+	}
+
+	.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
+		display: block;
+		padding: 10px 20px;
+		border-right: 0;
+		border-bottom: 1px solid #CCCCCC;
+	}
 }
