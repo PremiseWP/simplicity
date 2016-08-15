@@ -86,8 +86,15 @@ select {
 input[type="checkbox"],
 input[type="radio"] {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: baseline;
 	margin: 0;
+	width: 12px;
+	height: 12px;
+	outline: 0;
+}
+
+input[type="checkbox"]:checked {
+	background-color: #CCCCCC;
 }
 
 input[type="color"] {
