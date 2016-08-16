@@ -211,7 +211,8 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 		$body = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[body]' ) );
 
 		// if there is no css, set the default css
-		$width = ( isset( $body['max-width'] )        && ! empty( $body['max-width'] ) )        ? $body['max-width']        : '1200px';
+		$width     = ( isset( $body['width'] )            && ! empty( $body['width'] ) )            ? $body['width']            : '90%';
+		$max_width = ( isset( $body['max-width'] )        && ! empty( $body['max-width'] ) )        ? $body['max-width']        : '1200px';
 
 		$bbgc  = ( isset( $body['background-color'] ) && ! empty( $body['background-color'] ) ) ? $body['background-color'] : '#FFFFFF';
 		$bcol  = ( isset( $body['color'] )            && ! empty( $body['color'] ) )            ? $body['color']            : '#444444';
@@ -236,7 +237,8 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 		}';
 
 		$_css .= '.pwps-container {
-			max-width: '.$width.';
+			width: '.$width.';
+			max-width: '.$max_width.';
 		}';
 
 		return esc_attr( (string) $_css );

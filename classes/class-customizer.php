@@ -80,9 +80,14 @@ class PWPS_Theme_Customizer {
 		'description' => 'This section controls the styles for your site\'s body (main container).',
 		// The options for this section
 		'settings'    => array(
+			'width' => array(
+				'default'    => '90%',
+				'control_id' => 'pwps_customizer_body_width',
+				'label'      => 'Body Width',
+			),
 			'max-width' => array(
 				'default'    => '1200px',
-				'control_id' => 'pwps_customizer_max_width__color',
+				'control_id' => 'pwps_customizer_body_max_width',
 				'label'      => 'Body Maximum Width',
 			),
 			'background-color' => array(
