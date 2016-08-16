@@ -50,8 +50,14 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 	 * @return string html for logo including link
 	 */
 	function pwps_the_logo() {
-		if ( function_exists( 'the_custom_logo' ) ) {
+		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			the_custom_logo();
+		}
+		else {
+			?>
+			<a href="<?php esc_url( site_url() ); ?>" class="premise-block">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/img/premise-wp-logo.png' ); ?>" class="premise-responsive">
+			<?php 
 		}
 	}
 }

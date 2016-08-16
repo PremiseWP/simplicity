@@ -56,26 +56,26 @@ class PWPS_Theme_Customizer {
 		// The options for this section
 		'settings'    => array(
 			'nav-icon' => array(
-				'default'    => 'fa-search',
+				'default'    => 'fa-empire',
 				'control_id' => 'pwps_customizer_header_fa_icon',
 				'label'      => 'Nav Icon',
 				// 'transport' => 'postMessage',
 			),
 			'background-color' => array(
-				'default'    => '#FDFDFD',
+				'default'    => '#2b7ae7',
 				'control'    => 'color',
 				'control_id' => 'pwps_customizer_header_bg_color',
 				'label'      => 'Header Background Color',
 			),
 			'color' => array(
-				'default'     => '#444444',
+				'default'     => '#FDFDFD',
 				'control'     => 'color',
 				'control_id'  => 'pwps_customizer_header_color',
 				'label'       => 'Header Color',
 				'description' => 'color for h3-6 and p tags.',
 			),
 			'opacity' => array(
-				'default'    => '0.6',
+				'default'    => '1',
 				'control_id' => 'pwps_customizer_header_opacity',
 				'label'      => 'Header Opacity',
 			),
