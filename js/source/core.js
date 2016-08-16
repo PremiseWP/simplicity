@@ -35,7 +35,7 @@
 				$( this ).parents( '.pwps-link-pages-ajax' ).addClass( 'pwps-loading' );
 
 				var href = $( this ).attr( 'href' ),
-				pCont = loopContainer.find( '.post-content' );
+				pCont = loopContainer.find( '.pwps-post-content' );
 
 				pCont.css( 'min-height', pCont.height() );
 				
@@ -43,7 +43,7 @@
 					url: href,
 					type: 'post',
 					success: function( r ) {
-						var content = $(r).find( '.pwps-post .post-content' );
+						var content = $(r).find( '.pwps-post .pwps-post-content' );
 						pCont.html( content );
 						closePagination();
 						return false;
