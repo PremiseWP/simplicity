@@ -13,6 +13,6 @@
 			console.log( $array.closest( 'input' ) );
 			$array.parent( '.premise-field-fa_icon' ).find( 'input' ).change();
 			return false;
-		})
+		} );
 	} );
 } ( jQuery ) );

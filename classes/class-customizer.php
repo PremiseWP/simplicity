@@ -56,6 +56,12 @@ class PWPS_Theme_Customizer {
 				'control_id' => 'pwps_customizer_header_opacity',
 				'label'      => 'Header Opacity',
 			),
+			'analytics' => array(
+				'default'    => '',
+				'control_id' => 'pwps_customizer_header_analytics',
+				'label'      => 'Google Analytics Tracking ID',
+				'description'=> 'Looks something like this UA-12345678-1.<br><a href="https://support.google.com/analytics/answer/1032385?hl=en" target="_blank">find it here.</a>'
+			),
 		)
 	);
 

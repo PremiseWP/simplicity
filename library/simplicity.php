@@ -165,6 +165,30 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 }
 
 
+if ( ! function_exists( 'pwps_google_analytics_script' ) ) {
+	/**
+	 * output the google analytics script if a tracking ID has been provided
+	 * 
+	 * @return string the script needed for google analytics to work.
+	 */
+	function pwps_google_analytics_script() {
+		$ga_tracking_id = (string) esc_attr( premise_get_value( 'pwps_customizer_options[header][analytics]' ) );
+		$script = "<!-- Simplicity Google Analytics Tracking Code -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', '{$ga_tracking_id}', 'auto');
+		  ga('send', 'pageview');
+
+		</script>";
+		echo ( '' !== $ga_tracking_id ) ? $script : '';
+	}
+}
+
+
 if( ! function_exists( 'pwps_get_body_styles' ) ) {
 	/**
 	 * Return the css for the body container.
