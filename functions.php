@@ -30,7 +30,7 @@ if ( function_exists( 'add_action' ) ) {
 	 */
 	
 	// On theme activation.
-	add_action( 'after_theme_setup', 'pwps_theme_setup' );
+	add_action( 'after_setup_theme', 'pwps_theme_setup' );
 
 	// Register menus
 	add_action( 'init', 'pwps_register_menu' );

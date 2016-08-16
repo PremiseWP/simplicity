@@ -220,6 +220,10 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 		$h1col = ( isset( $body['h1-color'] )         && ! empty( $body['h1-color'] ) )         ? $body['h1-color']         : '#222222';
 		$h2col = ( isset( $body['h2-color'] )         && ! empty( $body['h2-color'] ) )         ? $body['h2-color']         : '#222222';
 
+		$linkcol = ( isset( $body['link-color'] )         && ! empty( $body['link-color'] ) )         ? $body['link-color']         : '#000000';
+
+		$accentcol = ( isset( $body['accent-color'] ) && ! empty( $body['accent-color'] ) )         ? $body['accent-color']         : '#2b7ae7';
+
 		$_css = ''; // start with an empty string
 
 		// set the body background and opacity
@@ -234,6 +238,15 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 
 		$_css .= 'h2 {
 			color: '.$h2col.';
+		}';
+
+		$_css .= 'a {
+			color: '.$linkcol.';
+		}';
+
+		// accent color styles
+		$_css .= '.pwps-meta-item:before {
+			background-color: '.$accentcol.';
 		}';
 
 		$_css .= '.pwps-container {

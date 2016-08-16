@@ -42,8 +42,10 @@ if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	 * @return void
 	 */
 	function pwps_theme_setup() {
+		if ( ! get_option( 'pwps_customizer_options' ) )
+			update_option( 'pwps_customizer_options', PWPS_Theme_Customizer::$default_options );
 		// flush rewrite rules
-		flush_rewrite_rules();
+		// flush_rewrite_rules();
 	}
 }
 

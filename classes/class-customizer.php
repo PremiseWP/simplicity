@@ -18,6 +18,29 @@ class PWPS_Theme_Customizer {
 	protected static $instance = null;
 
 
+	public static $default_options = array(
+		'header' => array(
+			'nav-icon'         => 'fa-empire',
+			'background-color' => '#2b7ae7',
+			'color'            => '#FDFDFD',
+			'opacity'          => '1',
+		),
+		'body'   => array(
+			'width'            => '90%',
+			'max-width'        => '1200px',
+			'background-color' => '#FDFDFD',
+			'color'            => '#444444',
+			'h1-color'         => '#222222',
+			'h2-color'         => '#222222',
+			'accent-color'     => '#2b7ae7',
+			'link-color'       => '#000000',
+		),
+		'footer' => array(
+			'copyright' => '%COPY% %YEAR% %SITENAME%. All Rights Reserved.',
+		),
+	);
+
+
 	/**
 	 * Holds header options
 	 *
@@ -114,6 +137,19 @@ class PWPS_Theme_Customizer {
 				'control'    => 'color',
 				'control_id' => 'pwps_customizer_h2_color',
 				'label'      => 'H2 Color',
+			),
+			'link-color' => array(
+				'default'    => '#000000',
+				'control'    => 'color',
+				'control_id' => 'pwps_customizer_link_color',
+				'label'      => 'Link Color',
+			),
+			'accent-color' => array(
+				'default'    => '#2b7ae7',
+				'control'    => 'color',
+				'control_id' => 'pwps_customizer_accent_color',
+				'label'      => 'Accent Color',
+				'description'=> 'Used to create subtle contrasts across the theme. Mainly to display meta data in blog posts.',
 			),
 		),
 	);

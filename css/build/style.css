@@ -330,7 +330,7 @@ p {
 
 a {
 	text-decoration: none;
-	color: #000000;
+	/*color: #000000;*/ /* handled by customizer */
 	letter-spacing: 1px;
 }
 
@@ -504,7 +504,7 @@ body.admin-bar #pwps-header {
 	line-height: 18px;
 	width: 2px;
 	vertical-align: text-top;
-	background-color: #2b7ae7;
+	/*background-color: #2b7ae7;*/ /* Hanlded by customizer */
 	margin-right: 5px;
 }
 
