@@ -265,5 +265,4 @@ class PWPS_Theme_Customizer {
 		}
 	}
 }
-
 ?>
