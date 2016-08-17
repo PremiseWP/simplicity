@@ -1011,3 +1011,24 @@ body.admin-bar #pwps-header {
 .pwps-post-content .sharedaddy {
 	margin-top: 60px;
 }
+
+
+/*
+	Youtube EMbeds
+ */
+
+.pwps-post-content .embed-youtube {
+	display: block;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	padding-top: 56%;
+}
+
+.pwps-post-content .embed-youtube > iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
