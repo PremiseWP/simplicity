@@ -283,12 +283,12 @@ if ( ! function_exists( 'get_button_styles' ) ) {
 			foreach ( $keys as $btn ) {
 				
 				$_css .= '.pwps-btn-'.$btn.' {
-					background-color: '.$buttons['primary-bg'].';
-					color: '.$buttons['primary-text'].';
+					background-color: '.$buttons[$btn.'-bg'].';
+					color: '.$buttons[$btn.'-text'].';
 				}
 				.pwps-btn-'.$btn.':hover {
-					background-color: '.$buttons['primary-bg-hover'].';
-					color: '.$buttons['primary-text-hover'].';
+					background-color: '.$buttons[$btn.'-bg-hover'].';
+					color: '.$buttons[$btn.'-text-hover'].';
 				}';
 			}
 		}

@@ -43,6 +43,16 @@ class PWPS_Theme_Customizer {
 			'primary-text' => '#FFFFFF',
 			'primary-bg-hover' => '#2b7ae7',
 			'primary-text-hover' => '#FDFDFD',
+			// secondary btn 
+			'secondary-bg' => '#AAAAAA',
+			'secondary-text' => '#FCFCFC',
+			'secondary-bg-hover' => '#CCCCCC',
+			'secondary-text-hover' => '#FDFDFD',
+			// warning btn 
+			'warning-bg' => '#EEEEEE',
+			'warning-text' => '#F05000',
+			'warning-bg-hover' => '#f05000',
+			'warning-text-hover' => '#FDFDFD',
 		), 
 	);
 
@@ -297,6 +307,8 @@ class PWPS_Theme_Customizer {
 			'description' => 'This section controls your buttons settings.',
 			// The options for this section
 			'settings'    => array(
+				// Primary Buttons
+				// ===============
 				'primary-bg' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_primary_bg',
@@ -317,6 +329,52 @@ class PWPS_Theme_Customizer {
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_primary_text_hover',
 					'label'      => 'Primary Button Text Hover',
+				),
+				// Secondary Buttons
+				// ===============
+				'secondary-bg' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_secondary_bg',
+					'label'      => 'Secondary Button Background',
+				),
+				'secondary-text' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_secondary_text',
+					'label'      => 'Secondary Button Text',
+				),
+				// on hover
+				'secondary-bg-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_secondary_bg_hover',
+					'label'      => 'Secondary Button Background Hover',
+				),
+				'secondary-text-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_secondary_text_hover',
+					'label'      => 'Secondary Button Text Hover',
+				),
+				// Waring Buttons
+				// ===============
+				'warning-bg' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_warning_bg',
+					'label'      => 'Waring Button Background',
+				),
+				'warning-text' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_warning_text',
+					'label'      => 'Waring Button Text',
+				),
+				// on hover
+				'warning-bg-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_warning_bg_hover',
+					'label'      => 'Waring Button Background Hover',
+				),
+				'warning-text-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_warning_text_hover',
+					'label'      => 'Waring Button Text Hover',
 				),
 			)
 		);	
