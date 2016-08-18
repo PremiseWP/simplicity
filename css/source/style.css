@@ -321,9 +321,10 @@ h3 {
 h4,
 h5,
 h6 {
+	font-family: 'Source Code Pro', monospace;
 	font-size: 25px;
 	line-height: 30px;
-	font-weight: 700;
+	font-weight: 400;
 	color: inherit;
 	margin-bottom: 20px;
 }
