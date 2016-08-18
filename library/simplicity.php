@@ -23,7 +23,7 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 				'theme_location'  => 'header-menu', // DO NOT MODIFY.
 				'menu'            => '',
 				'container'       => 'div',
-				'container_class' => 'pwps-nav-menu-container',
+				'container_class' => 'pwps-nav-menu-container premise-clear-float',
 				'container_id'    => '',
 				'menu_class'      => 'pwps-nav-menu',
 				'menu_id'         => '',
@@ -34,7 +34,7 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 				'link_before'     => '',
 				'link_after'      => '',
 				'items_wrap'      => '<ul>%3$s</ul>',
-				'depth'           => 1,
+				'depth'           => 2,
 			)
 		);
 	}
@@ -57,6 +57,7 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 			?>
 			<a href="<?php echo esc_url( site_url() ); ?>" class="premise-block">
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/img/premise-wp-logo.png' ); ?>" class="premise-responsive">
+			</a>
 			<?php 
 		}
 	}

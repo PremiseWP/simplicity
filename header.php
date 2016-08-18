@@ -42,6 +42,7 @@
 					</div>
 					<div class="premise-clear"></div>
 					<!-- The nav -->
+					<a href="javascript:;" id="pwps-nav-back"><i class="fa fa-angle-left"></i></a>
 					<?php pwps_main_nav(); ?>
 					<!-- The overlay -->
 					<div class="pwps-nav-overlay"></div>
