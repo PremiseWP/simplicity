@@ -260,7 +260,39 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 			max-width: '.$max_width.';
 		}';
 
+		$_css .= get_button_styles();
+
 		return esc_attr( (string) $_css );
+	}
+}
+
+
+if ( ! function_exists( 'get_button_styles' ) ) {
+	/**
+	 * returns the buttons styles. the css to apply to the header to style the buttons dynamically
+	 * 
+	 * @param  array  $keys key for each button
+	 * @return sting        the css to apply styles
+	 */
+	function get_button_styles( $keys = array( 'primary', 'secondary', 'warning' ) ) {
+		$buttons = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[buttons]' ) );
+
+		$_css = '';
+		if ( $buttons ) {
+
+			foreach ( $keys as $btn ) {
+				
+				$_css .= '.pwps-btn-'.$btn.' {
+					background-color: '.$buttons['primary-bg'].';
+					color: '.$buttons['primary-text'].';
+				}
+				.pwps-btn-'.$btn.':hover {
+					background-color: '.$buttons['primary-bg-hover'].';
+					color: '.$buttons['primary-text-hover'].';
+				}';
+			}
+		}
+		return $_css;
 	}
 }
 

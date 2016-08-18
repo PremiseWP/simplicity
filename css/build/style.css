@@ -366,40 +366,83 @@ p.error {
 /* Buttons */
 
 .pwps-btn,
-.submit {
+.pwps-btn-md,
+.pwps-btn-lg,
+.pwps-btn-primary,
+.pwps-btn-secondary,
+.pwps-btn-warning,
+/* default form elements */
+input.submit,
+input[type="submit"],
+button.submit, 
+button {
 	display: inline-block;
-	padding: 10px 20px;
-	border: 1px solid #444444;
-	border-radius: 5px;
+	cursor: pointer;
+	border-radius: 2px;
+	background-color: transparent;
 	transition: all .4s ease-in-out;
-	cursor: pointer !important; /* expected behavior */
-	background-color: #FFFFFF;
-	font-weight: 100;
-	font-size: 16px;
-	text-transform: capitalize;
+	font-weight: 300;
+	font-size: inherit;
 }
 
-/* TODO rethink this */
-.pwps-btn:hover,
-.pwps-btn:active,
-.pwps-btn:focus,
-.submit:hover,
-.submit:active,
-.submit:focus {
-	background-color: #444444;
-	color: #FFFFFF;
+/* a bsaic button */
+.pwps-btn,
+input.submit,
+input[type="submit"],
+button.submit, 
+button {
+	padding: 10px 20px;
+	border: 1px solid #888;
 }
 
-/* medium btn */
-.pwps-btn.pwps-btn-md {
+/* a medium btn */
+.pwps-btn-md {
+	display: inline-block;
 	padding: 18px 30px;
 	font-size: 18px;
 }
 
-/* large btn */
-.pwps-btn.pwps-btn-lg {
+/* a large btn */
+.pwps-btn-lg {
+	display: inline-block;
 	padding: 25px 40px;
 	font-size: 20px;
+}
+
+/* primary btn styles - background, color */
+.pwps-btn-primary {
+	background-color: #54D4F7;
+	color: #FFFFFF;
+}
+.pwps-btn-primary:hover,
+.pwps-btn-primary:active,
+.pwps-btn-primary:focus {
+	background-color: ;
+	color: ;
+}
+
+/* secondary btn styles - background, color */
+.pwps-btn-secondary {
+	background-color: ;
+	color: ;
+}
+.pwps-btn-secondary:hover,
+.pwps-btn-secondary:active,
+.pwps-btn-secondary:focus {
+	background-color: ;
+	color: ;
+}
+
+/* warning btn styles - background, color */
+.pwps-btn-warning {
+	background-color: ;
+	color: ;
+}
+.pwps-btn-warning:hover,
+.pwps-btn-warning:active,
+.pwps-btn-warning:focus {
+	background-color: ;
+	color: ;
 }
 
 

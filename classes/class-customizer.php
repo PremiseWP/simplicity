@@ -38,146 +38,17 @@ class PWPS_Theme_Customizer {
 		'footer' => array(
 			'copyright' => '%COPY% %YEAR% %SITENAME%. All Rights Reserved.',
 		),
+		'buttons' => array(
+			'primary-bg' => '#54D4F7',
+			'primary-text' => '#FFFFFF',
+			'primary-bg-hover' => '#2b7ae7',
+			'primary-text-hover' => '#FDFDFD',
+		), 
 	);
 
 
-	/**
-	 * Holds header options
-	 *
-	 * @var array
-	 */
-	public $header_options = array(
-		'id'          => 'pwps_customizer_header_section',
-		'key'         => 'header', // key to save serialized data
-		'title'       => 'Simplicity Header',
-		'priority'    => 35.1,
-		'capability'  => 'edit_theme_options',
-		'description' => 'This section controls most of your header settings. Your site\'s logo can be changed from the \'Site Identity\' section.',
-		// The options for this section
-		'settings'    => array(
-			'nav-icon' => array(
-				'default'    => 'fa-empire',
-				'control_id' => 'pwps_customizer_header_fa_icon',
-				'label'      => 'Nav Icon',
-				// 'transport' => 'postMessage',
-			),
-			'background-color' => array(
-				'default'    => '#2b7ae7',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_header_bg_color',
-				'label'      => 'Header Background Color',
-			),
-			'color' => array(
-				'default'     => '#FDFDFD',
-				'control'     => 'color',
-				'control_id'  => 'pwps_customizer_header_color',
-				'label'       => 'Header Color',
-				'description' => 'color for h3-6 and p tags.',
-			),
-			'opacity' => array(
-				'default'    => '1',
-				'control_id' => 'pwps_customizer_header_opacity',
-				'label'      => 'Header Opacity',
-			),
-			'analytics' => array(
-				'default'    => '',
-				'control_id' => 'pwps_customizer_header_analytics',
-				'label'      => 'Google Analytics Tracking ID',
-				'description'=> 'Looks something like this UA-12345678-1.<br><a href="https://support.google.com/analytics/answer/1032385?hl=en" target="_blank">find it here.</a>'
-			),
-		)
-	);
-
-
-	/**
-	 * Body options
-	 *
-	 * @var array
-	 */
-	public $body_options = array(
-		'id'          => 'pwps_customizer_body_section',
-		'title'       => 'Simplicity Body',
-		'key'         => 'body',
-		'priority'    => 35.2,
-		'capability'  => 'edit_theme_options',
-		'description' => 'This section controls the styles for your site\'s body (main container).',
-		// The options for this section
-		'settings'    => array(
-			'width' => array(
-				'default'    => '90%',
-				'control_id' => 'pwps_customizer_body_width',
-				'label'      => 'Body Width',
-			),
-			'max-width' => array(
-				'default'    => '1200px',
-				'control_id' => 'pwps_customizer_body_max_width',
-				'label'      => 'Body Maximum Width',
-			),
-			'background-color' => array(
-				'default'    => '#FDFDFD',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_body_bg_color',
-				'label'      => 'Body Background Color',
-			),
-			'color' => array(
-				'default'     => '#444444',
-				'control'     => 'color',
-				'control_id'  => 'pwps_customizer_body_color',
-				'label'       => 'Body Color',
-				'description' => 'color for h3-6 and p tags.',
-			),
-			'h1-color' => array(
-				'default'    => '#222222',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_h1_color',
-				'label'      => 'H1 Color',
-			),
-			'h2-color' => array(
-				'default'    => '#222222',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_h2_color',
-				'label'      => 'H2 Color',
-			),
-			'link-color' => array(
-				'default'    => '#000000',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_link_color',
-				'label'      => 'Link Color',
-			),
-			'accent-color' => array(
-				'default'    => '#2b7ae7',
-				'control'    => 'color',
-				'control_id' => 'pwps_customizer_accent_color',
-				'label'      => 'Accent Color',
-				'description'=> 'Used to create subtle contrasts across the theme. Mainly to display meta data in blog posts.',
-			),
-		),
-	);
-
-
-	/**
-	 * Holds footer options
-	 *
-	 * @var array
-	 */
-	public $footer_options = array(
-		'id'          => 'pwps_customizer_footer_section',
-		'key'         => 'footer', // key to save serialized data
-		'title'       => 'Simplicity Footer',
-		'priority'    => 35.3,
-		'capability'  => 'edit_theme_options',
-		'description' => 'This section controls your footer settings.',
-		// The options for this section
-		'settings'    => array(
-			'copyright' => array(
-				'type' => 'textarea', 
-				'default'    => '%COPY% %YEAR% %SITENAME%. All Rights Reserved.',
-				'control_id' => 'pwps_customizer_footer_copyright',
-				'label'      => 'Copyright',
-				'description' => 'Insert dynamic content such copyright symbol, date or site name by using %COPY%, %YEAR% or %SITENAME% (respectively).',
-			),
-		)
-	);
+	
+	protected $options = array();
 
 
 	/**
@@ -215,44 +86,11 @@ class PWPS_Theme_Customizer {
 		// save the wp_cusomize object for later use
 		$this->customize = $wp_customize;
 
-		// register the header section
-		$this->header_section();
+		$this->set_options();
 
-		// register the body section
-		$this->body_section();
-
-		// register the footer section
-		$this->footer_section();
-	}
-
-
-	/**
-	 * regiseter the header settings
-	 *
-	 * @return void register the settings
-	 */
-	public function header_section() {
-		$this->register_section( $this->header_options );
-	}
-
-
-	/**
-	 * regiseter the body settings
-	 *
-	 * @return void register the settings
-	 */
-	public function body_section() {
-		$this->register_section( $this->body_options );
-	}
-
-
-	/**
-	 * regiseter the footer settings
-	 *
-	 * @return void register the settings
-	 */
-	public function footer_section() {
-		$this->register_section( $this->footer_options );
+		foreach ($this->options as $k => $section) {
+			$this->register_section( $section );
+		}
 	}
 
 
@@ -277,7 +115,7 @@ class PWPS_Theme_Customizer {
 			// 2. register the setting
 			$this->customize->add_setting( 'pwps_customizer_options['.$section['key'].']['.$k.']',
 				array(
-					'default'     => $opt['default'],
+					'default'     => self::$default_options[$section['key']][$k],
 					'type'        => 'option',
 					'capability'  => 'edit_theme_options',
 					'transport'   => isset( $opt['transport'] ) ? $opt['transport'] : 'refresh',
@@ -310,6 +148,178 @@ class PWPS_Theme_Customizer {
 				);
 			}
 		}
+	}
+
+
+	/*
+		Options
+	 */
+	
+	protected function set_options() {
+		/**
+		 * Holds header options
+		 *
+		 * @var array
+		 */
+		$this->options['header'] = array(
+			'id'          => 'pwps_customizer_header_section',
+			'key'         => 'header', // key to save serialized data
+			'title'       => 'Simplicity Header',
+			'priority'    => 35.1,
+			'capability'  => 'edit_theme_options',
+			'description' => 'This section controls most of your header settings. Your site\'s logo can be changed from the \'Site Identity\' section.',
+			// The options for this section
+			'settings'    => array(
+				'nav-icon' => array(
+					'control_id' => 'pwps_customizer_header_fa_icon',
+					'label'      => 'Nav Icon',
+					// 'transport' => 'postMessage',
+				),
+				'background-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_header_bg_color',
+					'label'      => 'Header Background Color',
+				),
+				'color' => array(
+					'default'     => '#FDFDFD',
+					'control'     => 'color',
+					'control_id'  => 'pwps_customizer_header_color',
+					'label'       => 'Header Color',
+					'description' => 'color for h3-6 and p tags.',
+				),
+				'opacity' => array(
+					'control_id' => 'pwps_customizer_header_opacity',
+					'label'      => 'Header Opacity',
+				),
+				'analytics' => array(
+					'control_id' => 'pwps_customizer_header_analytics',
+					'label'      => 'Google Analytics Tracking ID',
+					'description'=> 'Looks something like this UA-12345678-1.<br><a href="https://support.google.com/analytics/answer/1032385?hl=en" target="_blank">find it here.</a>'
+				),
+			)
+		);
+
+
+		/**
+		 * Body options
+		 *
+		 * @var array
+		 */
+		$this->options['body'] = array(
+			'id'          => 'pwps_customizer_body_section',
+			'title'       => 'Simplicity Body',
+			'key'         => 'body',
+			'priority'    => 35.2,
+			'capability'  => 'edit_theme_options',
+			'description' => 'This section controls the styles for your site\'s body (main container).',
+			// The options for this section
+			'settings'    => array(
+				'width' => array(
+					'control_id' => 'pwps_customizer_body_width',
+					'label'      => 'Body Width',
+				),
+				'max-width' => array(
+					'control_id' => 'pwps_customizer_body_max_width',
+					'label'      => 'Body Maximum Width',
+				),
+				'background-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_body_bg_color',
+					'label'      => 'Body Background Color',
+				),
+				'color' => array(
+					'default'     => '#444444',
+					'control'     => 'color',
+					'control_id'  => 'pwps_customizer_body_color',
+					'label'       => 'Body Color',
+					'description' => 'color for h3-6 and p tags.',
+				),
+				'h1-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_h1_color',
+					'label'      => 'H1 Color',
+				),
+				'h2-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_h2_color',
+					'label'      => 'H2 Color',
+				),
+				'link-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_link_color',
+					'label'      => 'Link Color',
+				),
+				'accent-color' => array(
+					'control'    => 'color',
+					'control_id' => 'pwps_customizer_accent_color',
+					'label'      => 'Accent Color',
+					'description'=> 'Used to create subtle contrasts across the theme. Mainly to display meta data in blog posts.',
+				),
+			),
+		);
+
+
+		/**
+		 * Holds footer options
+		 *
+		 * @var array
+		 */
+		$this->options['footer'] = array(
+			'id'          => 'pwps_customizer_footer_section',
+			'key'         => 'footer', // key to save serialized data
+			'title'       => 'Simplicity Footer',
+			'priority'    => 35.3,
+			'capability'  => 'edit_theme_options',
+			'description' => 'This section controls your footer settings.',
+			// The options for this section
+			'settings'    => array(
+				'copyright' => array(
+					'type' => 'textarea', 
+					'control_id' => 'pwps_customizer_footer_copyright',
+					'label'      => 'Copyright',
+					'description' => 'Insert dynamic content such copyright symbol, date or site name by using %COPY%, %YEAR% or %SITENAME% (respectively).',
+				),
+			)
+		);
+
+
+		/**
+		 * Holds buttons options
+		 *
+		 * @var array
+		 */
+		$this->options['buttons'] = array(
+			'id'          => 'pwps_customizer_buttons_section',
+			'key'         => 'buttons', // key to save serialized data
+			'title'       => 'Simplicity Buttons',
+			'priority'    => 35.4,
+			'capability'  => 'edit_theme_options',
+			'description' => 'This section controls your buttons settings.',
+			// The options for this section
+			'settings'    => array(
+				'primary-bg' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_primary_bg',
+					'label'      => 'Primary Button Background',
+				),
+				'primary-text' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_primary_text',
+					'label'      => 'Primary Button Text',
+				),
+				// on hover
+				'primary-bg-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_primary_bg_hover',
+					'label'      => 'Primary Button Background Hover',
+				),
+				'primary-text-hover' => array(
+					'control' => 'color', 
+					'control_id' => 'pwps_customizer_buttons_primary_text_hover',
+					'label'      => 'Primary Button Text Hover',
+				),
+			)
+		);	
 	}
 }
 ?>
