@@ -576,13 +576,27 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 }
 
 
-function pwps_uses_sidebar() {
-	global $pwps_has_sidebar;
-	return (boolean) ( $pwps_has_sidebar && ! is_page() && ( is_single() || is_home() ) ) ? true : false;
+if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
+	/**
+	 * check whether a sidebar should be displayed
+	 * 
+	 * @return boolean true if a sidebar should be displayed. false otherwise
+	 */
+	function pwps_uses_sidebar() {
+		global $pwps_has_sidebar;
+		return (boolean) ( $pwps_has_sidebar && ! is_page() && ( is_single() || is_home() ) ) ? true : false;
+	}
 }
 
 
-
-function pwps_the_section_class( $newclass = '' ) {
-	echo pwps_uses_sidebar() ? ' class="premise-row"' : '';
+if ( ! function_exists( 'pwps_the_section_class' ) ) {
+	/**
+	 * output the classes for each section
+	 * 
+	 * @param  string $newclass enter new classes. feature not ready yet
+	 * @return strinf           classes attribute
+	 */
+	function pwps_the_section_class( $newclass = '' ) {
+		echo pwps_uses_sidebar() ? ' class="premise-row"' : '';
+	}
 }
