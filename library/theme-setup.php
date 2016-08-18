@@ -57,11 +57,13 @@ if ( ! function_exists( 'pwps_enqueue_scripts' ) ) {
 	 * @return void
 	 */
 	function pwps_enqueue_scripts() {
-		wp_register_style( 'pwps_css', get_template_directory_uri() . '/css/style.min.css' );
-		wp_register_script( 'pwps_js', get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ) );
+		wp_register_style( 'pwps_gfonts', get_template_directory_uri() . 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Code+Pro:300,400' );
+		wp_register_style( 'pwps_css',    get_template_directory_uri() . '/css/style.min.css' );
+		wp_register_script( 'pwps_js',    get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ) );
 
 		if ( ! is_admin() ) {
-			wp_enqueue_style( 'pwps_css' );
+			wp_enqueue_style(  'pwps_gfonts' );
+			wp_enqueue_style(  'pwps_css' );
 			wp_enqueue_script( 'pwps_js' );
 		}
 	}
