@@ -323,12 +323,12 @@ class PWPS_Theme_Customizer {
 				'primary-bg-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_primary_bg_hover',
-					'label'      => 'Primary Button Background Hover',
+					'label'      => 'Primary Button Background On Hover',
 				),
 				'primary-text-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_primary_text_hover',
-					'label'      => 'Primary Button Text Hover',
+					'label'      => 'Primary Button Text On Hover',
 				),
 				// Secondary Buttons
 				// ===============
@@ -346,12 +346,12 @@ class PWPS_Theme_Customizer {
 				'secondary-bg-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_secondary_bg_hover',
-					'label'      => 'Secondary Button Background Hover',
+					'label'      => 'Secondary Button Background On Hover',
 				),
 				'secondary-text-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_secondary_text_hover',
-					'label'      => 'Secondary Button Text Hover',
+					'label'      => 'Secondary Button Text On Hover',
 				),
 				// Waring Buttons
 				// ===============
@@ -369,12 +369,12 @@ class PWPS_Theme_Customizer {
 				'warning-bg-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_warning_bg_hover',
-					'label'      => 'Waring Button Background Hover',
+					'label'      => 'Waring Button Background On Hover',
 				),
 				'warning-text-hover' => array(
 					'control' => 'color', 
 					'control_id' => 'pwps_customizer_buttons_warning_text_hover',
-					'label'      => 'Waring Button Text Hover',
+					'label'      => 'Waring Button Text On Hover',
 				),
 			)
 		);	

@@ -7,3 +7,14 @@
 #customize-control-pwps_customizer_header_opacity input {
 	max-width: 47px;
 }
+
+
+/* Buttons Section */
+
+#accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_primary_bg,
+#accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_secondary_bg,
+#accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_warning_bg {
+	padding-top: 30px;
+	margin-top: 20px;
+	border-top: 1px solid #ccc;
+}
