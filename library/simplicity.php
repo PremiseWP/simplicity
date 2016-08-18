@@ -34,7 +34,7 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 				'link_before'     => '',
 				'link_after'      => '',
 				'items_wrap'      => '<ul>%3$s</ul>',
-				'depth'           => 0,
+				'depth'           => 1,
 			)
 		);
 	}
@@ -72,7 +72,7 @@ if ( ! function_exists( 'pwps_pagination' ) ) {
 	function pwps_pagination() {
 		?>
 
-		<div class="pwps-infinte-pagination">
+		<div class="pwps-infinte-pagination premise-clear">
 			<i class="fa fa-spin fa-spinner"></i>
 			<span>Loading more posts...</span>
 		</div>
@@ -554,5 +554,24 @@ if ( ! function_exists( 'pwps_get_post_format' ) ) {
 			return get_post_format();
 		}
 		return get_post_type();
+	}
+}
+
+
+if ( ! function_exists( 'pwps_the_sidebar' ) ) {
+	/**
+	 * echo the sidebar for simplicity if active
+	 * 
+	 * @return string html for sidebar
+	 */
+	function pwps_the_sidebar() {
+		global $pwps_has_sidebar;
+		if ( $pwps_has_sidebar ) { ?>
+			<div class="pwps-main-sidebar span4">
+				<ul class="pwps-sidebar">
+					<?php dynamic_sidebar( 'pwps-sidebar' ); ?>
+				</ul>
+			</div><?php 
+		}
 	}
 }

@@ -40,4 +40,6 @@ global $pwps_has_sidebar;
 
 </div>
 
-<?php if ( ! is_singular() ) pwps_pagination(); ?>
+<?php pwps_the_sidebar();
+
+if ( ! is_singular() ) pwps_pagination(); ?>

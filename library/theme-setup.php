@@ -5,9 +5,17 @@
  * @package Simplicity\Library
  */
 
+// set simplicity global variables
+global $pwps_has_sidebar;
 
-//  Hide the admin bar in the front end
-// show_admin_bar( true );
+
+/**
+ * check if the main seidebar is active
+ *
+ * @var boolean
+ */
+$pwps_has_sidebar = ( function_exists( 'is_active_sidebar' ) && is_active_sidebar( 'pwps-sidebar' ) ) ? true : false;
+
 
 // Add theme supprt
 if ( function_exists( 'add_theme_support' ) ) {
@@ -32,6 +40,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	// add woocommerce support
 	add_theme_support( 'woocommerce' );
 }
+
 
 if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	/**
