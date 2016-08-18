@@ -55,7 +55,7 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 		}
 		else {
 			?>
-			<a href="<?php esc_url( site_url() ); ?>" class="premise-block">
+			<a href="<?php echo esc_url( site_url() ); ?>" class="premise-block">
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/img/premise-wp-logo.png' ); ?>" class="premise-responsive">
 			<?php 
 		}
@@ -565,8 +565,7 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 	 * @return string html for sidebar
 	 */
 	function pwps_the_sidebar() {
-		global $pwps_has_sidebar;
-		if ( $pwps_has_sidebar ) { ?>
+		if ( pwps_uses_sidebar() ) { ?>
 			<div class="pwps-main-sidebar span4">
 				<ul class="pwps-sidebar">
 					<?php dynamic_sidebar( 'pwps-sidebar' ); ?>
@@ -574,4 +573,16 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 			</div><?php 
 		}
 	}
+}
+
+
+function pwps_uses_sidebar() {
+	global $pwps_has_sidebar;
+	return (boolean) ( $pwps_has_sidebar && ! is_page() && ( is_single() || is_home() ) ) ? true : false;
+}
+
+
+
+function pwps_the_section_class( $newclass = '' ) {
+	echo pwps_uses_sidebar() ? ' class="premise-row"' : '';
 }

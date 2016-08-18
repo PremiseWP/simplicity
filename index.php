@@ -7,10 +7,9 @@
 
 get_header();
 
-global $pwps_has_sidebar;
 ?>
 
-<section id="pwps-home"<?php echo $pwps_has_sidebar ? ' class="premise-row"' : '' ?>>
+<section id="pwps-home"<?php pwps_the_section_class(); ?>>
 
 	<?php get_template_part( 'loop' ); ?>
 

@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<section id="page">
+<section id="page"<?php pwps_the_section_class(); ?>>
 
 	<?php get_template_part( 'loop' ); ?>
 

@@ -5,11 +5,9 @@
  * @package Simplicity
  */
 
-// defined at single.php
-global $pwps_has_sidebar;
 ?>
 
-<div class="pwps-the-loop<?php echo $pwps_has_sidebar ? ' span8' : '' ?>">
+<div class="pwps-the-loop<?php echo pwps_uses_sidebar() ? ' span8' : '' ?>">
 
 	<?php
 	/**
