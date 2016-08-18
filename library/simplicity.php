@@ -281,14 +281,19 @@ if ( ! function_exists( 'get_button_styles' ) ) {
 		if ( $buttons ) {
 
 			foreach ( $keys as $btn ) {
-				
+
+				$bg = ( isset( $buttons[$btn.'-bg'] ) ) ? $buttons[$btn.'-bg'] : '';
+				$text = ( isset( $buttons[$btn.'-text'] ) ) ? $buttons[$btn.'-text'] : '';
+				$bg_hover = ( isset( $buttons[$btn.'-bg-hover'] ) ) ? $buttons[$btn.'-bg-hover'] : '';
+				$text_hover = ( isset( $buttons[$btn.'-text-hover'] ) ) ? $buttons[$btn.'-text-hover'] : '';
+
 				$_css .= '.pwps-btn-'.$btn.' {
-					background-color: '.$buttons[$btn.'-bg'].';
-					color: '.$buttons[$btn.'-text'].';
+					background-color: '.$bg.';
+					color: '.$text.';
 				}
 				.pwps-btn-'.$btn.':hover {
-					background-color: '.$buttons[$btn.'-bg-hover'].';
-					color: '.$buttons[$btn.'-text-hover'].';
+					background-color: '.$bg_hover.';
+					color: '.$text_hover.';
 				}';
 			}
 		}

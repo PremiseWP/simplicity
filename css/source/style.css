@@ -292,18 +292,19 @@ body {
 h1 {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 40px;
-	line-height: 45px;
+	line-height: 50px;
 	font-weight: 300;
 	color: #222;
 	margin-top: 20px;
 	margin-bottom: 30px;
 	word-break: break-word;
+	hyphens: all;
 }
 
 h2 {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 35px;
-	line-height: 40px;
+	line-height: 45px;
 	font-weight: 300;
 	color: #222;
 	margin-bottom: 20px;
@@ -312,7 +313,7 @@ h2 {
 h3 {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 30px;
-	line-height: 35px;
+	line-height: 40px;
 	font-weight: 300;
 	color: inherit;
 	margin-bottom: 20px;
@@ -418,6 +419,38 @@ button:hover {
 	display: inline-block;
 	padding: 25px 40px;
 	font-size: 20px;
+}
+
+/* button default styles. incase nothing has been saved in the database */
+
+/* primary */
+.pwps-btn-primary {
+	background-color: #54D4F7;
+	color: #FFFFFF;
+}
+.pwps-btn-primary:hover {
+	background-color: #2b7ae7;
+	color: #FDFDFD;
+}
+
+/* secondary */
+.pwps-btn-secondary {
+	background-color: #AAAAAA;
+	color: #FCFCFC;
+}
+.pwps-btn-secondary:hover {
+	background-color: #CCCCCC;
+	color: #FDFDFD;
+}
+
+/* Warning */
+.pwps-btn-warning {
+	background-color: #EEEEEE;
+	color: #F05000;
+}
+.pwps-btn-warning:hover {
+	background-color: #f05000;
+	color: #FDFDFD;
 }
 
 
