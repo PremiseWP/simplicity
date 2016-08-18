@@ -30,6 +30,7 @@
 	transition: opacity .4s 0s ease;
 	visibility: hidden;
 	opacity: 0;
+	height: 0;
 }
 
 .pwps-nav-menu-container ul {
@@ -210,6 +211,10 @@
 	background-color: transparent;
 }
 
+#pwps-header.pwps-nav-active .pwps-nav {
+
+}
+
 #pwps-header.pwps-nav-active .pwps-logo {
 	opacity: 0;
 }
@@ -227,6 +232,7 @@
 #pwps-header.pwps-nav-active .pwps-nav-menu-container {
 	visibility: visible;
 	opacity: 1;
+	height: auto;
 }
 
 /* @320px Styles for iPhone 5 */
