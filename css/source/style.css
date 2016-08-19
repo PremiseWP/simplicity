@@ -178,6 +178,10 @@ ol li {
 	margin-left: 20px;
 }
 
+.pwps-post-content li {
+	margin-bottom: 10px;
+}
+
 /* other */
 
 strong, b {
