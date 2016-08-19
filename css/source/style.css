@@ -482,7 +482,11 @@ button:hover {
 
 /* Admin bar */
 body.admin-bar #pwps-header {
-	margin-top: 32px;
+	margin-top: 46px;
+}
+
+#wpadminbar.mobile {
+	position: fixed;
 }
 
 .pwps-section {
@@ -508,7 +512,7 @@ body.admin-bar #pwps-header {
 	left: 0;
 	width: 100%;
 	padding: 10px 0;
-	z-index: 999999999;
+	z-index: 99999; /* cannot be higher than '99999' because it conflicts with the admin bar */
 }
 
 .pwps-header-overlay {

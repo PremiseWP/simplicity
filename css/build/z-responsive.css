@@ -7,11 +7,13 @@
  *
  * Breakpoints:
  * @768px   iPad portrait
+ * @782px   WP Admin styles responsive break point.
  * @1024px  iPad landscape
  */
 
 
-@media screen and (min-width: 768px) {
+/* @768px */
+@media screen and ( min-width: 768px ) {
 	/* featured images */
 	.pwps-the-loop .pwps-post-thumbnail {
 		float: left;
@@ -57,7 +59,17 @@
 }
 
 
-@media screen and (min-width: 1024px) {
+/* @782px */
+@media screen and ( min-width: 782px ) {
+	/* adjust for admin bar desktop */
+	body.admin-bar #pwps-header {
+		margin-top: 32px;
+	}
+}
+
+
+/* @1024px */
+@media screen and ( min-width: 1024px ) {
 	/* gallery shortcode css */
 	.gallery.gallery-columns-4 .gallery-item {
 		width: 23%;
