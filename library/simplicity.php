@@ -34,7 +34,7 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 				'link_before'     => '',
 				'link_after'      => '',
 				'items_wrap'      => '<ul>%3$s</ul>',
-				'depth'           => 2,
+				'depth'           => 0,
 			)
 		);
 	}
