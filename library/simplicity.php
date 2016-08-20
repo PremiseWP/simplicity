@@ -17,26 +17,28 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 	 * @return string the html for the main navingation
 	 */
 	function pwps_main_nav() {
-
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'header-menu', // DO NOT MODIFY.
-				'menu'            => '',
-				'container'       => 'div',
-				'container_class' => 'pwps-nav-menu-container premise-clear-float',
-				'container_id'    => '',
-				'menu_class'      => 'pwps-nav-menu',
-				'menu_id'         => '',
-				'echo'            => true,
-				'fallback_cb'     => '',
-				'before'          => '',
-				'after'           => '',
-				'link_before'     => '',
-				'link_after'      => '',
-				'items_wrap'      => '<ul>%3$s</ul>',
-				'depth'           => 0,
-			)
-		);
+		echo '<a href="javascript:;" id="pwps-nav-back"><i class="fa fa-angle-left"></i></a>
+		<div class="pwps-nav-menu-container premise-clear-float">';
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'header-menu', // DO NOT MODIFY.
+					'menu'            => '',
+					'container'       => '',
+					'container_class' => '',
+					'container_id'    => '',
+					'menu_class'      => 'pwps-nav-menu',
+					'menu_id'         => '',
+					'echo'            => true,
+					'fallback_cb'     => '',
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'items_wrap'      => '<ul>%3$s</ul>',
+					'depth'           => 0,
+				)
+			);
+		echo '</div>';
 	}
 }
 
@@ -583,9 +585,14 @@ if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 	 * 
 	 * @return boolean true if a sidebar should be displayed. false otherwise
 	 */
-	function pwps_uses_sidebar() {
-		global $pwps_has_sidebar;
-		return (boolean) ( $pwps_has_sidebar && ! is_page() && ( is_single() || is_home() ) ) ? true : false;
+	function pwps_uses_sidebar( $sidebar = 'pwps-sidebar', $only_single = true ) {
+		// check for the sidebar
+		$pwps_has_sidebar = ( function_exists( 'is_active_sidebar' ) && is_active_sidebar( $sidebar ) ) ? true : false;
+		
+		if ( $only_single && ! ( is_single() || is_home() ) ) 
+			return false;
+
+		return $pwps_has_sidebar ? true : false;
 	}
 }
 

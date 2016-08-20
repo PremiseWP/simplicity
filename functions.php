@@ -8,13 +8,8 @@
  */
 
 
-// Require Premise WP if it does not exist.
-if ( ! class_exists( 'Premise_WP' ) ) {
-	require 'includes/require-premise-wp.php';
-}
-
-
 // Includes
+require 'includes/require-premise-wp.php';
 require 'library/theme-setup.php';
 require 'library/simplicity.php';
 require 'classes/class-nav-search.php';
@@ -24,6 +19,8 @@ require 'classes/class-options-page.php';
 
 // Hooks
 if ( function_exists( 'add_action' ) ) {
+
+	add_action( 'tgmpa_register', 'pwps_register_required_plugins' );
 
 	/*
 		These functions are located in library/theme-setup.php

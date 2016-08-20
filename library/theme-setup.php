@@ -5,17 +5,6 @@
  * @package Simplicity\Library
  */
 
-// set simplicity global variables
-global $pwps_has_sidebar;
-
-
-/**
- * check if the main seidebar is active
- *
- * @var boolean
- */
-$pwps_has_sidebar = ( function_exists( 'is_active_sidebar' ) && is_active_sidebar( 'pwps-sidebar' ) ) ? true : false;
-
 
 // Add theme supprt
 if ( function_exists( 'add_theme_support' ) ) {
@@ -148,6 +137,12 @@ if ( ! function_exists( 'pwps_widgets_init' ) ) {
 			'name'          => __( 'Simplicity Sidebar', 'pwps_text_domain' ),
 			'id'            => 'pwps-sidebar',
 			'description'   => __( 'Widgets in this area will be displayed on your posts and blog page.', 'pwps_text_domain' ),
+		);
+		// The nav-footer sidebar
+		$sidebars['nav-footer'] = array(
+			'name'          => __( 'Simplicity Nav Footer', 'pwps_text_domain' ),
+			'id'            => 'pwps-nav-footer',
+			'description'   => __( 'Widgets in this area will be displayed on your nav fixed to the bottom.', 'pwps_text_domain' ),
 		);
 		// sidebar for woocommerce pages
 		$sidebars['woocommerce'] = array(

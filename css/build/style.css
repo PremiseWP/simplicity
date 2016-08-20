@@ -533,7 +533,7 @@ body.admin-bar #pwps-header {
 
 .pwps-logo {
 	position: relative;
-	z-index: 999;
+	z-index: 1;
 	max-width: 150px;
 	float: left;
 	transition: opacity .4s 0s ease;
