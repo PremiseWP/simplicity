@@ -36,16 +36,24 @@
 							<i class="fa <?php echo pwps_get_nav_icon(); ?>"></i>
 						</a>
 					</div>
-					<!-- The search field -->
-					<div class="pwps-nav-search">
-						<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Search anything.. Pages, Posts, Plugins, Themes, etc">
+					<div class="pwps-nav-wrapper">
+						<!-- The search field -->
+						<div class="pwps-nav-search">
+							<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Search anything.. Pages, Posts, Plugins, Themes, etc">
+						</div>
+						<div class="premise-clear"></div>
+						<!-- The nav -->
+						<?php pwps_main_nav(); ?>
+						<?php if ( pwps_uses_sidebar( 'pwps-nav-footer', false ) ) : ?>
+							<div class="pwps-nav-footer-sidebar">
+								<ul class="pwps-nav-footer-sidebar">
+									<?php dynamic_sidebar( 'pwps-nav-footer' ); ?>
+								</ul>
+							</div>
+						<?php endif; ?>
+						<!-- The overlay -->
+						<div class="pwps-nav-overlay"></div>
 					</div>
-					<div class="premise-clear"></div>
-					<!-- The nav -->
-					<a href="javascript:;" id="pwps-nav-back"><i class="fa fa-angle-left"></i></a>
-					<?php pwps_main_nav(); ?>
-					<!-- The overlay -->
-					<div class="pwps-nav-overlay"></div>
 				</div>
 
 			</div>
