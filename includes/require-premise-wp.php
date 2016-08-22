@@ -21,20 +21,20 @@ require_once 'class-tgm-activation-plugin.php';
  * @see     function.php to see where the hooks are called from
  */
 function pwps_register_required_plugins() {
-    
+
     $plugins = array();
 
-    if ( ! class_exists( 'Premise_WP' ) ) 
+    if ( ! class_exists( 'Premise_WP' ) )
         $plugins[] = pwps_require_premisewp();
 
-    if ( ! class_exists( 'Jetpack' ) ) 
+    if ( ! class_exists( 'Jetpack' ) )
         $plugins[] = pwps_recommend_jetpack();
 
     /*
      * Array of configuration settings. Amend each line as needed.
      */
     $config = array(
-        'id'           => 'pwps_simplicity',              // Unique ID for hashing notices for multiple instances of TGMPA.
+        'id'           => 'pwps_simplicity',   // Unique ID for hashing notices for multiple instances of TGMPA.
         'default_path' => '',                  // Default absolute path to bundled plugins.
         'menu'         => 'pwp-simplicity-theme',         // Menu slug.
         'parent_slug'  => 'themes.php',       // Parent menu slug.
