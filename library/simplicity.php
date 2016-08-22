@@ -569,7 +569,7 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 	 */
 	function pwps_the_sidebar() {
 		if ( pwps_uses_sidebar() ) { ?>
-			<div class="pwps-main-sidebar span4">
+			<div class="pwps-main-sidebar span4 premise-hide-on-mobile">
 				<ul class="pwps-sidebar">
 					<?php dynamic_sidebar( 'pwps-sidebar' ); ?>
 				</ul>

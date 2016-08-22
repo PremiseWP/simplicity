@@ -37,13 +37,25 @@
 						</a>
 					</div>
 					<div class="pwps-nav-wrapper">
-						<!-- The search field -->
+
 						<div class="pwps-nav-search">
 							<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Search anything.. Pages, Posts, Plugins, Themes, etc">
 						</div>
 						<div class="premise-clear"></div>
 						<!-- The nav -->
 						<?php pwps_main_nav(); ?>
+						<?php if ( pwps_uses_sidebar( 'pwps-sidebar', false ) ) : ?>
+							<div class="premise-clear premise-show-on-mobile">
+								<div class="premise-align-center">
+									<a href="#" class="pwps-toggle-mobile-sidebar">Show me the siedbar</a>
+								</div>
+								<div class="pwps-mobile-sidebar">
+									<ul class="pwps-sidebar">
+										<?php dynamic_sidebar( 'pwps-sidebar' ); ?>
+									</ul>
+								</div>
+							</div>
+						<?php endif; ?>
 						<?php if ( pwps_uses_sidebar( 'pwps-nav-footer', false ) ) : ?>
 							<div class="pwps-nav-footer-sidebar">
 								<ul class="pwps-nav-footer-sidebar">
