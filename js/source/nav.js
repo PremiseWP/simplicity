@@ -40,6 +40,7 @@
 				// if enter key is pressed
 				if ( e.keyCode == 13 ) {
 					header.removeClass( 'pwps-nav-active' );
+					body.removeClass( 'pwps-nav-active' );
 					navSearch.blur();
 					return false;
 				}
@@ -48,7 +49,7 @@
 				var $this = $( this ),
 				s = $this.val();
 
-				setTimeout(function(){
+				setTimeout( function() {
 					// if string is at least 1 character long
 					if ( 1 <= s.length ) {
 							pwpsDoSearch( s );
