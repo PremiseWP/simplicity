@@ -205,8 +205,7 @@ class PWPS_Theme_Customizer {
 					'default'     => '#FDFDFD',
 					'control'     => 'color',
 					'control_id'  => 'pwps_customizer_header_color',
-					'label'       => 'Header Color',
-					'description' => 'color for h3-6 and p tags.',
+					'label'       => 'Nav Icon Color',
 				),
 				'opacity' => array(
 					'control_id' => 'pwps_customizer_header_opacity',

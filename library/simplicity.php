@@ -60,7 +60,7 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 			<a href="<?php echo esc_url( site_url() ); ?>" class="premise-block">
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/img/premise-wp-logo.png' ); ?>" class="premise-responsive">
 			</a>
-			<?php 
+			<?php
 		}
 	}
 }
@@ -164,8 +164,8 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 		}';
 		// TO DO - add button or accent colors to theme options
 
-		// set the header color
-		$_css .= '#pwps-header {
+		// set the nav icon color
+		$_css .= '#pwps-nav-toggle-a {
 			color:'.$hcol.';
 		}';
 
@@ -177,7 +177,7 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 if ( ! function_exists( 'pwps_google_analytics_script' ) ) {
 	/**
 	 * output the google analytics script if a tracking ID has been provided
-	 * 
+	 *
 	 * @return string the script needed for google analytics to work.
 	 */
 	function pwps_google_analytics_script() {
@@ -273,7 +273,7 @@ if( ! function_exists( 'pwps_get_body_styles' ) ) {
 if ( ! function_exists( 'get_button_styles' ) ) {
 	/**
 	 * returns the buttons styles. the css to apply to the header to style the buttons dynamically
-	 * 
+	 *
 	 * @param  array  $keys key for each button
 	 * @return sting        the css to apply styles
 	 */
@@ -564,7 +564,7 @@ if ( ! function_exists( 'pwps_get_post_format' ) ) {
 if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 	/**
 	 * echo the sidebar for simplicity if active
-	 * 
+	 *
 	 * @return string html for sidebar
 	 */
 	function pwps_the_sidebar() {
@@ -573,7 +573,7 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 				<ul class="pwps-sidebar">
 					<?php dynamic_sidebar( 'pwps-sidebar' ); ?>
 				</ul>
-			</div><?php 
+			</div><?php
 		}
 	}
 }
@@ -582,14 +582,14 @@ if ( ! function_exists( 'pwps_the_sidebar' ) ) {
 if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 	/**
 	 * check whether a sidebar should be displayed
-	 * 
+	 *
 	 * @return boolean true if a sidebar should be displayed. false otherwise
 	 */
 	function pwps_uses_sidebar( $sidebar = 'pwps-sidebar', $only_single = true ) {
 		// check for the sidebar
 		$pwps_has_sidebar = ( function_exists( 'is_active_sidebar' ) && is_active_sidebar( $sidebar ) ) ? true : false;
-		
-		if ( $only_single && ! ( is_single() || is_home() ) ) 
+
+		if ( $only_single && ! ( is_single() || is_home() ) )
 			return false;
 
 		return $pwps_has_sidebar ? true : false;
@@ -600,7 +600,7 @@ if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 if ( ! function_exists( 'pwps_the_section_class' ) ) {
 	/**
 	 * output the classes for each section
-	 * 
+	 *
 	 * @param  string $newclass enter new classes. feature not ready yet
 	 * @return strinf           classes attribute
 	 */

@@ -380,7 +380,7 @@ Background and text colors are handled by customizer */
 /* default form elements */
 input.submit,
 input[type="submit"],
-button.submit, 
+button.submit,
 button {
 	display: inline-block;
 	padding: 10px 20px;
@@ -396,7 +396,7 @@ button {
 .pwps-btn,
 input.submit,
 input[type="submit"],
-button.submit, 
+button.submit,
 button {
 	border: 1px solid #888;
 	background-color: #FFFFFF;
@@ -966,24 +966,31 @@ body.admin-bar #pwps-header {
 	margin-bottom: 0;
 }
 
-/* Nav widget */
-.widget_nav_menu li,
+/* Default widgets and woocommerce widgets */
+.pwps-widget > ul li,
 .product-categories li {
 	position: relative;
 	list-style-type: none;
 	margin-left: 0;
 }
-.widget_nav_menu li {
+.pwps-widget > ul li {
 	border-bottom: 1px dashed #ccc;
 }
-.widget_nav_menu li > a,
-.product-categories li > a {
+.pwps-widget > ul li > a,
+.product-categories li > a,
+.pwps-widget > ul li.recentcomments {
 	display: block;
 	padding: 5px;
 }
-.widget_nav_menu li > ul,
+.pwps-widget > ul li > ul,
 .product-categories li > ul {
 	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.pwps-widget > ul li > ul > li:last-child,
+.product-categories li > ul > li:last-child {
+	border-bottom: 0;
 }
 
 /* Search widget */
@@ -1007,6 +1014,16 @@ body.admin-bar #pwps-header {
 	right: 0;
 	padding: 0 5px;
 	line-height: 30px;
+}
+
+table#wp-calendar {
+	width: 100%;
+}
+
+table#wp-calendar td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px
 }
 
 
