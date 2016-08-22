@@ -729,14 +729,14 @@ body.admin-bar #pwps-header {
 	color: #444;
 }
 
-.pwps-comment-list .comment .comment-body .comment-meta,
+.pwps-comment-list .comment .comment-body .comment-metadata,
 .pwps-comment-list .comment .comment-body .reply {
  	position: absolute;
 	bottom: 0;
 	line-height: 30px;
  }
 
-.pwps-comment-list .comment .comment-body .comment-meta {
+.pwps-comment-list .comment .comment-body .comment-metadata {
 	right: 0;
 }
 
