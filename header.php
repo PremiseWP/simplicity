@@ -47,7 +47,7 @@
 						<?php if ( pwps_uses_sidebar( 'pwps-sidebar', false ) ) : ?>
 							<div class="premise-clear premise-show-on-mobile">
 								<div class="premise-align-center">
-									<a href="#" class="pwps-toggle-mobile-sidebar">Show me the siedbar</a>
+									<a href="#" class="pwps-toggle-mobile-sidebar">See the sidebar</a>
 								</div>
 								<div class="pwps-mobile-sidebar">
 									<ul class="pwps-sidebar">

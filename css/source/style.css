@@ -560,10 +560,10 @@ body.admin-bar #pwps-header {
 
 .pwps-post-title h2,
 .pwps-post-title h3 {
-	width: 100%;
+	/*width: 100%;
 	overflow: hidden;
 	white-space: nowrap;
-	text-overflow: ellipsis;
+	text-overflow: ellipsis;*/
 }
 
 .pwps-post-thumbnail {
