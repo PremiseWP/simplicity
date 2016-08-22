@@ -1,4 +1,13 @@
+/**
+ * This file loads on the customizer page and not in the site itself.
+ *
+ * The customizer loads the site within an iframe.
+ *
+ * @wp-hook  customize_controls_print_scripts
+ */
+
 ( function( $ ) {
+
 	$( document ).ready( function() {
 		var DOM = $( this );
 		var headerSection = $( '#accordion-section-pwps_customizer_header_section' ),

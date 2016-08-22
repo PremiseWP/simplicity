@@ -183,7 +183,16 @@ class PWPS_Theme_Customizer {
 				'nav-icon' => array(
 					'control_id' => 'pwps_customizer_header_fa_icon',
 					'label'      => 'Nav Icon',
-					// 'transport' => 'postMessage',
+				),
+				'mobile-sidebar' => array(
+					'control_id' => 'pwps_customizer_header_mobile_sidebar',
+					'label'      => 'Display the mobile sidebar?',
+					'type' => 'checkbox',
+					'description' => 'If checked, the sidebar area that is displayed on the blog page and posts will be moved to the nav on mobile and a link will be displayed to see or hide the sidebar.'
+				),
+				'mobile-sidebar-link' => array(
+					'control_id' => 'pwps_customizer_header_mobile_sidebar_link',
+					'label'      => 'Mobile Sidebar Link Text',
 				),
 				'background-color' => array(
 					'control'    => 'color',

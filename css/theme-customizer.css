@@ -1,3 +1,12 @@
+/**
+ * This file loads on the customizer page.
+ *
+ * It is used to style the custoizer UI and not the site. The customizer loads the site within an iframe
+ * so this file will have no effect on the site.
+ *
+ * @wp-hook  customize_controls_print_styles
+ */
+
 /* Header Section */
 #accordion-section-pwps_customizer_header_section {
 
@@ -8,9 +17,7 @@
 	max-width: 47px;
 }
 
-
 /* Buttons Section */
-
 #accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_primary_bg,
 #accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_secondary_bg,
 #accordion-section-pwps_customizer_buttons_section #customize-control-pwps_customizer_buttons_warning_bg {
