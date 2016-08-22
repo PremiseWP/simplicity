@@ -24,6 +24,8 @@ class PWPS_Theme_Customizer {
 			'background-color' => '#2b7ae7',
 			'color'            => '#FDFDFD',
 			'opacity'          => '1',
+			'mobile-sidebar'   => 1,
+			'mobile-sidebar-link'   => 'See the sidebar',
 		),
 		'body'   => array(
 			'width'            => '90%',
@@ -43,21 +45,21 @@ class PWPS_Theme_Customizer {
 			'primary-text' => '#FFFFFF',
 			'primary-bg-hover' => '#2b7ae7',
 			'primary-text-hover' => '#FDFDFD',
-			// secondary btn 
+			// secondary btn
 			'secondary-bg' => '#AAAAAA',
 			'secondary-text' => '#FCFCFC',
 			'secondary-bg-hover' => '#CCCCCC',
 			'secondary-text-hover' => '#FDFDFD',
-			// warning btn 
+			// warning btn
 			'warning-bg' => '#EEEEEE',
 			'warning-text' => '#F05000',
 			'warning-bg-hover' => '#f05000',
 			'warning-text-hover' => '#FDFDFD',
-		), 
+		),
 	);
 
 
-	
+
 	protected $options = array();
 
 
@@ -164,7 +166,7 @@ class PWPS_Theme_Customizer {
 	/*
 		Options
 	 */
-	
+
 	protected function set_options() {
 		/**
 		 * Holds header options
@@ -293,7 +295,7 @@ class PWPS_Theme_Customizer {
 			// The options for this section
 			'settings'    => array(
 				'copyright' => array(
-					'type' => 'textarea', 
+					'type' => 'textarea',
 					'control_id' => 'pwps_customizer_footer_copyright',
 					'label'      => 'Copyright',
 					'description' => 'Insert dynamic content such copyright symbol, date or site name by using %COPY%, %YEAR% or %SITENAME% (respectively).',
@@ -319,74 +321,74 @@ class PWPS_Theme_Customizer {
 				// Primary Buttons
 				// ===============
 				'primary-bg' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_primary_bg',
 					'label'      => 'Primary Button Background',
 				),
 				'primary-text' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_primary_text',
 					'label'      => 'Primary Button Text',
 				),
 				// on hover
 				'primary-bg-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_primary_bg_hover',
 					'label'      => 'Primary Button Background On Hover',
 				),
 				'primary-text-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_primary_text_hover',
 					'label'      => 'Primary Button Text On Hover',
 				),
 				// Secondary Buttons
 				// ===============
 				'secondary-bg' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_secondary_bg',
 					'label'      => 'Secondary Button Background',
 				),
 				'secondary-text' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_secondary_text',
 					'label'      => 'Secondary Button Text',
 				),
 				// on hover
 				'secondary-bg-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_secondary_bg_hover',
 					'label'      => 'Secondary Button Background On Hover',
 				),
 				'secondary-text-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_secondary_text_hover',
 					'label'      => 'Secondary Button Text On Hover',
 				),
 				// Waring Buttons
 				// ===============
 				'warning-bg' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_warning_bg',
 					'label'      => 'Waring Button Background',
 				),
 				'warning-text' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_warning_text',
 					'label'      => 'Waring Button Text',
 				),
 				// on hover
 				'warning-bg-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_warning_bg_hover',
 					'label'      => 'Waring Button Background On Hover',
 				),
 				'warning-text-hover' => array(
-					'control' => 'color', 
+					'control' => 'color',
 					'control_id' => 'pwps_customizer_buttons_warning_text_hover',
 					'label'      => 'Waring Button Text On Hover',
 				),
 			)
-		);	
+		);
 	}
 }
 ?>

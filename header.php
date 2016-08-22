@@ -44,10 +44,12 @@
 						<div class="premise-clear"></div>
 						<!-- The nav -->
 						<?php pwps_main_nav(); ?>
-						<?php if ( pwps_uses_sidebar( 'pwps-sidebar', false ) ) : ?>
+						<?php if ( (boolean) premise_get_value( 'pwps_customizer_options[header][mobile-sidebar]' ) && pwps_uses_sidebar( 'pwps-sidebar' ) ) : ?>
 							<div class="premise-clear premise-show-on-mobile">
 								<div class="premise-align-center">
-									<a href="#" class="pwps-toggle-mobile-sidebar">See the sidebar</a>
+									<a href="#" class="pwps-toggle-mobile-sidebar">
+										<?php echo esc_html( (string) premise_get_value( 'pwps_customizer_options[header][mobile-sidebar-link]' ) ); ?>
+									</a>
 								</div>
 								<div class="pwps-mobile-sidebar">
 									<ul class="pwps-sidebar">
