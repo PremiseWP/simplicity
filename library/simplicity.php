@@ -148,9 +148,9 @@ if( ! function_exists( 'pwps_get_header_styles' ) ) {
 		$header = array_map('pwps_escape_string', (array) premise_get_value( 'pwps_customizer_options[header]' ) );
 
 		// if there is no css, set the default css
-		$hbgc = ( isset( $header['background-color'] )  && ! empty( $header['background-color'] ) ) ? $header['background-color'] : '#FDFDFD';
-		$hop  = ( isset( $header['opacity'] )           && ! empty( $header['opacity'] ) )          ? $header['opacity']          : '0.6';
-		$hcol = ( isset( $header['color'] )             && ! empty( $header['color'] ) )            ? $header['color']            : '#444444';
+		$hbgc = ( isset( $header['background-color'] )  && ! empty( $header['background-color'] ) ) ? $header['background-color'] : '#2b7ae7';
+		$hop  = ( isset( $header['opacity'] )           && ! empty( $header['opacity'] ) )          ? $header['opacity']          : '1';
+		$hcol = ( isset( $header['color'] )             && ! empty( $header['color'] ) )            ? $header['color']            : '#FDFDFD';
 
 		$_css = ''; // start with an empty string
 
