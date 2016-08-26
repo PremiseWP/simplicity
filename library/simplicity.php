@@ -589,7 +589,7 @@ if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 		// check for the sidebar
 		$pwps_has_sidebar = ( function_exists( 'is_active_sidebar' ) && is_active_sidebar( $sidebar ) ) ? true : false;
 
-		if ( $only_single && ! ( is_single() || is_home() ) )
+		if ( $only_single && ( is_page() && ! is_home() ) )
 			return false;
 
 		return $pwps_has_sidebar ? true : false;
