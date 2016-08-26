@@ -608,3 +608,30 @@ if ( ! function_exists( 'pwps_the_section_class' ) ) {
 		echo pwps_uses_sidebar() ? ' class="premise-row"' : '';
 	}
 }
+
+
+if ( ! function_exists( 'pwps_output_footer_scripts' ) ){
+
+	function pwps_output_footer_scripts() {
+		if ( is_singular() ) {
+			global $post;
+			$output = '';
+			$options = premise_get_value( 'pwps_page_options', array( 'context' => 'post', 'id' => $post->id ) );
+
+			$js = isset( $options['custom-js'] ) && ! empty( $options['custom-js'] ) ? $options['custom-js'] : '';
+			$css = isset( $options['custom-css'] ) && ! empty( $options['custom-css'] ) ? $options['custom-css'] : '';
+
+			if ( '' !== $js ) {
+				$output .= '<script type="text/javascript" id="simplicity-custom-scripts">'.$js.'</script>';
+			}
+
+			if ( '' !== $css ) {
+				$output .= '<style type="text/css" id="simplicity-custom-styles">'.$css.'</style>';
+			}
+
+			if ( ! empty( $output ) )
+				echo $output;
+		}
+		return false;
+	}
+}

@@ -121,7 +121,7 @@ if ( ! function_exists( 'pwps_woocommerce_wrapper_end' ) ) {
 if ( ! function_exists( 'pwps_widgets_init' ) ) {
 	/**
 	 * Initiate our widgets. registers sidebars
-	 * 
+	 *
 	 * @return void registers sidebar
 	 */
 	function pwps_widgets_init() {
@@ -154,6 +154,16 @@ if ( ! function_exists( 'pwps_widgets_init' ) ) {
 		foreach ( $sidebars as $k => $sidebar ) {
 			register_sidebar( array_merge( $sidebar, $sidebar_attrs ) );
 		}
+	}
+}
+
+
+if ( ! function_exists( 'pwps_register_meta_box' ) ) {
+	/**
+	 * Calls the class on the post edit screen.
+	 */
+	function pwps_register_meta_box() {
+	    new PWPS_Meta_Box();
 	}
 }
 ?>

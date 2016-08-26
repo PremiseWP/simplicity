@@ -12,6 +12,7 @@
 require 'includes/require-premise-wp.php';
 require 'library/theme-setup.php';
 require 'library/simplicity.php';
+require 'classes/class-meta-box.php';
 require 'classes/class-nav-search.php';
 require 'classes/class-customizer.php';
 require 'classes/class-options-page.php';
@@ -25,7 +26,7 @@ if ( function_exists( 'add_action' ) ) {
 	/*
 		These functions are located in library/theme-setup.php
 	 */
-	
+
 	// On theme activation.
 	add_action( 'after_setup_theme', 'pwps_theme_setup' );
 
@@ -37,12 +38,18 @@ if ( function_exists( 'add_action' ) ) {
 
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );
-	
+
+	// register the meta box
+	if ( is_admin() ) {
+	    add_action( 'load-post.php',     'pwps_register_meta_box' );
+	    add_action( 'load-post-new.php', 'pwps_register_meta_box' );
+	}
+
 
 	/*
 		These functions are located in library/simplicity.php
 	 */
-	
+
 	// register the ajax action for infinite scroll
 	add_action( 'wp_ajax_pwps_load_more_posts',        'pwps_load_more_posts' );
 	add_action( 'wp_ajax_nopriv_pwps_load_more_posts', 'pwps_load_more_posts' );
@@ -70,10 +77,13 @@ if ( function_exists( 'add_action' ) ) {
 	// add page links to the content
 	add_filter( 'the_content', 'pwps_insert_page_links', 20 );
 
+	// output the footer scripts and css from our theme
+	add_action( 'wp_footer', 'pwps_output_footer_scripts', 20 );
+
 	/*
 		These classe are located in the classes directory
 	 */
-	
+
 	// add the theme options page
 	// add_action( 'init', array( PWPS_Theme_Options::get_instance(), 'init' ) ); // For now we do not have an options page
 	add_action( 'customize_register' , array( PWPS_Theme_Customizer::get_instance(), 'init' ) );
