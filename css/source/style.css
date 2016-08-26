@@ -967,29 +967,30 @@ body.admin-bar #pwps-header {
 }
 
 /* Default widgets and woocommerce widgets */
+.pwps-widget,
 .pwps-widget > ul li,
 .product-categories li {
 	position: relative;
 	list-style-type: none;
 	margin-left: 0;
 }
-.pwps-widget > ul li {
+.pwps-main-sidebar .pwps-widget > ul li {
 	border-bottom: 1px dashed #ccc;
 }
-.pwps-widget > ul li > a,
-.product-categories li > a,
-.pwps-widget > ul li.recentcomments {
+.pwps-main-sidebar .pwps-widget > ul li > a,
+.pwps-main-sidebar .product-categories li > a,
+.pwps-main-sidebar .pwps-widget > ul li.recentcomments {
 	display: block;
 	padding: 5px;
 }
-.pwps-widget > ul li > ul,
-.product-categories li > ul {
+.pwps-main-sidebar .pwps-widget > ul li > ul,
+.pwps-main-sidebar .product-categories li > ul {
 	margin-left: 20px;
 	margin-bottom: 0;
 }
 
-.pwps-widget > ul li > ul > li:last-child,
-.product-categories li > ul > li:last-child {
+.pwps-main-sidebar .pwps-widget > ul li > ul > li:last-child,
+.pwps-main-sidebar .product-categories li > ul > li:last-child {
 	border-bottom: 0;
 }
 

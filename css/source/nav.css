@@ -214,6 +214,10 @@ body.pwps-nav-active {
 	text-align: center;
 }
 
+.pwps-nav-footer-sidebar .widget_wpcom_social_media_icons_widget li {
+	display: inline-block;
+}
+
 
 /* When nav is active */
 #pwps-header.pwps-nav-active {
