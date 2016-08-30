@@ -9,7 +9,7 @@
 
 <article <?php post_class( 'pwps-post pwps-aside-format' ); ?>>
 
-	<?php 
+	<?php
 	$_author = get_user_by( 'ID', $post->post_author ); ?>
 
 	<div class="pwps-aside-header">
@@ -29,6 +29,14 @@
 	<?php if ( ! is_home() && ! is_front_page() ) : ?>
 		<div class="pwps-post-title">
 			<h1><?php the_title(); ?></h1>
+		</div>
+	<?php endif; ?>
+
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="pwps-post-thumbnail">
+			<a href="<?php the_permalink(); ?>" class="premise-block">
+				<?php the_post_thumbnail( 'pwps-thumbnail', array( 'class' => 'premise-responsive' ) ); ?>
+			</a>
 		</div>
 	<?php endif; ?>
 

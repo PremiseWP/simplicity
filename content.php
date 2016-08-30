@@ -15,6 +15,14 @@
 		</div>
 	<?php endif; ?>
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="pwps-post-thumbnail">
+			<a href="<?php the_permalink(); ?>" class="premise-block">
+				<?php the_post_thumbnail( 'pwps-thumbnail', array( 'class' => 'premise-responsive' ) ); ?>
+			</a>
+		</div>
+	<?php endif; ?>
+
 	<div class="pwps-post-content">
 		<?php the_content(); ?>
 	</div>
