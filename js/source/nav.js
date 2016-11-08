@@ -128,7 +128,7 @@
 
 		/**
 		 * initaite the slide nav for our nav system
-		 * 
+		 *
 		 * @return {void} binds the slide menu animation to our mein nav
 		 */
 		function pwpsSubnavigation() {
@@ -151,7 +151,7 @@
 
 					// set the active parent menu and keep it until we go back to the top level
 					$( this ).addClass( 'pwps-active-parent' );
-					
+
 					// slide the menu
 					slideNav();
 
@@ -159,7 +159,7 @@
 					back.addClass( 'pwps-show' );
 					back.off().click( function() {
 						level--; // go back one level
-						
+
 						// slide the menu
 						slideNav();
 
@@ -171,7 +171,7 @@
 							}, 400 );
 						}
 					} );
-					
+
 					// slide the nav left or right
 					function slideNav() {
 						ul.css( {
