@@ -11,11 +11,12 @@
 		loopContainer = $( '.pwps-the-loop' ),
 		sidebarToggle = $( '.pwps-toggle-mobile-sidebar' );
 
-		if ( ! loopContainer.length ) {
-			_conent = pwpsContent.html();
-			pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
-			loopContainer = $( '.pwps-the-loop' );
-		}
+		// Causes issues with some JS events. Need to rethink this
+		// if ( ! loopContainer.length ) {
+		// 	_conent = pwpsContent.html();
+		// 	pwpsContent.html( '<div class="pwps-the-loop">'+_conent+'</div>' );
+		// 	loopContainer = $( '.pwps-the-loop' );
+		// }
 
 		// activate the nav search
 		navToggle.click( pwpsInitNav );
@@ -181,8 +182,7 @@
 				} );
 			}
 
-
-		};
+		}
 
 	} );
 

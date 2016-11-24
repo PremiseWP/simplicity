@@ -27,7 +27,7 @@
 				pCont = loopContainer.find( '.pwps-post-content' );
 
 				pCont.css( 'min-height', pCont.height() );
-				
+
 				$.ajax( {
 					url: href,
 					type: 'post',
