@@ -3,23 +3,527 @@
 	{
 		"selected_items":
 		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"physicia",
+				"physician"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"cli",
+				"clinics_query"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"Physicia",
+				"physicians"
+			],
+			[
+				"pre",
+				"premise-float-left"
+			],
+			[
+				"physici",
+				"Physician"
+			],
+			[
+				"ad",
+				"address"
+			],
+			[
+				"_",
+				"_add"
+			],
+			[
+				"joj",
+				"js_object"
+			],
+			[
+				"_marker",
+				"_markers"
+			],
+			[
+				"infow",
+				"infowindow"
+			],
+			[
+				"vcgma",
+				"vcaGmap"
+			],
+			[
+				"mar",
+				"markers"
+			],
+			[
+				"inf",
+				"infow_view"
+			],
+			[
+				"ke",
+				"array_key_exists"
+			],
+			[
+				"do",
+				"doctors"
+			],
+			[
+				"baco",
+				"background-color"
+			],
+			[
+				"bu",
+				"business_id"
+			],
+			[
+				"arma",
+				"array_map"
+			],
+			[
+				"en",
+				"endif"
+			],
+			[
+				"sta",
+				"stateId"
+			],
+			[
+				"obg",
+				"ob_get_clean"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"curl",
+				"curl_exec"
+			],
+			[
+				"libs",
+				"list_by_state"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"vcgm",
+				"vcaGmap"
+			],
+			[
+				"vgm",
+				"vcaGmap"
+			],
+			[
+				"ma",
+				"markers"
+			],
+			[
+				"vm",
+				"vcaMasonry"
+			],
+			[
+				"shc",
+				"schema_longitude"
+			],
+			[
+				"vzf",
+				"vcaZipForm"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"premise",
+				"premise-inline-block"
+			],
+			[
+				"arrayf",
+				"array_flip"
+			],
+			[
+				"vcc",
+				"vca_clinics"
+			],
+			[
+				"premise_",
+				"premise_get_value"
+			],
+			[
+				"wpq",
+				"_wpquery"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"geet",
+				"get_template_directory_uri"
+			],
+			[
+				"pr",
+				"plugins_array"
+			],
+			[
+				"re",
+				"repeat-y"
+			],
+			[
+				"tfg",
+				"tfg_quote_plugin"
+			],
+			[
+				"run",
+				"runMasonry"
+			],
+			[
+				"ch",
+				"checkTagsAvail"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"ot",
+				"objectToURI"
+			],
+			[
+				"cn",
+				"confetti"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"all",
+				"allTags"
+			],
+			[
+				"toggle",
+				"toggleModules"
+			],
+			[
+				"tomo",
+				"toggleMoreFields"
+			],
+			[
+				"tfl",
+				"tfgConfettiLoaded"
+			],
+			[
+				"C",
+				"Confetti"
+			],
+			[
+				"confe",
+				"Confetti"
+			],
+			[
+				"arramer",
+				"array_merge"
+			],
+			[
+				"tfutag",
+				"tfg_used_tags"
+			],
+			[
+				"ut",
+				"tfg_used_tags"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"optio",
+				"option"
+			],
+			[
+				"ta",
+				"tagsSelected"
+			],
+			[
+				"tbp",
+				"tfgBlogPost"
+			],
+			[
+				"tags",
+				"tagsSelected"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ser",
+				"service"
+			],
+			[
+				"strrep",
+				"str_replace"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ani",
+				"animation-direction"
+			],
+			[
+				"anim",
+				"animation-duration"
+			],
+			[
+				"tfgcon",
+				"tfgConfettiOverlay"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"cla",
+				"class\tclass …"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"fil",
+				"filters"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"tr",
+				"transition"
+			],
+			[
+				"y",
+				"y2"
+			],
+			[
+				"D",
+				"DateTime"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"sidebar-",
+				"sidebar-img"
+			],
+			[
+				"padi",
+				"padding-left"
+			],
+			[
+				"cont",
+				"contact"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"pcop",
+				"pwps_customizer_options"
+			],
+			[
+				"clea",
+				"clearTimeout"
+			],
+			[
+				"pc",
+				"pwpsContent"
+			],
+			[
+				"pwc",
+				"pwpsContent"
+			],
+			[
+				"quer",
+				"query_string"
+			],
+			[
+				"dat",
+				"data-pwps-nav-search"
+			],
+			[
+				"pwn",
+				"pwps-nav-results"
+			],
+			[
+				"pwps_the_",
+				"pwps_the_post_meta"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"ccc",
+				"CCCCCC"
+			],
+			[
+				"boxs",
+				"box-sizing"
+			],
+			[
+				"contr",
+				"control_id"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"te",
+				"text-top"
+			],
+			[
+				"wor",
+				"word-break"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"inin",
+				"inline-block"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"funcn",
+				"function"
+			],
+			[
+				"PWTH",
+				"PWPS_Theme_Options"
+			],
+			[
+				"bakco",
+				"background-color"
+			],
+			[
+				"eas",
+				"ease-in-out"
+			],
+			[
+				"GS",
+				"Google_Service_YouTube"
+			],
+			[
+				"sanit",
+				"sanitize_text_field"
+			],
+			[
+				"tab",
+				"table"
+			],
+			[
+				"scn",
+				"sgrContent"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"anima",
+				"animation-iteration-count"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"nas",
+				"navSearch"
+			],
+			[
+				"chec",
+				"check_for_x"
+			],
+			[
+				"trivia",
+				"trivia_questions"
+			],
+			[
+				"PC",
+				"PremiseCPT"
+			],
+			[
+				"lin",
+				"link\t@link"
+			],
+			[
+				"pack",
+				"package\t@package"
+			],
+			[
+				"op",
+				"opts"
+			],
+			[
+				"set",
+				"setPreview"
+			],
+			[
+				"sa",
+				"salse_role"
+			],
+			[
+				"sub",
+				"subpackage\t@subpackage"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "functions.php",
+			"file": "js/source/core.js",
 			"settings":
 			{
-				"buffer_size": 3199,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "library/theme-setup.php",
-			"settings":
-			{
-				"buffer_size": 4758,
+				"buffer_size": 3431,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -32,26 +536,191 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 167.0,
-		"last_filter": "save",
+		"height": 392.0,
+		"last_filter": "sa",
 		"selected_items":
 		[
+			[
+				"sa",
+				"Project: Save As"
+			],
+			[
+				"live",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"l",
+				"AlignTab: Live Preview Mode"
+			],
 			[
 				"save",
 				"Project: Save As"
 			],
 			[
+				"table",
+				"AlignTab: Table Mode"
+			],
+			[
+				"syj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"saves",
+				"Project: Save As"
+			],
+			[
+				"li",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"ssp",
+				"Set Syntax: PHP"
+			],
+			[
+				"sphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"sh",
+				"Set Syntax: HTML"
+			],
+			[
+				"shtm",
+				"Snippet: html"
+			],
+			[
 				"sav",
 				"Project: Save As"
+			],
+			[
+				"liv",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"tab",
+				"AlignTab: Table Mode"
+			],
+			[
+				"tabl",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"tabel",
+				"AlignTab: Table Mode"
+			],
+			[
+				"lv",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"LIVE",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"ive",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"ta",
+				"AlignTab: Table Mode"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssph",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"tabmod",
+				"AlignTab: Table Mode"
+			],
+			[
+				"limo",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"mini",
+				"Whitespace: Remove Trailing Whitespace"
+			],
+			[
+				"tamo",
+				"AlignTab: Table Mode"
+			],
+			[
+				"livemod",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"alitab",
+				"AlignTab"
+			],
+			[
+				"tamod",
+				"AlignTab: Table Mode"
+			],
+			[
+				"tabmo",
+				"AlignTab: Table Mode"
+			],
+			[
+				"livmo",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"tabm",
+				"AlignTab: Table Mode"
+			],
+			[
+				"align",
+				"AlignTab: Table Mode"
+			],
+			[
+				"aligntab",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"alita",
+				"AlignTab"
+			],
+			[
+				"alig",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"ali",
+				"AlignTab"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
 			]
 		],
-		"width": 485.0
+		"width": 593.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 126.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -65,27 +734,287 @@
 	},
 	"expanded_folders":
 	[
-		"/Applications/MAMP/htdocs/wp-content/themes/simplicity"
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source"
 	],
 	"file_history":
 	[
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/controller/class.physicians.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/library/functions.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/single-veinclinics-doctor.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/page-physician-directory.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/content-physician.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/taxonomy-state.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/functions.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/controller/class.shortcodes.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/js/source/global.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/controller/class.clinics.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/content-clinic.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/css/source/global.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/page-clinics.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/model/class.clinics.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/single-clinic.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/model/class.vca-clinics.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/content-clinic-infowindow.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/model/class.geoquery.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/library/helpers.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/view/vca-reviews-iframe.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/model/class.rewrite-rules.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/index.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/js/source/masonry.pkgd.min.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/js/source/isotope.pkgd.min.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-config.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/script.min.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/functions.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/admin/tinymce-quote-plugin.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/view/tmpl-editor-tfg-quote-template.html",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/library/site.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/classes/class-shortcode.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/README.md",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/webflow.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/global.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/header.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/source/webflow.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/fitzgerald_old.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/classes/view/tmpl-editor-tfg-quote-template.html",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/admin/tinymce-quote-plugin-view.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/build/fitzgerald_old.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/source/confetti.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/sidebar-confetti.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/page-confetti.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/library/admin.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/classes/class-confetti.php",
+		"/Users/mariovallejo/GoogleDrive/Clients/Torque/Fitzferald/data_backup_torque_mv_9.26.2016/pageData 2010-04-30 23 08 10.txt",
+		"/Users/mariovallejo/GoogleDrive/Clients/Torque/Fitzferald/data_backup_torque_mv_9.26.2016/pageData2010-07-17 20 52 13.txt",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/mario-notes.txt",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/loop-confetti.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/package.json",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/loop-confetti-map.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/Gruntfile.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/admin/theme-reference.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/single.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-single.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/confetti-page.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-loop-list.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/loop-confetti-list.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/timeline-express.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/page-contact.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/timeline-express/timeline-express-container.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/timeline-express-container.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/admin/theme-options.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/admin/theme-options.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/class.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/class-test.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/classes/class-user-profiles.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-author.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/source/global.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/front-page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/author.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-service.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-project.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/loop-related.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/classes/class-meta-box.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/sidebar-service.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/single-service.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/single-project.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/ast.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/page-404.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/content-none.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/documentation/files/library/site.php.txt",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/404.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/index.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/plugins/Premise-WP/Gruntfile.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/footer.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/source/modernizr.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/build/global.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/normalize.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/single.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/library/theme-setup.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/includes/require-premise-wp.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/library/simplicity.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/index.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/front-page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-nav-search.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/core.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/header.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/searchpage.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop-related.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/style.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/view/view-content-loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/z-responsive.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/nav.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-related.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/comments.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/theme-customizer.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/theme-customizer.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/functions.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-customizer.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop-premise-portfolio.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-options-page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/theme-customizer.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/build/nav.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/premise-resets.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/premiseScroll.jquery.min.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/style.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/footer.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-none.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-video-meta-box.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/premise-portfolio.css"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"",
+			"js/source/*.js",
+			""
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"function do",
+			"VCA_Clinics::",
+			"premise-float",
+			"premise-float-",
+			" premise-float-",
+			"clinic",
+			"get_template_part( 'content', 'clinic' );",
+			"find-locate",
+			"physician-",
+			"VCA_Clinics::",
+			"id=\"vca",
+			"VCA_Clinics(",
+			"get_states",
+			"infow",
+			"_m",
+			"infowindow",
+			"marker",
+			"markers_a",
+			"_markers",
+			"get_markers",
+			";",
+			"protected",
+			"\tprotected",
+			"closed",
+			"<table>",
+			"span6",
+			"h3",
+			"p>",
+			"span3",
+			"_vca_clinic",
+			"\n\n        //",
+			"\tp",
+			"'custom_nonce_action'",
+			"$length",
+			"'custom_nonce'",
+			"custom_nonce_action",
+			"$post_type",
+			"add_metabox",
+			"maybe_init_mb",
+			"$zip",
+			"list_by_state",
+			"vca_list_clinics_by_state",
+			"$_map_data",
+			"markers",
+			" data-",
+			"markers",
+			"$c",
+			"vcaMapObj",
+			"vcaGoogleMap",
+			".vca-distance:",
+			"list_all",
+			"lat",
+			"$_POST['latlng']['lat']",
+			"\\'",
+			"'",
+			"$user_lat",
+			"schema_longitude",
+			"schema_latitude",
+			"pm2",
+			"pm1",
+			"vca_list_clinics_by_state",
+			"public function",
+			"$k",
+			"#the permalink",
+			"Job Title",
+			"span",
+			"span2",
+			"quote",
+			"tfgMobileNavIcon",
+			"menuWidth",
+			"overlay",
+			"w-nav-overlay",
+			"tfg_nav_logo",
+			".wpview",
+			"type:",
+			"radio",
+			"boutique-banner",
+			"boutique_banner",
+			"}\n.",
+			"\t",
+			"  ",
+			"$a->",
+			"$this",
+			"MyButtons",
+			"tinymce.plugins.tfg_quote_plugin",
+			"boutique_banner",
+			"dtbaker_mce_banner",
+			"$this->shortcode_tag",
+			";s:",
+			"{",
+			"url('fonts",
+			"url(",
+			"font-family",
+			"matrix",
+			"webfont",
+			"project",
+			"tag",
+			"js",
+			"doFiltering",
+			"load",
+			"click",
+			"#tfg-page-confetti",
+			".portfolio-page-inner",
+			"h4",
+			"strong",
+			"h2",
+			"resetTagsSelected",
+			"uri",
+			"array_in",
+			"$(this)",
+			"updateCategory",
+			"updatedBreadcrumb",
+			"tfgUpdateBreadcrumbTags",
+			"tfgResetTags",
+			"tfgDoTagFiltering",
+			"tfgConfettiLoading",
+			"tfgUpdateCategory",
+			"tfgCheckTagAvailability",
+			"tfgConfettiMasonry",
+			"tfgConfettiLoaded",
+			"tfgBindEvents",
+			"tfgResetConfetti",
+			"tfgConfettiInit",
+			"this.",
+			"confetti.",
+			"tfgConfettiOverlay",
+			"tfgGridView",
+			"tfgMoreFields"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -93,6 +1022,19 @@
 		"regex": false,
 		"replace_history":
 		[
+			"pwps_enqueue_customizer_js",
+			"class=\"pwps-container\"",
+			"pwps-",
+			"pwps_",
+			"premise-options-page",
+			"SPTPresentationBuilder",
+			"spt-slides-available",
+			"chp-header-absolute",
+			"tfwk_get_site_option( 'tfwk_config', 'gmaps-api' )",
+			"podley-main-sidebar",
+			"tfwkProcessContactForm",
+			"tfwkRosterFilter",
+			"roster_instance"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -103,62 +1045,36 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "functions.php",
+					"file": "js/source/core.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3199,
+						"buffer_size": 3431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								845,
-								865
+								2333,
+								2333
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 567.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "library/theme-setup.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4758,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1802,
-								1802
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 426.0,
+						"translation.y": 664.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -169,11 +1085,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -202,11 +1118,15 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 86.0
+	},
 	"pinned_build_system": "",
 	"project": "simplicity.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -216,8 +1136,516 @@
 		"selected_items":
 		[
 			[
+				"core",
+				"js/source/core.js"
+			],
+			[
+				"sinp",
+				"single-veinclinics-doctor.php"
+			],
+			[
+				"glo",
+				"js/source/global.js"
+			],
+			[
+				"paphy",
+				"page-physician-directory.php"
+			],
+			[
+				"clph",
+				"controller/class.physicians.php"
+			],
+			[
+				"conphy",
+				"content-physician.php"
+			],
+			[
+				"pap",
+				"page-physician-directory.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"tax",
+				"taxonomy-state.php"
+			],
+			[
+				"clcli",
+				"controller/class.clinics.php"
+			],
+			[
+				"concli",
+				"content-clinic.php"
+			],
+			[
+				"claclin",
+				"controller/class.clinics.php"
+			],
+			[
+				"taxsta",
+				"taxonomy-state.php"
+			],
+			[
+				"clsh",
+				"controller/class.shortcodes.php"
+			],
+			[
 				"fu",
 				"functions.php"
+			],
+			[
+				"fun",
+				"library/functions.php"
+			],
+			[
+				"con",
+				"content-clinic.php"
+			],
+			[
+				"global",
+				"css/source/global.css"
+			],
+			[
+				"",
+				"library/functions.php"
+			],
+			[
+				"t",
+				"taxonomy-state.php"
+			],
+			[
+				"moclcli",
+				"model/class.clinics.php"
+			],
+			[
+				"pacli",
+				"page-clinics.php"
+			],
+			[
+				"vca",
+				"model/class.vca-clinics.php"
+			],
+			[
+				"clacli",
+				"controller/class.clinics.php"
+			],
+			[
+				"clasho",
+				"controller/class.shortcodes.php"
+			],
+			[
+				"singci",
+				"single-clinic.php"
+			],
+			[
+				"vccli",
+				"model/class.vca-clinics.php"
+			],
+			[
+				"taxs",
+				"taxonomy-state.php"
+			],
+			[
+				"paclin",
+				"page-clinics.php"
+			],
+			[
+				"clsho",
+				"controller/class.shortcodes.php"
+			],
+			[
+				"vccl",
+				"model/class.vca-clinics.php"
+			],
+			[
+				"clge",
+				"model/class.geoquery.php"
+			],
+			[
+				"clshor",
+				"controller/class.shortcodes.php"
+			],
+			[
+				"help",
+				"library/helpers.php"
+			],
+			[
+				"cla",
+				"model/class.vca-clinics.php"
+			],
+			[
+				"globa",
+				"css/source/global.css"
+			],
+			[
+				"short",
+				"controller/class.shortcodes.php"
+			],
+			[
+				"clcl",
+				"controller/class.clinics.php"
+			],
+			[
+				"glob",
+				"css/source/global.css"
+			],
+			[
+				"conc",
+				"content-clinic.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"clrere",
+				"model/class.rewrite-rules.php"
+			],
+			[
+				"funct",
+				"functions.php"
+			],
+			[
+				"globl",
+				"js/source/global.js"
+			],
+			[
+				"pcli",
+				"page-clinics.php"
+			],
+			[
+				"conclin",
+				"content-clinic.php"
+			],
+			[
+				"paclini",
+				"page-clinics.php"
+			],
+			[
+				"clinic",
+				"controller/class.clinics.php"
+			],
+			[
+				"reru",
+				"model/class.rewrite-rules.php"
+			],
+			[
+				"wpc",
+				"wp-config.php"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"sear",
+				"search.php"
+			],
+			[
+				"js/so",
+				"js/source/confetti.js"
+			],
+			[
+				"consingl",
+				"content-single.php"
+			],
+			[
+				"conten",
+				"content.php"
+			],
+			[
+				"shor",
+				"classes/class-shortcode.php"
+			],
+			[
+				"function",
+				"functions.php"
+			],
+			[
+				"pag",
+				"page.php"
+			],
+			[
+				"heade",
+				"header.php"
+			],
+			[
+				"he",
+				"header.php"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"functio",
+				"functions.php"
+			],
+			[
+				"old",
+				"css/build/fitzgerald_old.css"
+			],
+			[
+				"pagconfe",
+				"page-confetti.php"
+			],
+			[
+				"sideba",
+				"sidebar-confetti.php"
+			],
+			[
+				"odl",
+				"css/source/fitzgerald_old.css"
+			],
+			[
+				"web",
+				"css/source/webflow.css"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"pageconfe",
+				"page-confetti.php"
+			],
+			[
+				"hede",
+				"header.php"
+			],
+			[
+				"loop",
+				"loop-confetti.php"
+			],
+			[
+				"loma",
+				"loop-confetti-map.php"
+			],
+			[
+				"confe",
+				"page-confetti.php"
+			],
+			[
+				"site",
+				"library/site.php"
+			],
+			[
+				"cofne",
+				"js/source/confetti.js"
+			],
+			[
+				"readm",
+				"README.md"
+			],
+			[
+				"single",
+				"single.php"
+			],
+			[
+				"cont",
+				"content.php"
+			],
+			[
+				"conf",
+				"css/source/confetti-page.css"
+			],
+			[
+				"paconfe",
+				"page-confetti.php"
+			],
+			[
+				"time",
+				"timeline-express/timeline-express-container.php"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"confeti",
+				"js/source/confetti.js"
+			],
+			[
+				"sidebar",
+				"sidebar-confetti.php"
+			],
+			[
+				"confet",
+				"css/source/confetti-page.css"
+			],
+			[
+				"loopconfeti",
+				"loop-confetti-list.php"
+			],
+			[
+				"pageconfett",
+				"page-confetti.php"
+			],
+			[
+				"conloop",
+				"content-loop.php"
+			],
+			[
+				"loo",
+				"loop-confetti-list.php"
+			],
+			[
+				"cololi",
+				"content-loop-list.php"
+			],
+			[
+				"contelop",
+				"content-loop.php"
+			],
+			[
+				"adm",
+				"library/admin.php"
+			],
+			[
+				"clac",
+				"classes/class-confetti.php"
+			],
+			[
+				"confj",
+				"js/source/confetti.js"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.js"
+			],
+			[
+				"lopcon",
+				"loop-confetti.php"
+			],
+			[
+				"clacon",
+				"classes/class-confetti.php"
+			],
+			[
+				"conlo",
+				"content-loop.php"
+			],
+			[
+				"lo",
+				"loop-confetti.php"
+			],
+			[
+				"pac",
+				"page-confetti.php"
+			],
+			[
+				"admin",
+				"library/admin.php"
+			],
+			[
+				"funci",
+				"functions.php"
+			],
+			[
+				"sicon",
+				"sidebar-confetti.php"
+			],
+			[
+				"pacon",
+				"page-confetti.php"
+			],
+			[
+				"front",
+				"front-page.php"
+			],
+			[
+				"sidec",
+				"sidebar-confetti.php"
+			],
+			[
+				"clus",
+				"classes/class-user-profiles.php"
+			],
+			[
+				"rela",
+				"loop-related.php"
+			],
+			[
+				"conpr",
+				"content-project.php"
+			],
+			[
+				"content",
+				"content.php"
+			],
+			[
+				"clas",
+				"classes/class-user-profiles.php"
+			],
+			[
+				"conlop",
+				"content-loop.php"
+			],
+			[
+				"loconf",
+				"loop-confetti.php"
+			],
+			[
+				"side",
+				"sidebar-confetti.php"
+			],
+			[
+				"conpor",
+				"content-project.php"
+			],
+			[
+				"sipr",
+				"single-project.php"
+			],
+			[
+				"contenon",
+				"content-none.php"
+			],
+			[
+				"projec",
+				"content-project.php"
+			],
+			[
+				"clme",
+				"classes/class-meta-box.php"
+			],
+			[
+				"lopconf",
+				"loop-confetti.php"
+			],
+			[
+				"clmeta",
+				"classes/class-meta-box.php"
+			],
+			[
+				"hed",
+				"header.php"
+			],
+			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"simpl",
+				"library/simplicity.php"
+			],
+			[
+				"nav",
+				"css/source/nav.css"
+			],
+			[
+				"cust",
+				"classes/class-customizer.php"
+			],
+			[
+				"heda",
+				"header.php"
 			]
 		],
 		"width": 0.0
@@ -225,36 +1653,776 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "prw",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
+				"prwp",
+				"~/sites/wp.dev/wp-content/plugins/Premise-WP/premise-wp.sublime-project"
+			],
+			[
+				"pwp",
+				"~/sites/wp.dev/wp-content/plugins/Premise-WP/premise-wp.sublime-project"
+			],
+			[
+				"r",
+				"~/sites/wp.dev/root.sublime-project"
+			],
+			[
 				"prw",
-				"/Applications/MAMP/htdocs/premise-wp.sublime-project"
+				"~/sites/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"pre",
+				"~/sites/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"pw",
+				"~/sites/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"ptime",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-project"
+			],
+			[
+				"ptim",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-project"
 			],
 			[
 				"fit",
-				"/Applications/MAMP/htdocs/wp-content/themes/fitzgerald-theme/fitzgerald-theme.sublime-project"
+				"~/sites/wp.dev/wp-content/themes/fitzgerald-theme/fitzgerald-theme.sublime-project"
 			],
 			[
-				"pr",
-				"/Applications/MAMP/htdocs/premise-wp.sublime-project"
+				"le",
+				"~/sites/wp.dev/wp-content/themes/level5/level5.sublime-project"
 			],
 			[
-				"fi",
-				"/Applications/MAMP/htdocs/wp-content/themes/fitzgerald-theme/fitzgerald-theme.sublime-project"
+				"prti",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-project"
+			],
+			[
+				"prtime",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-workspace"
+			],
+			[
+				"vall",
+				"~/sites/wp.dev/wp-content/themes/vallgroup/vallgroup-theme.sublime-project"
+			],
+			[
+				"val",
+				"~/sites/wp.dev/wp-content/themes/vallgroup/vallgroup-theme.sublime-project"
+			],
+			[
+				"po",
+				"~/sites/wp.dev/wp-content/plugins/premise-portfolio/premise-portfolio.sublime-project"
+			],
+			[
+				"libr",
+				"~/sites/sublime_projects/libraries.sublime-project"
+			],
+			[
+				"tim",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-project"
+			],
+			[
+				"pretim",
+				"~/sites/wp.dev/wp-content/plugins/premise-time-track/premise-time-track.sublime-project"
+			],
+			[
+				"",
+				"~/GoogleDrive/Clients/Torque/Fitzferald/Site HTML Files/fitzgerald-HTML-Site.sublime-project"
+			],
+			[
+				"prewp",
+				"~/sites/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"premi",
+				"~/sites/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"roo",
+				"~/sites/sublime_tmp_projects/wp-dev-root.sublime-project"
+			],
+			[
+				"simpl",
+				"~/sites/sublime_tmp_projects/simplicity-theme.sublime-project"
+			],
+			[
+				"simp",
+				"~/sites/sublime_tmp_projects/simplicity-theme.sublime-project"
+			],
+			[
+				"vll",
+				"~/sites/sublime_tmp_projects/vallejo-menu-plugin.sublime-project"
+			],
+			[
+				"valle",
+				"~/sites/sublime_tmp_projects/vallejo-menu-plugin.sublime-project"
+			],
+			[
+				"ees",
+				"~/sites/sublime_tmp_projects/eesf-theme.sublime-project"
+			],
+			[
+				"pp",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"pbo",
+				"~/sites/sublime_tmp_projects/premise-boxes.sublime-project"
+			],
+			[
+				"prbo",
+				"~/sites/sublime_tmp_projects/premise-boxes.sublime-project"
+			],
+			[
+				"prepo",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"psc",
+				"~/sites/sublime_tmp_projects/premiseScroll.sublime-project"
+			],
+			[
+				"prscr",
+				"~/sites/sublime_tmp_projects/premiseScroll.sublime-project"
+			],
+			[
+				"va",
+				"~/sites/sublime_tmp_projects/vallejo-menu-plugin.sublime-project"
+			],
+			[
+				"v",
+				"~/sites/sublime_tmp_projects/vallejo-wp-theme.sublime-project"
+			],
+			[
+				"vawp",
+				"~/sites/sublime_tmp_projects/vallejo-wp-theme.sublime-project"
+			],
+			[
+				"prpo",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"pspl",
+				"~/sites/sublime_tmp_projects/premise-split-view.sublime-project"
+			],
+			[
+				"prspl",
+				"~/sites/sublime_tmp_projects/premise-split-view.sublime-project"
+			],
+			[
+				"spl",
+				"~/sites/sublime_tmp_projects/premise-split-view.sublime-project"
+			],
+			[
+				"psl",
+				"~/sites/sublime_tmp_projects/premise-split-view.sublime-project"
+			],
+			[
+				"pp\\",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"p",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"ppo",
+				"~/sites/sublime_tmp_projects/premise-portfolio.sublime-project"
+			],
+			[
+				"smrt",
+				"~/sites/sublime_tmp_projects/smart-choice.sublime-project"
+			],
+			[
+				"sma",
+				"~/sites/sublime_tmp_projects/smart-choice.sublime-project"
+			],
+			[
+				"2n",
+				"~/sites/sublime_tmp_projects/2x4-network.sublime-project"
+			],
+			[
+				"librar",
+				"~/sites/sublime_tmp_projects/libraries.sublime-project"
+			],
+			[
+				"ibr",
+				"~/sites/sublime_tmp_projects/libraries.sublime-project"
+			],
+			[
+				"libra",
+				"~/sites/sublime_tmp_projects/libraries.sublime-project"
+			],
+			[
+				"li",
+				"~/sites/sublime_tmp_projects/libraries.sublime-project"
+			],
+			[
+				"ee",
+				"~/sites/sublime_tmp_projects/eesf-theme.sublime-project"
+			],
+			[
+				"premis",
+				"~/Documents/sublime_projects/premise-wp.sublime-workspace"
+			],
+			[
+				"premise",
+				"~/Documents/sublime_projects/premise-wp.sublime-workspace"
+			],
+			[
+				"obje",
+				"~/Documents/sublime_projects/objectwave-theme.sublime-workspace"
+			],
+			[
+				"leve",
+				"~/Documents/sublime_projects/level5-snapon.sublime-project"
+			],
+			[
+				"prtim",
+				"~/Documents/sublime_projects/premise-time-track.sublime-project"
+			],
+			[
+				"pretime",
+				"~/Documents/sublime_projects/premise-time-track.sublime-project"
+			],
+			[
+				"lethe",
+				"~/Documents/sublime_projects/level5-snapon-theme.sublime-project"
+			],
+			[
+				"smartch",
+				"~/Documents/sublime_projects/smartchoice-dev.sublime-project"
+			],
+			[
+				"fra",
+				"~/Documents/sublime_projects/franfest-dev.sublime-project"
+			],
+			[
+				"sales",
+				"~/Documents/sublime_projects/sales-tool-plugin.sublime-project"
+			],
+			[
+				"wran",
+				"~/Documents/sublime_projects/wranglerworkwear.sublime-project"
+			],
+			[
+				"wra",
+				"~/Documents/sublime_projects/wranglerworkwear.sublime-project"
+			],
+			[
+				"wr",
+				"~/Documents/sublime_projects/wranglerworkwear.sublime-project"
+			],
+			[
+				"sale",
+				"~/Documents/sublime_projects/sales-tool-plugin.sublime-project"
+			],
+			[
+				"prede",
+				"~/Documents/sublime_projects/premise.dev.sublime-project"
+			],
+			[
+				"sal",
+				"~/Documents/sublime_projects/www-sales-tool.sublime-project"
+			],
+			[
+				"prew",
+				"~/Documents/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"preth",
+				"~/Documents/sublime_projects/premise-theme.sublime-project"
+			],
+			[
+				"PREW",
+				"~/Documents/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"premiw",
+				"~/Documents/sublime_projects/premise-wp.sublime-project"
+			],
+			[
+				"preb",
+				"~/Documents/sublime_projects/premise-boxes.sublime-project"
+			],
+			[
+				"pasl",
+				"~/Documents/sublime_projects/paslode21.sublime-project"
+			],
+			[
+				"sangre",
+				"~/Documents/sublime_projects/sangreea-theme.sublime-project"
+			],
+			[
+				"pas2",
+				"~/Documents/sublime_projects/paslode21.sublime-project"
+			],
+			[
+				"paslode",
+				"~/Documents/sublime_projects/paslode.sublime-project"
+			],
+			[
+				"lanca",
+				"~/Documents/sublime_projects/lancaster.sublime-project"
+			],
+			[
+				"psalo",
+				"~/Documents/sublime_projects/paslode21.sublime-project"
+			],
+			[
+				"pas21",
+				"~/Documents/sublime_projects/paslode21.sublime-project"
+			],
+			[
+				"pa21",
+				"~/Documents/sublime_projects/paslode21.sublime-project"
+			],
+			[
+				"propos",
+				"~/Documents/sublime_projects/proposapp.sublime-project"
+			],
+			[
+				"fr",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"fram",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"di",
+				"~/Documents/sublime_projects/displet.sublime-project"
+			],
+			[
+				"prop",
+				"~/Documents/sublime_projects/proposapp.sublime-project"
+			],
+			[
+				"podl",
+				"~/Documents/sublime_projects/podley.sublime-project"
+			],
+			[
+				"displ",
+				"~/Documents/sublime_projects/displet.sublime-project"
+			],
+			[
+				"tribus",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"tro",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"tr",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"disple",
+				"~/Documents/sublime_projects/displet.sublime-project"
+			],
+			[
+				"proposap",
+				"~/Documents/sublime_projects/proposapp.sublime-project"
+			],
+			[
+				"frame",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"podely",
+				"~/Documents/sublime_projects/podley.sublime-project"
+			],
+			[
+				"podley",
+				"~/Documents/sublime_projects/podley.sublime-project"
+			],
+			[
+				"dilbeck",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"dilbe",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"frae",
+				"~/Documents/sublime_projects/tribus-framework.sublime-project"
+			],
+			[
+				"dilb",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"dis",
+				"~/Documents/sublime_projects/displet.sublime-project"
+			],
+			[
+				"pro",
+				"~/Documents/sublime_projects/proposapp.sublime-project"
+			],
+			[
+				"propo",
+				"~/Documents/sublime_projects/proposapp.sublime-project"
+			],
+			[
+				"agor",
+				"~/Documents/sublime_projects/agoranoticias.sublime-project"
+			],
+			[
+				"podle",
+				"~/Documents/sublime_projects/podley.sublime-project"
+			],
+			[
+				"penfe",
+				"~/Documents/sublime_projects/penfed.sublime-project"
+			],
+			[
+				"dile",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"displet",
+				"~/Documents/sublime_projects/displet.sublime-project"
+			],
+			[
+				"fnr",
+				"~/Documents/sublime_projects/fnr-theme.sublime-project"
+			],
+			[
+				"dil",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"dilbecl",
+				"~/Documents/sublime_projects/dilbeck.sublime-project"
+			],
+			[
+				"foo",
+				"~/Documents/sublime_projects/food-blogger.sublime-project"
+			],
+			[
+				"disp",
+				"~/Documents/sublime_projects/displet.sublime-workspace"
+			],
+			[
+				"penfed",
+				"~/Documents/sublime_projects/penfed.sublime-project"
+			],
+			[
+				"pen",
+				"~/Documents/sublime_projects/penfed.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "wnav",
 		"selected_items":
 		[
+			[
+				"wnav",
+				"w-nav"
+			],
+			[
+				"fuquo",
+				"full-quote-inside"
+			],
+			[
+				"mainqu",
+				"main-quote"
+			],
+			[
+				"smac",
+				"small-caps.small-orange"
+			],
+			[
+				"tremob",
+				"tfg-read-more-btn"
+			],
+			[
+				"tagas",
+				"tfg_the_tags_as_classes"
+			],
+			[
+				"recipe",
+				"Recipe"
+			],
+			[
+				"porpain",
+				"portfolio-page-inner"
+			],
+			[
+				"seletag",
+				"select-tag"
+			],
+			[
+				"smalora",
+				"small-caps.small-orange"
+			],
+			[
+				"tfg-blog-post",
+				"tfg-blog-post"
+			],
+			[
+				"",
+				"$cons"
+			],
+			[
+				"selvii",
+				"select-view-icon"
+			],
+			[
+				"tftnav",
+				"tfg_the_page_nav"
+			],
+			[
+				"search",
+				"pwps_nav_search"
+			],
+			[
+				"nav-results",
+				"pwps-nav-results"
+			],
+			[
+				"secbroto",
+				"pwps-section-border-top"
+			],
+			[
+				"pwps-post-thumbnail",
+				"pwps-post-thumbnail"
+			],
+			[
+				"pbpo",
+				"pwps-blog-post"
+			],
+			[
+				"navse",
+				"PWPS_Nav_Search"
+			],
+			[
+				"poinf",
+				"post-info"
+			],
+			[
+				"header_icon_walker",
+				"header_icon_walker"
+			],
+			[
+				"mkbuiwra",
+				"mk_build_main_wrapper"
+			],
+			[
+				"welcome",
+				"spt_slide_sales_rep.spt_welcome"
+			],
+			[
+				"getsales",
+				"get_sales_reps"
+			],
+			[
+				"othehero",
+				"ow_the_hero"
+			],
+			[
+				"moseover",
+				"mouseover"
+			],
+			[
+				"ow",
+				"ow-wave"
+			],
+			[
+				"utit",
+				"ow-underlined-title"
+			],
+			[
+				"obcont",
+				"ow-btn-container"
+			],
+			[
+				"othauth",
+				"ow_the_author"
+			],
+			[
+				"footer",
+				"footer"
+			],
+			[
+				"ow-floating-logo",
+				"ow-floating-logo"
+			],
+			[
+				"oecasstre",
+				"ow-case-study.ow-case-study-problem"
+			],
+			[
+				"owclielog",
+				"ow-client-logo"
+			],
+			[
+				"ojob",
+				"ow-job-apply-btn"
+			],
+			[
+				"owpoexp",
+				"ow-post-excerpt"
+			],
+			[
+				"ow-underlined-title",
+				"ow-underlined-title"
+			],
+			[
+				"owthecli",
+				"ow_the_clients"
+			],
+			[
+				"aniipho",
+				"ow-animate-iphone"
+			],
+			[
+				"premgetva",
+				"premise_get_value"
+			],
+			[
+				"pregetva",
+				"premise_get_value"
+			],
+			[
+				"pregetvau",
+				"premise_get_value"
+			],
+			[
+				"spinslayo",
+				"spt_insert_layout"
+			],
+			[
+				"preget",
+				"premise_get_value"
+			],
+			[
+				"sptsta",
+				"spt_get_email_stats"
+			],
+			[
+				"chti",
+				"chp_the_title"
+			],
+			[
+				"navt",
+				"nav-toggle"
+			],
+			[
+				"tfwnav",
+				"tfwk_primary_nav"
+			],
+			[
+				"tfgeage",
+				"tfwk_get_agent_meta"
+			],
+			[
+				"tabs",
+				"tfwkTabs"
+			],
+			[
+				"tfwk_roster_search_fields",
+				"tfwk_roster_search_fields"
+			],
+			[
+				"tfwroste",
+				"tfwk_roster_the_image"
+			],
+			[
+				"rostse",
+				"tfwk_roster_search"
+			],
+			[
+				"offi",
+				"tfwk_get_office_meta"
+			],
+			[
+				"isparen",
+				"tfwk_is_parent_theme"
+			],
+			[
+				"tfwsoci",
+				"tfwk_social"
+			],
+			[
+				"tfwro",
+				"tfwk_setup_roster_data"
+			],
+			[
+				"tfwcta",
+				"tfwk_the_cta"
+			],
+			[
+				"social",
+				"tfwk_social"
+			],
+			[
+				"tfwkProcessContactForm",
+				"tfwkProcessContactForm"
+			],
+			[
+				"tfcontact",
+				"tfwk_the_contact_form"
+			],
+			[
+				"contact",
+				"tfwk_load_contact_form"
+			],
+			[
+				"prna",
+				"tfwk_primary_nav"
+			],
+			[
+				"find",
+				"get_findthebest_data"
+			],
+			[
+				"tfwget",
+				"tfwk_get_option"
+			],
+			[
+				"tfwfiel",
+				"tfwk_field"
+			],
+			[
+				"tfageme",
+				"tfwk_get_agent_meta"
+			],
+			[
+				"emar",
+				"tfwk_empty_arrays"
+			],
+			[
+				"tfag",
+				"tfwk_display_agent"
+			],
+			[
+				"type",
+				"tfwk_insert_typeahead"
+			],
+			[
+				"ty",
+				"typeahead"
+			],
+			[
+				"discho",
+				"displetretsidx_the_school_data"
+			],
+			[
+				"sch",
+				"tfwk_school_data"
+			]
 		],
-		"width": 0.0
+		"width": 719.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -264,7 +2432,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 150.0,
+	"side_bar_width": 258.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

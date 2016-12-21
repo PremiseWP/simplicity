@@ -14,7 +14,9 @@
 			pwpsHeaderBump();
 
 			// bind infinite scroll
-			pwpsLoadMorePostsAjax();
+			$(window).load(function() {
+				pwpsLoadMorePostsAjax();
+			});
 
 			// posts link pages ajax
 			var pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
@@ -70,9 +72,11 @@
 			var search_paged = 2, loop_paged = 2,
 
 			_load = $( '.pwps-infinte-pagination' ).premiseScroll( {
+				offset: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
 				onScroll: function() {
+					// console.log( 'this runs' );
 					_load.stopScroll(); // prevent this function from running twice
-
+					console.log( 'this should only run once' );
 					var $this = $( this ),
 					data = {
 						action: 'pwps_load_more_posts',
@@ -98,9 +102,9 @@
 						loopContainer.is( '.pwps-nav-results' ) ? search_paged++ : loop_paged++;
 					} );
 					return false;
-				},
-				offsetIn: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
+				} // onScroll
 			} );
+			console.log( _load );
 		}
 
 		// run it!
