@@ -1023,7 +1023,14 @@ table#wp-calendar {
 table#wp-calendar td {
 	text-align: center;
 	vertical-align: middle;
-	padding: 10px
+	line-height: 35px;
+	padding: 0;
+}
+
+table#wp-calendar tbody td > a {
+	display: block;
+	background-color: #EFEFEF;
+	text-decoration: underline;
 }
 
 
