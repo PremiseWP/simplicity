@@ -529,6 +529,11 @@ body.admin-bar #pwps-header {
 	background-color: #FDFDFD;
 }
 
+.pwps-site-title h1 {
+	margin: 0;
+	line-height: 1.2;
+}
+
 .pwps-logo {
 	position: relative;
 	z-index: 1;

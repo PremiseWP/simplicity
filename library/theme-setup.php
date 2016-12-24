@@ -20,6 +20,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	// custom logo in customizer
 	add_theme_support( 'custom-logo', array(
 		'size' => 'custom-logo-size',
+		'header-text' => array( 'pwps-site-title' ),
 	) );
 
 	// Image sizes

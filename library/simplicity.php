@@ -53,14 +53,17 @@ if ( ! function_exists( 'pwps_the_logo' ) ) {
 	 */
 	function pwps_the_logo() {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-			the_custom_logo();
+			?><div class="pwps-logo"><?
+				the_custom_logo();
+			?></div><?
 		}
-		else {
-			?>
-			<a href="<?php echo esc_url( site_url() ); ?>" class="premise-block">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/img/premise-wp-logo.png' ); ?>" class="premise-responsive">
-			</a>
-			<?php
+		elseif ( get_theme_mod( 'header_text' ) ) {
+			?><div class="pwps-site-title premise-inline-block">
+				<a href="<?php echo esc_url( site_url() ); ?>" class="premise-block ">
+					<h1><?php echo esc_attr( bloginfo( 'name' ) ); ?></h1>
+					<p><?php echo esc_attr( bloginfo( 'description' ) ); ?></p>
+				</a>
+			</div><?
 		}
 	}
 }

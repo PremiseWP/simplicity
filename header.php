@@ -26,9 +26,7 @@
 
 			<div class="pwps-container">
 
-				<div class="pwps-logo">
-					<?php pwps_the_logo(); ?>
-				</div>
+				<?php pwps_the_logo(); ?>
 
 				<div class="pwps-nav">
 					<div class="pwps-nav-toggle">
