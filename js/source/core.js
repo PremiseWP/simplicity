@@ -74,7 +74,7 @@
 			_load = $( '.pwps-infinte-pagination' ).premiseScroll( {
 				offset: -300, // Trigger the ajax call 300px before the bottom of the page is reached. This buys us a little time (better user experience)
 				onScroll: function() {
-					// console.log( 'this runs' );
+					console.log( 'this runs' );
 					_load.stopScroll(); // prevent this function from running twice
 					console.log( 'this should only run once' );
 					var $this = $( this ),
@@ -104,7 +104,6 @@
 					return false;
 				} // onScroll
 			} );
-			console.log( _load );
 		}
 
 		// run it!
