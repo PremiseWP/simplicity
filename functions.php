@@ -12,7 +12,6 @@
 require 'includes/require-premise-wp.php';
 require 'library/theme-setup.php';
 require 'library/simplicity.php';
-require 'classes/class-meta-box.php';
 require 'classes/class-nav-search.php';
 require 'classes/class-customizer.php';
 require 'classes/class-options-page.php';
@@ -38,13 +37,6 @@ if ( function_exists( 'add_action' ) ) {
 
 	// Enqueue scripts.
 	add_action( 'wp_enqueue_scripts', 'pwps_enqueue_scripts' );
-
-	// register the meta box
-	if ( is_admin() ) {
-	    add_action( 'load-post.php',     'pwps_register_meta_box' );
-	    add_action( 'load-post-new.php', 'pwps_register_meta_box' );
-	}
-
 
 	/*
 		These functions are located in library/simplicity.php
@@ -91,4 +83,29 @@ if ( function_exists( 'add_action' ) ) {
 	// register the ajax action to the nav search functionality
 	add_action( 'wp_ajax_pwps_nav_search',        array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
 	add_action( 'wp_ajax_nopriv_pwps_nav_search', array( PWPS_Nav_Search::get_instance(), 'pwps_nav_search' ) );
+}
+
+
+if ( function_exists( 'pwp_add_metabox' ) ) {
+	pwp_add_metabox(
+		'Simplicity Page Options',
+		'page',
+		array(
+			array(
+	            'type' => 'textarea',
+	            'name' => 'pwps_page_options[custom-css]',
+	            'label' => 'Custom CSS',
+	            'placeholder' => '.your_class {...',
+	            'context' => 'post',
+	        ),
+	        array(
+	            'type' => 'textarea',
+	            'name' => 'pwps_page_options[custom-js]',
+	            'label' => 'Custom JS',
+	            'placeholder' => '(function($){...',
+	            'context' => 'post',
+	        )
+	    ),
+	    'pwps_page_options'
+	);
 }
