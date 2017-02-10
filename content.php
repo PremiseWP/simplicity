@@ -25,6 +25,20 @@
 		<?php the_content(); ?>
 	</div>
 
+	<!-- The category -->
+	<div class="pwpp-post-category">
+		<?php echo ( '' !== (string) get_the_category_list( ', ', 'single', get_the_id() ) )
+			 ? '<p>Categories: ' . get_the_category_list( ', ', 'single', get_the_id() ) . '</p>'
+			 : ''; ?>
+	</div>
+
+	<!-- The tags -->
+	<div class="pwpp-post-tags">
+		<?php echo ( '' !== (string) get_the_tag_list( '', ', ', '', get_the_id() ) )
+			 ? '<p>Tags: ' . get_the_tag_list( '', ', ', '', get_the_id() ) . '</p>'
+			 : ''; ?>
+	</div>
+
 	<div class="pwps-posts-navigation">
 		<p><?php posts_nav_link(); ?></p>
 	</div>
