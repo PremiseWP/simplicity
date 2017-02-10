@@ -356,17 +356,17 @@ a {
 
 /* messages */
 
-p.success,
-p.error {
+p.pwps-success,
+p.pwps-error {
 	max-width: 500px;
 	margin: 2.25em auto;
 }
 
-p.success {
+p.pwps-success {
 	color: #008000;
 }
 
-p.error {
+p.pwps-error {
 	color: #E60000;
 }
 

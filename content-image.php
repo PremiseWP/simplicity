@@ -9,11 +9,9 @@
 
 <article <?php post_class( 'pwps-post pwps-image-format' ); ?>>
 
-	<?php if ( ! is_home() && ! is_front_page() ) : ?>
-		<div class="pwps-post-title">
-			<h1><?php the_title(); ?></h1>
-		</div>
-	<?php endif; ?>
+	<div class="pwps-post-title">
+		<h1><?php the_title(); ?></h1>
+	</div>
 
 	<div class="pwps-post-content">
 		<?php the_content(); ?>
