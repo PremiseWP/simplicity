@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cla",
+				"classes"
+			],
+			[
 				"con",
 				"console"
 			],
@@ -308,10 +312,6 @@
 				"categories"
 			],
 			[
-				"cla",
-				"class\tclass …"
-			],
-			[
 				"backgr",
 				"background"
 			],
@@ -520,10 +520,44 @@
 	"buffers":
 	[
 		{
-			"file": "js/source/core.js",
+			"file": "page.php",
 			"settings":
 			{
-				"buffer_size": 3431,
+				"buffer_size": 433,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content-page.php",
+			"settings":
+			{
+				"buffer_size": 759,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content-video.php",
+			"settings":
+			{
+				"buffer_size": 441,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/simplicity.php",
+			"settings":
+			{
+				"buffer_size": 19254,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/source/style.css",
+			"settings":
+			{
+				"buffer_size": 19454,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -735,10 +769,26 @@
 	"expanded_folders":
 	[
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source"
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source"
 	],
 	"file_history":
 	[
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/single.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/functions.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/z-responsive.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/style.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/style.css",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/library/simplicity.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/front-page.php",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/core.js",
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/index.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/controller/class.physicians.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/library/functions.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/vein-clinics-theme/single-veinclinics-doctor.php",
@@ -831,29 +881,18 @@
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/js/source/modernizr.js",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/build/global.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/fitzgerald-theme/css/source/normalize.css",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/single.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/library/theme-setup.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/includes/require-premise-wp.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/page.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/library/simplicity.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/index.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/front-page.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-nav-search.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/core.js",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/header.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/searchpage.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-loop.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop-related.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/style.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/view/view-content-loop.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/z-responsive.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/nav.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-related.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/comments.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/theme-customizer.js",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/theme-customizer.css",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/functions.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-customizer.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/loop-premise-portfolio.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-options-page.php",
@@ -861,12 +900,9 @@
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/build/nav.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/premise-resets.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/js/source/premiseScroll.jquery.min.js",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/style.css",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/footer.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content.php",
 		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/content-none.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-video-meta-box.php",
-		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/css/source/premise-portfolio.css"
+		"/Users/mariovallejo/sites/wp.dev/wp-content/themes/simplicity/classes/class-video-meta-box.php"
 	],
 	"find":
 	{
@@ -887,6 +923,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"pwps_page_options",
+			"pwps_the_loop_class",
 			"function do",
 			"VCA_Clinics::",
 			"premise-float",
@@ -1012,9 +1050,7 @@
 			"tfgConfettiInit",
 			"this.",
 			"confetti.",
-			"tfgConfettiOverlay",
-			"tfgGridView",
-			"tfgMoreFields"
+			"tfgConfettiOverlay"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1045,24 +1081,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "js/source/core.js",
+					"file": "page.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3431,
+						"buffer_size": 433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2333,
-								2333
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1070,14 +1106,142 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 664.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "content-page.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "content-video.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "library/simplicity.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1179,
+								1179
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/source/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5342,
+								5342
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5618.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1136,6 +1300,66 @@
 		"selected_items":
 		[
 			[
+				"cpa",
+				"content-page.php"
+			],
+			[
+				"style",
+				"css/source/style.css"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"conte",
+				"content.php"
+			],
+			[
+				"colo",
+				"content-loop.php"
+			],
+			[
+				"stye",
+				"css/source/style.css"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"single",
+				"single.php"
+			],
+			[
+				"pa",
+				"page.php"
+			],
+			[
+				"singel",
+				"single.php"
+			],
+			[
+				"simpl",
+				"library/simplicity.php"
+			],
+			[
+				"con",
+				"content.php"
+			],
+			[
+				"front",
+				"front-page.php"
+			],
+			[
+				"loop",
+				"loop.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
 				"core",
 				"js/source/core.js"
 			],
@@ -1162,10 +1386,6 @@
 			[
 				"pap",
 				"page-physician-directory.php"
-			],
-			[
-				"func",
-				"functions.php"
 			],
 			[
 				"tax",
@@ -1198,10 +1418,6 @@
 			[
 				"fun",
 				"library/functions.php"
-			],
-			[
-				"con",
-				"content-clinic.php"
 			],
 			[
 				"global",
@@ -1294,10 +1510,6 @@
 			[
 				"conc",
 				"content-clinic.php"
-			],
-			[
-				"index",
-				"index.php"
 			],
 			[
 				"clrere",
@@ -1420,10 +1632,6 @@
 				"header.php"
 			],
 			[
-				"loop",
-				"loop-confetti.php"
-			],
-			[
 				"loma",
 				"loop-confetti-map.php"
 			],
@@ -1444,10 +1652,6 @@
 				"README.md"
 			],
 			[
-				"single",
-				"single.php"
-			],
-			[
 				"cont",
 				"content.php"
 			],
@@ -1462,10 +1666,6 @@
 			[
 				"time",
 				"timeline-express/timeline-express-container.php"
-			],
-			[
-				"page",
-				"page.php"
 			],
 			[
 				"confeti",
@@ -1556,10 +1756,6 @@
 				"page-confetti.php"
 			],
 			[
-				"front",
-				"front-page.php"
-			],
-			[
 				"sidec",
 				"sidebar-confetti.php"
 			],
@@ -1614,38 +1810,6 @@
 			[
 				"clme",
 				"classes/class-meta-box.php"
-			],
-			[
-				"lopconf",
-				"loop-confetti.php"
-			],
-			[
-				"clmeta",
-				"classes/class-meta-box.php"
-			],
-			[
-				"hed",
-				"header.php"
-			],
-			[
-				"foo",
-				"footer.php"
-			],
-			[
-				"simpl",
-				"library/simplicity.php"
-			],
-			[
-				"nav",
-				"css/source/nav.css"
-			],
-			[
-				"cust",
-				"classes/class-customizer.php"
-			],
-			[
-				"heda",
-				"header.php"
 			]
 		],
 		"width": 0.0
@@ -1653,9 +1817,21 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "root",
 		"selected_items":
 		[
+			[
+				"root",
+				"~/sites/wp.dev/root.sublime-project"
+			],
+			[
+				"roo",
+				"~/sites/wp.dev/root.sublime-project"
+			],
+			[
+				"vein",
+				"~/sites/wp.dev/wp-content/themes/vein-clinics-theme/vein-clinics-theme.sublime-project"
+			],
 			[
 				"prwp",
 				"~/sites/wp.dev/wp-content/plugins/Premise-WP/premise-wp.sublime-project"
@@ -1739,10 +1915,6 @@
 			[
 				"premi",
 				"~/sites/sublime_projects/premise-wp.sublime-project"
-			],
-			[
-				"roo",
-				"~/sites/sublime_tmp_projects/wp-dev-root.sublime-project"
 			],
 			[
 				"simpl",
@@ -2121,10 +2293,14 @@
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
-		"last_filter": "wnav",
+		"height": 287.0,
+		"last_filter": "mainna",
 		"selected_items":
 		[
+			[
+				"mainna",
+				"pwps_main_nav"
+			],
 			[
 				"wnav",
 				"w-nav"
@@ -2422,7 +2598,7 @@
 				"tfwk_school_data"
 			]
 		],
-		"width": 719.0
+		"width": 649.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -2431,7 +2607,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 258.0,
 	"status_bar_visible": true,
 	"template_settings":

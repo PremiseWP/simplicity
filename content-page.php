@@ -1,21 +1,15 @@
 <?php
 /**
- * Content Template
+ * The content template for a page
  *
- * @package Simplicity
+ * @package Premise Simplicity
  */
-
 ?>
 
-<article <?php post_class( 'pwps-post' ); ?>>
+<article <?php post_class( 'pwps-page' ); ?>>
 
-	<?php if ( ! is_home() && ! is_front_page() ) : ?>
-		<div class="pwps-post-title">
-			<h1><?php the_title(); ?></h1>
-		</div>
-	<?php endif; ?>
-
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( has_post_thumbnail()
+		 && ! (boolean) premise_get_value( 'pwps_page_options[hide-thumbnail]', 'post' ) ) : ?>
 		<div class="pwps-post-thumbnail">
 			<?php the_post_thumbnail( 'pwps-thumbnail', array( 'class' => 'premise-responsive' ) ); ?>
 		</div>

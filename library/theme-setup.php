@@ -29,6 +29,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 	// add woocommerce support
 	add_theme_support( 'woocommerce' );
+
+	add_theme_support( 'infinite-scroll', array(
+	    'container' => 'pwps-loop',
+	    'footer' => 'pwps-header',
+	) );
 }
 
 

@@ -29,7 +29,6 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 					'menu_class'      => 'pwps-nav-menu',
 					'menu_id'         => '',
 					'echo'            => true,
-					'fallback_cb'     => '',
 					'before'          => '',
 					'after'           => '',
 					'link_before'     => '',
@@ -640,5 +639,20 @@ if ( ! function_exists( 'pwps_output_footer_scripts' ) ){
 				echo $output;
 		}
 		return false;
+	}
+}
+
+
+if ( ! function_exists( 'pwps_the_loop_class' ) ) {
+	/**
+	 * output the classes needed for the loop container to work depending on sidebar or not
+	 *
+	 * @param  string $classes string of classes to apend to element
+	 * @return string          the classes for the element.
+	 */
+	function pwps_the_loop_class( $classes = '' ) {
+		$sidebar = pwps_uses_sidebar() ? ' span8' : '';
+		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
+		echo 'class="pwps-the-loop' . $sidebar . $_classes . '"';
 	}
 }

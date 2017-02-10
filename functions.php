@@ -91,16 +91,29 @@ if ( function_exists( 'pwp_add_metabox' ) ) {
 		'Simplicity Page Options',
 		'page',
 		array(
+			'name_prefix' => 'pwps_page_options',
 			array(
+	            'type' => 'checkbox',
+	            'name' => '[hide-title]',
+	            'label' => 'Hide Title?',
+	            'context' => 'post',
+	        ),
+	        array(
+	            'type' => 'checkbox',
+	            'name' => '[hide-thumbnail]',
+	            'label' => 'Hide Featured Image?',
+	            'context' => 'post',
+	        ),
+	        array(
 	            'type' => 'textarea',
-	            'name' => 'pwps_page_options[custom-css]',
+	            'name' => '[custom-css]',
 	            'label' => 'Custom CSS',
 	            'placeholder' => '.your_class {...',
 	            'context' => 'post',
 	        ),
 	        array(
 	            'type' => 'textarea',
-	            'name' => 'pwps_page_options[custom-js]',
+	            'name' => '[custom-js]',
 	            'label' => 'Custom JS',
 	            'placeholder' => '(function($){...',
 	            'context' => 'post',
