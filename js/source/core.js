@@ -14,9 +14,7 @@
 			pwpsHeaderBump();
 
 			// bind infinite scroll
-			$(window).load(function() {
-				pwpsLoadMorePostsAjax();
-			});
+			// pwpsLoadMorePostsAjax();
 
 			// posts link pages ajax
 			var pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
