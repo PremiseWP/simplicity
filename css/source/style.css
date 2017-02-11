@@ -573,8 +573,9 @@ body.admin-bar #pwps-header {
 	word-break: break-all;
 }
 
-.pwps-blog-post .pwps-post-thumbnail {
-	margin-bottom: 2em;
+.pwps-blog-post .pwps-post-thumbnail,
+.pwps-post .pwps-post-thumbnail {
+	margin-bottom: 2.5em;
 }
 
 .pwps-post-meta {
