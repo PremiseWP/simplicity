@@ -101,8 +101,9 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 			echo pwps_get_header_styles();
 			echo pwps_get_body_styles();
 
-			if ( ! is_admin() && $page_styles = premise_get_value( 'pwps_page_options', 'post' ) ) {
-				var_dump($page_styles);
+			if ( ! is_admin()
+				 && $page_styles = premise_get_value( 'pwps_page_options[custom-css]', 'post' ) ) {
+					echo (string) $page_styles;
 			}
 			?>
 		</style>
