@@ -89,7 +89,7 @@ if ( function_exists( 'add_action' ) ) {
 if ( function_exists( 'pwp_add_metabox' ) ) {
 	pwp_add_metabox(
 		'Simplicity Page Options',
-		'page',
+		array( 'post', 'page', 'premise_portfolio' ),
 		array(
 			'name_prefix' => 'pwps_page_options',
 			array(
