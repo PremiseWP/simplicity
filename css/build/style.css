@@ -571,7 +571,7 @@ body.admin-bar #pwps-header {
 	border-bottom: 1px solid #f4f4f4;
 }
 
-.pwps-loop article.pwps-post:after {
+article.pwps-post:after {
 	content: '';
 	display: table;
 	clear: both;
@@ -792,7 +792,7 @@ body.admin-bar #pwps-header {
 
 #pwps-comments #respond,
 .woocommerce #pwps-woocommerce #review_form #respond {
-	padding: 80px 0;
+	padding: 1em 0;
 	max-width: 700px;
 	margin: 0 auto;
 }
@@ -892,7 +892,7 @@ body.admin-bar #pwps-header {
 
 .pwps-loop-related .premise-scroller {
 	padding-bottom: 20px;
-	border-bottom: 1px solid #CCCCCC;
+	/*border-bottom: 1px solid #CCCCCC; */ /* hide since v1.2.0 */
 }
 
 
