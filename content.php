@@ -7,7 +7,7 @@
 
 ?>
 
-<article <?php post_class( 'pwps-post' ); ?>>
+<article <?php post_class( 'pwps-post pwp-clear-float' ); ?>>
 
 	<?php if ( ! is_home() && ! is_front_page() ) : ?>
 		<div class="pwps-post-title">
@@ -37,10 +37,6 @@
 		<?php echo ( '' !== (string) get_the_tag_list( '', ', ', '', get_the_id() ) )
 			 ? '<p>Tags: ' . get_the_tag_list( '', ', ', '', get_the_id() ) . '</p>'
 			 : ''; ?>
-	</div>
-
-	<div class="pwps-posts-navigation">
-		<p><?php posts_nav_link(); ?></p>
 	</div>
 
 </article>

@@ -562,10 +562,17 @@ body.admin-bar #pwps-header {
 	The Loop
  */
 
-.pwps-blog-post {
-	padding: 0 0 10px 0;
+.pwps-loop article.pwps-post {
+	clear: both;
+	margin: 2em auto;
+	padding: 1em 0;
 	border-bottom: 1px solid #f4f4f4;
-	margin-bottom: 60px;
+}
+
+.pwps-loop article.pwps-post:after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .pwps-post-title h2,
