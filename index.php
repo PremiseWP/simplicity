@@ -14,7 +14,7 @@ get_header();
 	<?php
 	get_template_part( 'loop' );
 	pwps_the_sidebar();
-	pwps_pagination();
+	// pwps_pagination();
 	?>
 
 </section>
