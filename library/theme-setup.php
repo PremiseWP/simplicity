@@ -37,6 +37,21 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 
+if ( ! function_exists( 'pwps_theme_activation' ) ) {
+	/**
+	 * Activate our theme!
+	 *
+	 * This function runs right after our theme is activated and runs only once. Perfect to set things like defaults.
+	 *
+	 * @return void
+	 */
+	function pwps_theme_activation() {
+		// set the header text in case there is no logo
+		set_theme_mod( 'header_text', ( ! get_theme_mod( 'header_text' ) ) ? true : false );
+	}
+}
+
+
 if ( ! function_exists( 'pwps_theme_setup' ) ) {
 	/**
 	 * Setup the theme once it is activated.

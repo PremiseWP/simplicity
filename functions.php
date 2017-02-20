@@ -27,6 +27,7 @@ if ( function_exists( 'add_action' ) ) {
 	 */
 
 	// On theme activation.
+	add_action( 'after_switch_theme', 'pwps_theme_activation');
 	add_action( 'after_setup_theme', 'pwps_theme_setup' );
 
 	// Register menus
