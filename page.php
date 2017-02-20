@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<section id="page"<?php pwps_the_section_class(); ?>>
+<section id="page" <?php pwps_the_section_class(); ?>>
 
 	<div <?php pwps_the_loop_class(); ?>>
 
