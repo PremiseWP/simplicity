@@ -590,7 +590,9 @@ if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 	/**
 	 * check whether a sidebar should be displayed
 	 *
-	 * @return boolean true if a sidebar should be displayed. false otherwise
+	 * @param  string  $sidebar     the sidebar id to display
+	 * @param  boolean $only_single Whether to display only on posts or both posts and pages
+	 * @return boolean              true if a sidebar should be displayed. false otherwise
 	 */
 	function pwps_uses_sidebar( $sidebar = 'pwps-sidebar', $only_single = true ) {
 		// check for the sidebar
@@ -630,7 +632,25 @@ if ( ! function_exists( 'pwps_the_loop_class' ) ) {
 		$sidebar  = pwps_uses_sidebar()          ? ' span8'                   : 'span12';
 		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
 
-		echo ' id="pwps-loop" class="pwps-the-loop' . $sidebar . $_classes . '"';
+		echo ' id="pwps-loop" class="pwps-loop' . $sidebar . $_classes . '"';
+	}
+}
+
+
+if ( ! function_exists( 'pwps_the_loop' ) ) {
+	/**
+	 * Do the default loop for the theme. This is the loop used in the blog page. We put it into its own funtion to be able to pass it to the infinite scroll option 'render'
+	 *
+	 * @since  1.2.0
+	 *
+	 * @return string html for the loop articles.
+	 */
+	function pwps_the_loop() {
+		while ( have_posts() ) : the_post();
+
+			get_template_part( 'content', 'loop' );
+
+		endwhile;
 	}
 }
 
