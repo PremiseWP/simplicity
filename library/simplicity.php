@@ -617,6 +617,24 @@ if ( ! function_exists( 'pwps_the_section_class' ) ) {
 }
 
 
+if ( ! function_exists( 'pwps_the_loop_class' ) ) {
+	/**
+	 * output the classes needed for the loop container to work depending on sidebar or not.
+	 *
+	 * @since  1.2.0           also outputs the id to make sure the jetpack infinte scroll works.
+	 *
+	 * @param  string $classes string of classes to apend to element
+	 * @return string          the classes for the element.
+	 */
+	function pwps_the_loop_class( $classes = '' ) {
+		$sidebar  = pwps_uses_sidebar()          ? ' span8'                   : 'span12';
+		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
+
+		echo ' id="pwps-loop" class="pwps-the-loop' . $sidebar . $_classes . '"';
+	}
+}
+
+
 if ( ! function_exists( 'pwps_output_footer_scripts' ) ){
 
 	function pwps_output_footer_scripts() {
@@ -640,20 +658,5 @@ if ( ! function_exists( 'pwps_output_footer_scripts' ) ){
 				echo $output;
 		}
 		return false;
-	}
-}
-
-
-if ( ! function_exists( 'pwps_the_loop_class' ) ) {
-	/**
-	 * output the classes needed for the loop container to work depending on sidebar or not
-	 *
-	 * @param  string $classes string of classes to apend to element
-	 * @return string          the classes for the element.
-	 */
-	function pwps_the_loop_class( $classes = '' ) {
-		$sidebar = pwps_uses_sidebar() ? ' span8' : '';
-		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
-		echo 'class="pwps-the-loop' . $sidebar . $_classes . '"';
 	}
 }
