@@ -11,7 +11,7 @@
 
 	<div class="pwps-post-title">
 		<a href="<?php the_permalink(); ?>">
-			<h2><?php the_title(); ?></h2>
+			<h1><?php the_title(); ?></h1>
 		</a>
 	</div>
 
@@ -23,10 +23,9 @@
 		</div>
 	<?php endif; ?>
 
-	<div class="pwps-post-excerpt">
-		<?php the_excerpt(); ?>
+	<div class="pwps-post-content">
+		<?php the_content(); ?>
 	</div>
-
 
 	<?php pwps_the_post_meta(); ?>
 
