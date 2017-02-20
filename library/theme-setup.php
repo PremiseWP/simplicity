@@ -19,7 +19,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 	// custom logo in customizer
 	add_theme_support( 'custom-logo', array(
-		'size' => 'custom-logo-size',
+		'size'        => 'custom-logo-size',
 		'header-text' => array( 'pwps-site-title' ),
 	) );
 
@@ -31,8 +31,15 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'woocommerce' );
 
 	add_theme_support( 'infinite-scroll', array(
-	    'container' => 'pwps-loop',
-	    'footer' => 'pwps-header',
+	    'container'      => 'pwps-loop',
+	    'render'         => 'pwps_the_loop',
+	    'footer'         => 'pwps-header', // match width of the header to set the fixed footer
+	    'footer_widgets' => array(
+	    	'pwps-footer-1-sidebar',
+	    	'pwps-footer-2-sidebar',
+	    	'pwps-footer-3-sidebar',
+	    	'pwps-footer-4-sidebar',
+	    ),
 	) );
 }
 
@@ -162,13 +169,37 @@ if ( ! function_exists( 'pwps_widgets_init' ) ) {
 		$sidebars['nav-footer'] = array(
 			'name'          => __( 'Simplicity Nav Footer', 'pwps_text_domain' ),
 			'id'            => 'pwps-nav-footer',
-			'description'   => __( 'Widgets in this area will be displayed on your nav fixed to the bottom.', 'pwps_text_domain' ),
+			'description'   => __( 'Widgets in this area will be displayed on your Main Site\'s Navigation fixed to the bottom. Ideal for Social Profiles.', 'pwps_text_domain' ),
 		);
 		// sidebar for woocommerce pages
 		$sidebars['woocommerce'] = array(
 			'name'          => __( 'Simplicity Woocommerce', 'pwps_text_domain' ),
 			'id'            => 'pwps-woocommerce-sidebar',
 			'description'   => __( 'Widgets in this area will be displayed on the woocommerce pages.', 'pwps_text_domain' ),
+		);
+		// sidebar for footer-1 pages
+		$sidebars['footer-1'] = array(
+			'name'          => __( 'Simplicity Footer Column 1', 'pwps_text_domain' ),
+			'id'            => 'pwps-footer-1-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed in the footer of your site on the first column.', 'pwps_text_domain' ),
+		);
+		// sidebar for footer-2 pages
+		$sidebars['footer-2'] = array(
+			'name'          => __( 'Simplicity Footer Column 2', 'pwps_text_domain' ),
+			'id'            => 'pwps-footer-2-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed in the footer of your site on the second column.', 'pwps_text_domain' ),
+		);
+		// sidebar for footer-3 pages
+		$sidebars['footer-3'] = array(
+			'name'          => __( 'Simplicity Footer Column 3', 'pwps_text_domain' ),
+			'id'            => 'pwps-footer-3-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed in the footer of your site on the third column.', 'pwps_text_domain' ),
+		);
+		// sidebar for footer-4 pages
+		$sidebars['footer-4'] = array(
+			'name'          => __( 'Simplicity Footer Column 4', 'pwps_text_domain' ),
+			'id'            => 'pwps-footer-4-sidebar',
+			'description'   => __( 'Widgets in this area will be displayed in the footer of your site on the fourth column.', 'pwps_text_domain' ),
 		);
 		// loop and register the sidebars
 		foreach ( $sidebars as $k => $sidebar ) {
