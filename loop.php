@@ -7,7 +7,7 @@
 
 ?>
 
-<div id="pwps-loop" <?php pwps_the_loop_class(); ?>>
+<div <?php pwps_the_loop_class(); ?>>
 
 	<?php
 	if ( have_posts() ) :
