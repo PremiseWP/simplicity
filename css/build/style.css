@@ -1175,3 +1175,13 @@ table#wp-calendar tbody td > a {
 	top: 0;
 	left: 0;
 }
+
+
+/**
+ * Footer
+ */
+
+#pwps-footer {
+
+	padding: 2em 0;
+}
