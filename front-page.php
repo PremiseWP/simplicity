@@ -11,10 +11,27 @@ get_header();
 
 <section id="pwps-front-page" <?php pwps_the_section_class(); ?>>
 
-	<?php
-	get_template_part( 'loop' );
-	pwps_the_sidebar();
-	?>
+	<div <?php pwps_the_loop_class(); ?>>
+
+		<?php
+		if ( have_posts() ) :
+
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'content' );
+
+			endwhile;
+
+		else :
+
+			get_template_part( 'content', 'none' );
+
+		endif;
+		?>
+
+	</div>
+
+	<?php pwps_the_sidebar(); ?>
 
 </section>
 
