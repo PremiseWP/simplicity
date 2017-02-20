@@ -7,7 +7,7 @@
 
 ?>
 
-<article <?php post_class( 'pwps-blog-post' ); ?>>
+<article <?php post_class( 'pwps-post pwps-blog-post' ); ?>>
 
 	<div class="pwps-post-title">
 		<a href="<?php the_permalink(); ?>">
