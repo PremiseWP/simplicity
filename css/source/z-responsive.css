@@ -15,11 +15,13 @@
 /* @768px */
 @media screen and ( min-width: 768px ) {
 	/* featured images */
-	.pwps-the-loop .pwps-post-thumbnail {
+	.pwps-blog-post .pwps-post-thumbnail,
+	.pwps-post .pwps-post-thumbnail {
 		float: left;
-		padding-right: 20px;
-		max-width: 400px;
+		padding-right: 1.25em;
+		max-width: 25em;
 		box-sizing: border-box;
+		clear: left;
 	}
 
 	/* gallery shortcode */
@@ -49,7 +51,7 @@
 	/* woocommerce pages */
 	#pwps-woocommerce .span8,
 	.pwps-the-loop.span8 {
-		padding-right: 30px;
+		padding-right: 2em;
 	}
 
 	/* Adjust loop of related posts */
@@ -63,7 +65,7 @@
 @media screen and ( min-width: 782px ) {
 	/* adjust for admin bar desktop */
 	body.admin-bar #pwps-header {
-		margin-top: 32px;
+		margin-top: 32px; /* Must be in PX! */
 	}
 }
 

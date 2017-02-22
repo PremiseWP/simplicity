@@ -29,7 +29,6 @@ if ( ! function_exists( 'pwps_main_nav' ) ) {
 					'menu_class'      => 'pwps-nav-menu',
 					'menu_id'         => '',
 					'echo'            => true,
-					'fallback_cb'     => '',
 					'before'          => '',
 					'after'           => '',
 					'link_before'     => '',
@@ -102,8 +101,9 @@ if ( ! function_exists( 'pwps_load_custom_css' ) ) {
 			echo pwps_get_header_styles();
 			echo pwps_get_body_styles();
 
-			if ( ! is_admin() && $page_styles = premise_get_value( 'pwps_page_options', 'post' ) ) {
-				var_dump($page_styles);
+			if ( ! is_admin()
+				 && $page_styles = premise_get_value( 'pwps_page_options[custom-css]', 'post' ) ) {
+					echo (string) $page_styles;
 			}
 			?>
 		</style>
@@ -590,7 +590,9 @@ if ( ! function_exists( 'pwps_uses_sidebar' ) ) {
 	/**
 	 * check whether a sidebar should be displayed
 	 *
-	 * @return boolean true if a sidebar should be displayed. false otherwise
+	 * @param  string  $sidebar     the sidebar id to display
+	 * @param  boolean $only_single Whether to display only on posts or both posts and pages
+	 * @return boolean              true if a sidebar should be displayed. false otherwise
 	 */
 	function pwps_uses_sidebar( $sidebar = 'pwps-sidebar', $only_single = true ) {
 		// check for the sidebar
@@ -613,6 +615,42 @@ if ( ! function_exists( 'pwps_the_section_class' ) ) {
 	 */
 	function pwps_the_section_class( $newclass = '' ) {
 		echo pwps_uses_sidebar() ? ' class="premise-row"' : '';
+	}
+}
+
+
+if ( ! function_exists( 'pwps_the_loop_class' ) ) {
+	/**
+	 * output the classes needed for the loop container to work depending on sidebar or not.
+	 *
+	 * @since  1.2.0           also outputs the id to make sure the jetpack infinte scroll works.
+	 *
+	 * @param  string $classes string of classes to apend to element
+	 * @return string          the classes for the element.
+	 */
+	function pwps_the_loop_class( $classes = '' ) {
+		$sidebar  = pwps_uses_sidebar()          ? ' span8'                   : 'span12';
+		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
+
+		echo ' id="pwps-loop" class="pwps-loop' . $sidebar . $_classes . '"';
+	}
+}
+
+
+if ( ! function_exists( 'pwps_the_loop' ) ) {
+	/**
+	 * Do the default loop for the theme. This is the loop used in the blog page. We put it into its own funtion to be able to pass it to the infinite scroll option 'render'
+	 *
+	 * @since  1.2.0
+	 *
+	 * @return string html for the loop articles.
+	 */
+	function pwps_the_loop() {
+		while ( have_posts() ) : the_post();
+
+			get_template_part( 'content', 'loop' );
+
+		endwhile;
 	}
 }
 

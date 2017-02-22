@@ -9,6 +9,6 @@
 
 <article <?php post_class( 'no-content' ); ?>>
 
-	<p>Sorry, no posts were found.</p>
+	<p class="pwps-error">Sorry, no posts were found.</p>
 
 </article>

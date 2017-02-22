@@ -31,8 +31,4 @@
 		</div>
 	</div>
 
-	<div class="pwps-posts-navigation">
-		<p><?php posts_nav_link(); ?></p>
-	</div>
-
 </article>

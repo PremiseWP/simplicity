@@ -113,6 +113,11 @@ body.pwps-nav-active {
 	vertical-align: baseline;
 }
 
+.pwps-nav-menu-container li:hover > a {
+	opacity: 0.6;
+	/*background-color: rgba( 255, 255, 255, 1 );*/
+}
+
 .pwps-nav-menu-container li.menu-item-has-children {
 	cursor: pointer; /* Important for submenu animation */
 }

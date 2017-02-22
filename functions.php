@@ -27,6 +27,7 @@ if ( function_exists( 'add_action' ) ) {
 	 */
 
 	// On theme activation.
+	add_action( 'after_switch_theme', 'pwps_theme_activation');
 	add_action( 'after_setup_theme', 'pwps_theme_setup' );
 
 	// Register menus
@@ -89,18 +90,31 @@ if ( function_exists( 'add_action' ) ) {
 if ( function_exists( 'pwp_add_metabox' ) ) {
 	pwp_add_metabox(
 		'Simplicity Page Options',
-		'page',
+		array( 'post', 'page', 'premise_portfolio' ),
 		array(
+			'name_prefix' => 'pwps_page_options',
 			array(
+	            'type' => 'checkbox',
+	            'name' => '[hide-title]',
+	            'label' => 'Hide Title?',
+	            'context' => 'post',
+	        ),
+	        array(
+	            'type' => 'checkbox',
+	            'name' => '[hide-thumbnail]',
+	            'label' => 'Hide Featured Image?',
+	            'context' => 'post',
+	        ),
+	        array(
 	            'type' => 'textarea',
-	            'name' => 'pwps_page_options[custom-css]',
+	            'name' => '[custom-css]',
 	            'label' => 'Custom CSS',
 	            'placeholder' => '.your_class {...',
 	            'context' => 'post',
 	        ),
 	        array(
 	            'type' => 'textarea',
-	            'name' => 'pwps_page_options[custom-js]',
+	            'name' => '[custom-js]',
 	            'label' => 'Custom JS',
 	            'placeholder' => '(function($){...',
 	            'context' => 'post',
