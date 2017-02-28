@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<section id="pwps-home" <?php pwps_the_section_class(); ?>>
+<section id="pwps-home">
 	<div id="pwps-content" class="pwps-container">
 
 		<div <?php pwps_the_section_class(); ?>>
