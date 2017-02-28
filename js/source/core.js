@@ -48,10 +48,11 @@
 
 		// fix spacing between main content and top of page since our header is fixed
 		function pwpsHeaderBump() {
-			pwpsContent.css( 'margin-top', header.outerHeight() + 'px' );
+			var _height = ( $('body').is( '.page' ) && $('.pwps-page-thumbnail').length  ) ? '0px' : header.outerHeight() + 'px';
+			pwpsContent.css( 'margin-top', _height );
 			$( window ).resize( function(){
 				setTimeout( function() {
-					pwpsContent.css( 'margin-top', header.outerHeight() + 'px' );
+					pwpsContent.css( 'margin-top', _height );
 					clearTimeout();
 				}, 1000 );
 			} );

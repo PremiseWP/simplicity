@@ -10,25 +10,29 @@ get_header();
 ?>
 
 <section id="pwps-home" <?php pwps_the_section_class(); ?>>
+	<div id="pwps-content" class="pwps-container">
 
-	<div <?php pwps_the_loop_class(); ?>>
+		<div <?php pwps_the_section_class(); ?>>
+			<div <?php pwps_the_loop_class(); ?>>
 
-		<?php
-		if ( have_posts() ) :
+				<?php
+				if ( have_posts() ) :
 
-			pwps_the_loop();
+					pwps_the_loop();
 
-		else :
+				else :
 
-			get_template_part( 'content', 'none' );
+					get_template_part( 'content', 'none' );
 
-		endif;
-		?>
+				endif;
+				?>
+
+			</div>
+
+			<?php pwps_the_sidebar(); ?>
+		</div>
 
 	</div>
-
-	<?php pwps_the_sidebar(); ?>
-
 </section>
 
 <?php get_footer(); ?>

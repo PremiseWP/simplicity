@@ -632,7 +632,7 @@ if ( ! function_exists( 'pwps_the_loop_class' ) ) {
 		$sidebar  = pwps_uses_sidebar()          ? ' span8'                   : 'span12';
 		$_classes = ( '' !== (string) $classes ) ? ' ' . esc_attr( $classes ) : '';
 
-		echo ' id="pwps-loop" class="pwps-loop' . $sidebar . $_classes . '"';
+		echo ' id="pwps-loop" class="pwps-loop ' . $sidebar . $_classes . '"';
 	}
 }
 

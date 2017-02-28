@@ -7,7 +7,7 @@
 
 ?>
 
-	</div> <!-- Close the .sangreea-content tag -->
+	<!-- </div> --> <!-- Close the .sangreea-content tag -->
 
 	<footer id="pwps-footer">
 		<div class="pwps-container">

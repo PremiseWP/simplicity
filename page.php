@@ -11,31 +11,25 @@ get_header();
 
 <section id="page" <?php pwps_the_section_class(); ?>>
 
-	<div <?php pwps_the_loop_class(); ?>>
+		<div <?php pwps_the_loop_class(); ?>>
 
-		<?php
-		if ( have_posts() ) :
+			<?php
+			if ( have_posts() ) :
 
-			while ( have_posts() ) : the_post();
+				while ( have_posts() ) : the_post();
 
-				if ( ! (boolean) premise_get_value( 'pwps_page_options[hide-title]', 'post' ) ) :
-					?><div class="pwps-post-title">
-						<h1><?php the_title(); ?></h1>
-					</div><?
-				endif;
+					get_template_part( 'content', pwps_get_post_format() );
 
-				get_template_part( 'content', pwps_get_post_format() );
+				endwhile;
 
-			endwhile;
+			else :
 
-		else :
+				get_template_part( 'content', 'none' );
 
-			get_template_part( 'content', 'none' );
+			endif;
+			?>
 
-		endif;
-		?>
-
-	</div>
+		</div>
 
 </section>
 
