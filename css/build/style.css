@@ -879,19 +879,27 @@ article.pwps-post:after {
 	margin-top: 40px;
 }
 
-.pwps-loop-related .pwps-blog-post {
+.pwps-related-post {
+	width: 33.33%;
 	vertical-align: top;
 	padding: 0 20px;
 	border-right: 1px solid #CCCCCC;
-	width: 80%;
 	display: inline-block;
 	border-bottom: 0;
 	margin-bottom: 0;
 	white-space: normal;
 }
 
-.pwps-loop-related .pwps-blog-post:first-child {
+.pwps-related-post:first-child {
 	padding-left: 0;
+}
+
+.pwps-related-post h2 {
+	font-size: 1.3em;
+}
+
+.pwps-related-post p {
+	font-size: 1em;
 }
 
 .pwps-loop-related .premise-scroller {
