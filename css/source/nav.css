@@ -4,7 +4,7 @@ body.pwps-nav-active {
 	overflow: hidden;
 }
 
-#pwps-header.pwps-nav-active {
+body.pwps-nav-active #pwps-header {
 	z-index: 999999;
 }
 
@@ -225,37 +225,30 @@ body.pwps-nav-active {
 
 
 /* When nav is active */
-#pwps-header.pwps-nav-active {
+body.pwps-nav-active #pwps-header {
 	background-color: transparent;
 }
 
-#pwps-header.pwps-nav-active .pwps-nav {
+body.pwps-nav-active #pwps-header .pwps-nav {
 
 }
 
-#pwps-header.pwps-nav-active .pwps-logo {
+body.pwps-nav-active #pwps-header .pwps-logo {
 	opacity: 0;
 }
 
-#pwps-header.pwps-nav-active .pwps-nav-wrapper {
+body.pwps-nav-active #pwps-header .pwps-nav-wrapper {
 	opacity: 1;
 	visibility: visible;
 }
 
-#pwps-header.pwps-nav-active .pwps-nav-search {
+body.pwps-nav-active #pwps-header .pwps-nav-search {
 	opacity: 1;
 	width: 90%; /* Starts with iPhone 6 - iPhone 5 is in zresponsive stylesheet */
 }
 
-#pwps-header.pwps-nav-active .pwps-nav-menu-container {
+body.pwps-nav-active #pwps-header .pwps-nav-menu-container {
 	visibility: visible;
 	opacity: 1;
 	height: auto;
-}
-
-/* @320px Styles for iPhone 5 */
-@media screen and ( max-width: 320px ) {
-	#pwps-header.pwps-nav-active .pwps-nav-search {
-		width: 235px; /* See main css file for iphone 6 styles */
-	}
 }
