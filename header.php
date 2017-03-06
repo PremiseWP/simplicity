@@ -36,9 +36,9 @@
 					</div>
 					<div class="pwps-nav-wrapper">
 
-						<div class="pwps-nav-search">
+						<!-- <div class="pwps-nav-search">
 							<input type="text" id="pwps-nav-search-input" name="nav_search" placeholder="Search anything.. Pages, Posts, Plugins, Themes, etc">
-						</div>
+						</div> -->
 						<div class="premise-clear"></div>
 						<!-- The nav -->
 						<?php pwps_main_nav(); ?>
