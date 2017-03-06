@@ -9,8 +9,8 @@ get_header();
 
 ?>
 
-<section id="pwps-front-page" <?php pwps_the_section_class(); ?>>
-
+<section id="pwps-front-page">
+	<div <?php pwps_the_section_class(); ?>>
 		<div <?php pwps_the_loop_class(); ?>>
 
 			<?php
@@ -32,7 +32,7 @@ get_header();
 		</div>
 
 		<?php pwps_the_sidebar(); ?>
-
+	</div>
 </section>
 
 <?php get_footer(); ?>
