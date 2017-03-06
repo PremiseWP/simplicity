@@ -655,7 +655,7 @@ article.pwps-post:after {
 
 #loop-related-posts {
 	border-top: 1px solid #CCCCCC;
-	padding-top: 40px;
+	/*padding-top: 40px;*/
 }
 
 
@@ -874,7 +874,7 @@ article.pwps-post:after {
 }
 
 .pwps-loop-related {
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 
 .pwps-related-post {
