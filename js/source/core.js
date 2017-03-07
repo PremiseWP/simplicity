@@ -1,17 +1,28 @@
 (function($){
 	$( document ).ready( function(){
+		// run it!
+		pwpsInitJs();
+	});
+
+	// the theme JS
+	function pwpsInitJs() {
 		// reference our variables for efficiency
 		var header    = $( '#pwps-header' ),
 		pwpsContent   = $( '#pwps-content' ),
-		loopContainer = $( '.pwps-the-loop' );
+		loopContainer = $( '.pwps-the-loop' ),
+		loopRelated   = $( '#pwps-loop-related' ),
+		pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
 
-		// initiate our javascript. this function is called at the end of this file.
-		function pwpsInitJs() {
-			// fix header space
-			pwpsHeaderBump();
+		// fix header space first
+		pwpsHeaderBump();
 
-			// posts link pages ajax
-			var pwpsLinkPages = $( '.pwps-link-pages-ajax a' );
+		// bind events if elements exist in DOM
+		pwpsLinkPages.length && bindNextPrevPage();
+		// if loop related exists adjust the heights of posts
+		loopRelated.length && premiseSameHeight( '.pwps-loop-related .pwps-related-post' );
+
+		// load the next page for a post
+		function bindNextPrevPage() {
 			pwpsLinkPages.click( function( e ) {
 				e.preventDefault();
 
@@ -44,7 +55,7 @@
 					pCont.css( 'min-height', '' );
 				}
 			} );
-		}
+		};
 
 		// fix spacing between main content and top of page since our header is fixed
 		function pwpsHeaderBump() {
@@ -56,9 +67,6 @@
 					clearTimeout();
 				}, 1000 );
 			} );
-		}
-
-		// run it!
-		pwpsInitJs();
-	});
+		};
+	}
 }(jQuery));
