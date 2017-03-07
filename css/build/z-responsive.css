@@ -17,11 +17,11 @@
 	/* featured images */
 	.pwps-blog-post .pwps-post-thumbnail,
 	.pwps-post .pwps-post-thumbnail {
-		float: left;
-		padding-right: 1.25em;
+		/*padding-right: 1.25em;
 		max-width: 25em;
+		float: left;
 		box-sizing: border-box;
-		clear: left;
+		clear: left;*/
 	}
 
 	/* gallery shortcode */

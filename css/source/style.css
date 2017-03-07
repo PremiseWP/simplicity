@@ -472,8 +472,8 @@ button:hover {
 }
 
 #pwps-content.pwps-container {
- 	overflow-x: hidden;
- }
+	overflow-x: hidden;
+}
 
 /* Admin bar */
 body.admin-bar #pwps-header {
@@ -553,6 +553,10 @@ body.admin-bar #pwps-header {
 	The Loop
  */
 
+#pwps-loop {
+	overflow-x: hidden;
+}
+
 article.pwps-post {
 	clear: both;
 	margin-bottom: 4em;
@@ -571,13 +575,20 @@ article.pwps-post:after {
 	word-break: break-all;
 }
 
-.pwps-blog-post .pwps-post-thumbnail,
-.pwps-post .pwps-post-thumbnail {
-	margin-bottom: 2.5em;
+.pwps-post-thumbnail {
+	float: left;
+	box-sizing: border-box;
+	clear: left;
+	margin-bottom: 2em;
 }
 
 .pwps-post-content {
 	margin-bottom: 2em;
+}
+
+.pwps-post-content img {
+	max-width: 100%;
+	height: auto;
 }
 
 .pwps-post-meta {
