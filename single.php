@@ -13,7 +13,7 @@ get_header();
 	<div id="pwps-content" class="pwps-container">
 
 		<div <?php pwps_the_section_class(); ?>>
-			<div <?php pwps_the_loop_class(); ?>>
+			<div class="<?php echo pwps_uses_sidebar() ? ' span8' : 'span12'; ?>">
 
 				<?php
 				if ( have_posts() ) :
