@@ -1,9 +1,3 @@
-/**
- * Sangreea Main Stylesheet
- *
- * Table of Index
- */
-
 /*
 	Resets
 
@@ -110,7 +104,6 @@ input[type="reset"] {
 }
 
 /* Tables */
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -260,30 +253,21 @@ pre {
 code {
 	font-family: 'Source Code Pro', monospace;
 	background-color: rgba( 253, 253, 253, 1 );
-	padding: 2px 5px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	vertical-align: baseline;
+	padding: 0 0.125em;
 	color: #676767;
 	word-break: break-all;
 }
 
-/*code::selection {
-	background-color: rgba( 4, 4, 4, 0.9 );
-	color: #FFFFFF;
-}*/
+code::selection {
+	background-color: #444;
+	color: #fff;
+}
 
 pre > code {
 	border: 0;
 	padding: 0;
 	background-color: transparent;
-	line-height: 1.6;
 }
-
-
-/*
-	Typography
- */
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -291,44 +275,40 @@ body {
 	font-weight: 300;
 	line-height: 1.3;
 	overflow-x: hidden;
-	/*color: #444;*/
 }
 
 h1 {
-	font-family: 'Source Code Pro', monospace;
-	font-size: 3em;
-	line-height: 1.45;
-	font-weight: 300;
 	color: #222;
-	word-break: break-word;
 	hyphens: all;
-	margin-top: .6em;
-	margin-bottom: .8em;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1.45;
+	margin-bottom: 1em;
+	word-break: break-word;
+	font-family: 'Source Code Pro', monospace;
 }
 
 h2 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 2.5em;
+	font-size: 1.8em;
 	font-weight: 300;
 	color: #222;
-	margin-top: .6em;
-	margin-bottom: .8em;
+	margin-bottom: 1em;
 }
 
 h3 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 300;
 	color: inherit;
-	margin-top: .6em;
-	margin-bottom: .8em;
+	margin-bottom: 1em;
 }
 
 h4,
 h5,
 h6 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-weight: 400;
 	color: inherit;
 	margin-top: .6em;
@@ -340,10 +320,11 @@ h6 {
 }
 
 p {
-	font-size: 1.25em;
+	font-size: 1.125em;
+	line-height: 1.45;
 	color: inherit;
-	margin-top: .6em;
-	margin-bottom: .8em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 a {
@@ -564,8 +545,8 @@ body.admin-bar #pwps-header {
 
 .pwps-loop article.pwps-post {
 	clear: both;
-	margin: 2em auto;
-	padding: 1em 0;
+	margin: 0 auto 2em;
+	padding: 0 0 2em 0;
 	border-bottom: 1px solid #f4f4f4;
 }
 
@@ -873,19 +854,24 @@ article.pwps-post:after {
 	margin-top: 40px;
 }
 
-.pwps-loop-related .pwps-blog-post {
+.pwps-loop-related article.pwps-blog-post {
 	vertical-align: top;
-	padding: 0 20px;
-	border-right: 1px solid #CCCCCC;
-	width: 80%;
+	padding: 0 2em;
+	/*border-right: 1px solid #CCCCCC;*/
+	/*width: 80%;*/
 	display: inline-block;
 	border-bottom: 0;
 	margin-bottom: 0;
 	white-space: normal;
+	width: 50%;
 }
 
 .pwps-loop-related .pwps-blog-post:first-child {
 	padding-left: 0;
+}
+
+.pwps-loop-related .pwps-blog-post h2 {
+	font-size: 1.125em;
 }
 
 .pwps-loop-related .premise-scroller {

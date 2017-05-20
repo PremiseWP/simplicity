@@ -21,9 +21,4 @@
 	</div>
 <?php endif; ?>
 
-<div class="pwps-post-excerpt">
-	<?php the_excerpt(); ?>
-</div>
-
-
 <?php pwps_the_post_meta(); ?>

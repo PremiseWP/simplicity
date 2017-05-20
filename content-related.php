@@ -7,7 +7,7 @@
 
 ?>
 
-<article <?php post_class( 'pwps-related-post span7' ); ?>>
+<article <?php post_class( 'pwps-post pwps-blog-post' ); ?>>
 
 	<?php get_template_part( 'view/view', 'content-loop' ); ?>
 

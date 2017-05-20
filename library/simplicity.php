@@ -468,11 +468,6 @@ if ( ! function_exists( 'pwps_the_post_meta' ) ) {
 						<?php echo 'Found in: ' . $pwpws_categories; ?>
 					</div>
 				<?php endif; ?>
-				<?php if ( function_exists( 'sharing_display' ) ) : ?>
-					<div class="pwps-meta-item pwps-social-meta">
-						<?php echo sharing_display(); ?>
-					</div>
-				<?php endif; ?>
 			</div>
 		<?php endif;
 	}

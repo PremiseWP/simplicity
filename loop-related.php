@@ -37,12 +37,12 @@ if ( $tags ) :
 				<div class="premise-scroller"><?php
 					while( $lr_query->have_posts() ) : $lr_query->the_post();
 
-						get_template_part( 'content', 'loop' );
+						get_template_part( 'content', 'related' );
 
 					endwhile; ?>
 				</div>
 			</div>
-		</section><?php 
+		</section><?php
 	endif;
 
 	// reset our post query
