@@ -55,7 +55,7 @@
 	}
 
 	/* Adjust loop of related posts */
-	.pwps-loop-related .pwps-blog-post {
+	.pwps-loop-related article.pwps-blog-post {
 		width: 60%;
 	}
 }
@@ -99,7 +99,7 @@
 	}
 
 	/* Adjust loop of related posts */
-	.pwps-loop-related .pwps-blog-post {
+	.pwps-loop-related article.pwps-blog-post {
 		width: 40%;
 	}
 

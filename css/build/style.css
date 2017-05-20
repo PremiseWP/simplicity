@@ -1,9 +1,3 @@
-/**
- * Sangreea Main Stylesheet
- *
- * Table of Index
- */
-
 /*
 	Resets
 
@@ -110,7 +104,6 @@ input[type="reset"] {
 }
 
 /* Tables */
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -260,12 +253,17 @@ pre {
 code {
 	font-family: 'Source Code Pro', monospace;
 	background-color: rgba( 253, 253, 253, 1 );
+<<<<<<< HEAD
 	vertical-align: baseline;
+=======
+	padding: 0 0.125em;
+>>>>>>> v2
 	color: #676767;
 	word-break: break-all;
 }
 
 code::-moz-selection {
+<<<<<<< HEAD
 	background-color: rgba( 4, 4, 4, 0.9 );
 	color: #FFFFFF;
 }
@@ -273,19 +271,22 @@ code::-moz-selection {
 code::selection {
 	background-color: rgba( 4, 4, 4, 0.9 );
 	color: #FFFFFF;
+=======
+	background-color: #444;
+	color: #fff;
+}
+
+code::selection {
+	background-color: #444;
+	color: #fff;
+>>>>>>> v2
 }
 
 pre > code {
 	border: 0;
 	padding: 0;
 	background-color: transparent;
-	line-height: 1.6;
 }
-
-
-/*
-	Typography
- */
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -296,21 +297,25 @@ body {
 }
 
 h1 {
-	font-family: 'Source Code Pro', monospace;
-	font-size: 3em;
-	line-height: 1.45;
-	font-weight: 300;
 	color: #222;
-	word-break: break-word;
 	-webkit-hyphens: all;
 	    -ms-hyphens: all;
 	        hyphens: all;
+<<<<<<< HEAD
 	margin-bottom: 1em;
+=======
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1.45;
+	margin-bottom: 1em;
+	word-break: break-word;
+	font-family: 'Source Code Pro', monospace;
+>>>>>>> v2
 }
 
 h2 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 2.5em;
+	font-size: 1.8em;
 	font-weight: 300;
 	color: #222;
 	margin-bottom: 1em;
@@ -318,7 +323,7 @@ h2 {
 
 h3 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 300;
 	color: inherit;
 	margin-bottom: 1em;
@@ -328,7 +333,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Source Code Pro', monospace;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-weight: 400;
 	color: inherit;
 	margin-bottom: 1em;
@@ -339,9 +344,14 @@ h6 {
 }
 
 p {
-	font-size: 1.25em;
+	font-size: 1.125em;
+	line-height: 1.45;
 	color: inherit;
+<<<<<<< HEAD
 	line-height: 1.4;
+=======
+	margin-top: 1em;
+>>>>>>> v2
 	margin-bottom: 1em;
 }
 
@@ -566,8 +576,13 @@ body.admin-bar #pwps-header {
 
 article.pwps-post {
 	clear: both;
+<<<<<<< HEAD
 	margin-bottom: 4em;
 	padding-bottom: 3em;
+=======
+	margin: 0 auto 2em;
+	padding: 0 0 2em 0;
+>>>>>>> v2
 	border-bottom: 1px solid #f4f4f4;
 }
 
@@ -902,6 +917,7 @@ article.pwps-post:after {
 	border-bottom: 1px solid #f4f4f4;
 }
 
+<<<<<<< HEAD
 .pwps-loop-related .premise-scroller {
 	padding-top: 1em;
 	padding-left: .5em;
@@ -919,6 +935,18 @@ article.pwps-post:after {
 	vertical-align: top;
 	display: inline-block;
 	transition: all .4s ease-in-out;
+=======
+.pwps-loop-related article.pwps-blog-post {
+	vertical-align: top;
+	padding: 0 2em;
+	/*border-right: 1px solid #CCCCCC;*/
+	/*width: 80%;*/
+	display: inline-block;
+	border-bottom: 0;
+	margin-bottom: 0;
+	white-space: normal;
+	width: 50%;
+>>>>>>> v2
 }
 
 .pwps-related-post:hover {
@@ -931,6 +959,10 @@ article.pwps-post:after {
 
 .pwps-related-post p {
 	font-size: 1em;
+}
+
+.pwps-loop-related .pwps-blog-post h2 {
+	font-size: 1.125em;
 }
 
 .pwps-loop-related .premise-scroller {

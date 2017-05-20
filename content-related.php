@@ -7,7 +7,11 @@
 
 ?>
 
+<<<<<<< HEAD
 <article <?php post_class( 'pwps-related-post span5' ); ?>>
+=======
+<article <?php post_class( 'pwps-post pwps-blog-post' ); ?>>
+>>>>>>> v2
 
 	<div class="pwps-post-title">
 		<a href="<?php the_permalink(); ?>">

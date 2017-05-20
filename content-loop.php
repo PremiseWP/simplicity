@@ -11,7 +11,7 @@
 
 	<div class="pwps-post-title">
 		<a href="<?php the_permalink(); ?>">
-			<h1><?php the_title(); ?></h1>
+			<h2><?php the_title(); ?></h2>
 		</a>
 	</div>
 
