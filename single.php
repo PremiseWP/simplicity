@@ -20,6 +20,8 @@ get_header();
 
 				get_template_part( 'content', pwps_get_post_format() );
 
+				get_template_part( 'view/post', 'author');
+
 				get_template_part( 'loop', 'related' );
 
 				if ( ( comments_open() || get_comments_number() ) ) :

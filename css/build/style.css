@@ -710,8 +710,8 @@ article.pwps-post:after {
  */
 
 #pwps-comments {
-	margin-top: 100px;
-	padding-top: 60px;
+	margin-top: 4em;
+	padding-top: 4em;
 	border-top: 1px solid #CCCCCC;
 }
 
@@ -852,13 +852,13 @@ article.pwps-post:after {
  */
 
 #pwps-loop-related {
-	margin-top: 100px;
-	padding-top: 60px;
-	border-top: 1px solid #CCCCCC
+	margin-top: 4em;
+	padding-top: 4em;
+	border-top: 0.0125em solid #CCCCCC
 }
 
 .pwps-loop-related {
-	margin-top: 40px;
+	margin-top: 3em;
 }
 
 .pwps-loop-related article.pwps-blog-post {
@@ -882,7 +882,7 @@ article.pwps-post:after {
 }
 
 .pwps-loop-related .premise-scroller {
-	padding-bottom: 20px;
+	padding-bottom: 1.125em;
 	/*border-bottom: 1px solid #CCCCCC; */ /* hide since v1.2.0 */
 }
 
@@ -1175,4 +1175,26 @@ table#wp-calendar tbody td > a {
 #pwps-footer {
 
 	padding: 2em 0;
+}
+
+
+/**
+ * Post Author section
+ */
+
+#pwps-post-author {
+	margin-top: 4em;
+}
+
+.pwps-post-author-avatar {
+	padding-right: 1.5em;
+	margin-bottom: .5em;
+	max-width: 25%;
+}
+
+.pwps-post-author-avatar img {
+	display: block;
+	border: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 0.25em #909090;
 }
