@@ -9,11 +9,14 @@
 
 <article <?php post_class( 'pwps-post pwp-clear-float' ); ?>>
 
-	<div class="pwps-post-title">
-		<h1><?php the_title(); ?></h1>
-	</div>
+	<?php if ( ! (boolean) premise_get_value( 'pwps_page_options[hide-title]', 'post' ) ) :
+		?><div class="pwps-post-title">
+			<h1><?php the_title(); ?></h1>
+		</div><?
+	endif; ?>
 
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( has_post_thumbnail()
+		 && ! (boolean) premise_get_value( 'pwps_page_options[hide-thumbnail]', 'post' ) ) : ?>
 		<div class="pwps-post-thumbnail">
 			<?php the_post_thumbnail( 'pwps-thumbnail', array( 'class' => 'premise-responsive' ) ); ?>
 		</div>
