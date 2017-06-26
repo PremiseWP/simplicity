@@ -508,6 +508,7 @@ body.admin-bar #pwps-header {
 	height: 100%;
 	opacity: 0.6;
 	background-color: #FDFDFD;
+	z-index: -1;
 }
 
 .pwps-site-title {
